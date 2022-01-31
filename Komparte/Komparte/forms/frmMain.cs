@@ -20,15 +20,15 @@ namespace Komparte
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             }
-        private const int cGrip = 80;      // Grip size
-        private const int cCaption = 567;   // Caption bar height;
+        private const int cGrip = 30;      // Grip size
+        private const int cCaption = 610;   // Caption bar height;
 
 
         protected override void OnPaint(PaintEventArgs e)
         {
             Rectangle rc = new Rectangle(this.ClientSize.Width - cGrip, this.ClientSize.Height - cGrip, cGrip, cGrip);
             ControlPaint.DrawSizeGrip(e.Graphics, this.BackColor, rc);
-            rc = new Rectangle(0, 0, this.ClientSize.Width, cCaption);
+            rc = new Rectangle(0, 0, this.ClientSize.Width, cCaption); e.Graphics.FillRectangle(Brushes.Transparent, rc);
             e.Graphics.FillRectangle(Brushes.Transparent, rc);
         }
 
