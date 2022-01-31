@@ -21,14 +21,15 @@ namespace Komparte
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             }
         private const int cGrip = 80;      // Grip size
-        private const int cCaption = 16;   // Caption bar height;
+        private const int cCaption = 567;   // Caption bar height;
+
 
         protected override void OnPaint(PaintEventArgs e)
         {
             Rectangle rc = new Rectangle(this.ClientSize.Width - cGrip, this.ClientSize.Height - cGrip, cGrip, cGrip);
             ControlPaint.DrawSizeGrip(e.Graphics, this.BackColor, rc);
             rc = new Rectangle(0, 0, this.ClientSize.Width, cCaption);
-            e.Graphics.FillRectangle(Brushes.Chocolate, rc);
+            e.Graphics.FillRectangle(Brushes.Transparent, rc);
         }
 
         protected override void WndProc(ref Message m)
@@ -37,7 +38,7 @@ namespace Komparte
             {  // Trap WM_NCHITTEST
                 Point pos = new Point(m.LParam.ToInt32());
                 pos = this.PointToClient(pos);
-                if (pos.Y < frmMain.cGrip)
+                if (pos.Y < frmMain.cCaption)
                 {
                     m.Result = (IntPtr)2;  // HTCAPTION
                     return;

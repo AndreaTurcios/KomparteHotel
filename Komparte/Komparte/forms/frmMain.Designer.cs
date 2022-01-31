@@ -173,15 +173,17 @@ namespace Komparte
             // btnClose
             // 
             this.btnClose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Image = global::Komparte.Properties.Resources.close;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(32, 24);
-            this.btnClose.Text = "X";
+            this.btnClose.Size = new System.Drawing.Size(34, 24);
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1123, 638);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.menuStrip1);
@@ -192,7 +194,6 @@ namespace Komparte
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelBotones.ResumeLayout(false);
