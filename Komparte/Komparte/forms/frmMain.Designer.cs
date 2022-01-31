@@ -168,7 +168,7 @@ namespace Komparte
             this.menuStrip1.Size = new System.Drawing.Size(1123, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.btnClose_Click);
             // 
             // btnClose
             // 
@@ -193,6 +193,7 @@ namespace Komparte
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelBotones.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
