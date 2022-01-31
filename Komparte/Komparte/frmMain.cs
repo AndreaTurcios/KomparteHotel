@@ -15,7 +15,27 @@ namespace Komparte
         public frmMain()
         {
             InitializeComponent();
+            hideSubMenu();
+        }
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
         }
 
+        private void hideSubMenu()
+        {
+            panelBotones.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelBotones);
+        }
     }
 }
