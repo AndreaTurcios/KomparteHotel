@@ -57,7 +57,7 @@ namespace Komparte
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 28);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(310, 610);
+            this.panelMenu.Size = new System.Drawing.Size(310, 717);
             this.panelMenu.TabIndex = 0;
             // 
             // panelBotones
@@ -120,6 +120,7 @@ namespace Komparte
             this.button2.Text = "button2";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnMen1
             // 
@@ -165,7 +166,7 @@ namespace Komparte
             this.btnClose});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1123, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1301, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.btnClose_Click);
@@ -184,7 +185,7 @@ namespace Komparte
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1123, 638);
+            this.ClientSize = new System.Drawing.Size(1301, 745);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

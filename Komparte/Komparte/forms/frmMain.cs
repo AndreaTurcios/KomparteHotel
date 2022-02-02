@@ -23,7 +23,6 @@ namespace Komparte
         private const int cGrip = 30;      // Grip size
         private const int cCaption = 610;   // Caption bar height;
 
-
         protected override void OnPaint(PaintEventArgs e)
         {
             Rectangle rc = new Rectangle(this.ClientSize.Width - cGrip, this.ClientSize.Height - cGrip, cGrip, cGrip);
@@ -35,7 +34,7 @@ namespace Komparte
         protected override void WndProc(ref Message m)
         {
             if (m.Msg == 0x84)
-            {  // Trap WM_NCHITTEST
+            {  
                 Point pos = new Point(m.LParam.ToInt32());
                 pos = this.PointToClient(pos);
                 if (pos.Y < frmMain.cCaption)
@@ -52,8 +51,6 @@ namespace Komparte
             base.WndProc(ref m);
         }
 
-    
-       
 
     private void showSubMenu(Panel subMenu)
         {
@@ -89,6 +86,11 @@ namespace Komparte
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
