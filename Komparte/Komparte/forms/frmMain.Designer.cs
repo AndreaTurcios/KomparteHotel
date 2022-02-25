@@ -17,6 +17,7 @@ namespace Komparte
             if (disposing && (components != null))
             {
                 components.Dispose();
+                // aqui tenemos un comentario para poder probar como funiona github
             }
             base.Dispose(disposing);
         }
