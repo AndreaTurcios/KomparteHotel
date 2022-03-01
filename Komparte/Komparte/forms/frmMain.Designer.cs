@@ -32,6 +32,11 @@ namespace Komparte
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelBotones2 = new System.Windows.Forms.Panel();
+            this.btnTipoEntorno = new System.Windows.Forms.Button();
+            this.btnTipoActividades = new System.Windows.Forms.Button();
+            this.btnInformacion = new System.Windows.Forms.Button();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.panelBotones = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -41,8 +46,8 @@ namespace Komparte
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnClose = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
+            this.panelBotones2.SuspendLayout();
             this.panelBotones.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,6 +58,8 @@ namespace Komparte
             // 
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
+            this.panelMenu.Controls.Add(this.panelBotones2);
+            this.panelMenu.Controls.Add(this.btnInformacion);
             this.panelMenu.Controls.Add(this.btnCerrarSesion);
             this.panelMenu.Controls.Add(this.panelBotones);
             this.panelMenu.Controls.Add(this.btnMen1);
@@ -63,6 +70,89 @@ namespace Komparte
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(388, 903);
             this.panelMenu.TabIndex = 0;
+            // 
+            // panelBotones2
+            // 
+            this.panelBotones2.Controls.Add(this.btnTipoEntorno);
+            this.panelBotones2.Controls.Add(this.btnTipoActividades);
+            this.panelBotones2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBotones2.Location = new System.Drawing.Point(0, 621);
+            this.panelBotones2.Name = "panelBotones2";
+            this.panelBotones2.Size = new System.Drawing.Size(388, 149);
+            this.panelBotones2.TabIndex = 5;
+            // 
+            // btnTipoEntorno
+            // 
+            this.btnTipoEntorno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
+            this.btnTipoEntorno.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTipoEntorno.FlatAppearance.BorderSize = 0;
+            this.btnTipoEntorno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTipoEntorno.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTipoEntorno.ForeColor = System.Drawing.Color.White;
+            this.btnTipoEntorno.Location = new System.Drawing.Point(0, 75);
+            this.btnTipoEntorno.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTipoEntorno.Name = "btnTipoEntorno";
+            this.btnTipoEntorno.Padding = new System.Windows.Forms.Padding(44, 0, 0, 0);
+            this.btnTipoEntorno.Size = new System.Drawing.Size(388, 74);
+            this.btnTipoEntorno.TabIndex = 8;
+            this.btnTipoEntorno.Text = "Entorno";
+            this.btnTipoEntorno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTipoEntorno.UseVisualStyleBackColor = false;
+            // 
+            // btnTipoActividades
+            // 
+            this.btnTipoActividades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
+            this.btnTipoActividades.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTipoActividades.FlatAppearance.BorderSize = 0;
+            this.btnTipoActividades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTipoActividades.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTipoActividades.ForeColor = System.Drawing.Color.White;
+            this.btnTipoActividades.Location = new System.Drawing.Point(0, 0);
+            this.btnTipoActividades.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTipoActividades.Name = "btnTipoActividades";
+            this.btnTipoActividades.Padding = new System.Windows.Forms.Padding(44, 0, 0, 0);
+            this.btnTipoActividades.Size = new System.Drawing.Size(388, 75);
+            this.btnTipoActividades.TabIndex = 7;
+            this.btnTipoActividades.Text = "Actividades";
+            this.btnTipoActividades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTipoActividades.UseVisualStyleBackColor = false;
+            // 
+            // btnInformacion
+            // 
+            this.btnInformacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInformacion.FlatAppearance.BorderSize = 0;
+            this.btnInformacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInformacion.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnInformacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnInformacion.Location = new System.Drawing.Point(0, 546);
+            this.btnInformacion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInformacion.Name = "btnInformacion";
+            this.btnInformacion.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnInformacion.Size = new System.Drawing.Size(388, 75);
+            this.btnInformacion.TabIndex = 4;
+            this.btnInformacion.Text = "Información";
+            this.btnInformacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInformacion.UseVisualStyleBackColor = true;
+            this.btnInformacion.Click += new System.EventHandler(this.btnInformacion_Click);
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
+            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 828);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(388, 75);
+            this.btnCerrarSesion.TabIndex = 3;
+            this.btnCerrarSesion.Text = "Cerrar sesión";
+            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // panelBotones
             // 
@@ -193,25 +283,6 @@ namespace Komparte
             this.btnClose.Size = new System.Drawing.Size(36, 24);
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
-            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 828);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnCerrarSesion.Size = new System.Drawing.Size(388, 75);
-            this.btnCerrarSesion.TabIndex = 3;
-            this.btnCerrarSesion.Text = "Cerrar sesión";
-            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -230,6 +301,7 @@ namespace Komparte
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.panelMenu.ResumeLayout(false);
+            this.panelBotones2.ResumeLayout(false);
             this.panelBotones.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -253,6 +325,10 @@ namespace Komparte
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem btnClose;
         private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Button btnInformacion;
+        private System.Windows.Forms.Panel panelBotones2;
+        private System.Windows.Forms.Button btnTipoEntorno;
+        private System.Windows.Forms.Button btnTipoActividades;
     }
 }
 

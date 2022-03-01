@@ -39,6 +39,7 @@ namespace Komparte.forms
         {
             frmMain frm = new frmMain();
             frm.Show();
+            this.Hide();
         }
     }
 }

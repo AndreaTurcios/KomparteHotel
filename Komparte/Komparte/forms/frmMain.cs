@@ -17,6 +17,7 @@ namespace Komparte
         {
             InitializeComponent();
             hideSubMenu();
+
             this.FormBorderStyle = FormBorderStyle.None;
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true);
@@ -67,6 +68,7 @@ namespace Komparte
         private void hideSubMenu()
         {
             panelBotones.Visible = false;
+            panelBotones2.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -103,6 +105,12 @@ namespace Komparte
         {
             frmLogin frm = new frmLogin();
             frm.Show();
+            this.Hide();
+        }
+
+        private void btnInformacion_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelBotones2);
         }
     }
 }
