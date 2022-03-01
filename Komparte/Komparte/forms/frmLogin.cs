@@ -34,5 +34,11 @@ namespace Komparte.forms
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmMain frm = new frmMain();
+            frm.Show();
+        }
     }
 }

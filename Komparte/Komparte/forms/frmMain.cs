@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Komparte.forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -96,6 +97,12 @@ namespace Komparte
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            frmLogin frm = new frmLogin();
+            frm.Show();
         }
     }
 }

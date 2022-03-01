@@ -63,6 +63,16 @@ namespace Komparte.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blancolinea {
+            get {
+                object obj = ResourceManager.GetObject("blancolinea", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close {
             get {
                 object obj = ResourceManager.GetObject("close", resourceCulture);
@@ -76,6 +86,16 @@ namespace Komparte.Properties {
         internal static System.Drawing.Bitmap logopngkomparte {
             get {
                 object obj = ResourceManager.GetObject("logopngkomparte", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap straight_white_line_png_1_1 {
+            get {
+                object obj = ResourceManager.GetObject("straight-white-line-png-1-1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
