@@ -59,7 +59,7 @@ namespace Komparte.forms
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(0, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(754, 356);
+            this.panel1.Size = new System.Drawing.Size(754, 369);
             this.panel1.TabIndex = 0;
             // 
             // groupBox1
@@ -75,7 +75,7 @@ namespace Komparte.forms
             this.groupBox1.Controls.Add(this.Pais);
             this.groupBox1.Location = new System.Drawing.Point(12, 67);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(732, 258);
+            this.groupBox1.Size = new System.Drawing.Size(708, 286);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Control de región";
@@ -204,7 +204,7 @@ namespace Komparte.forms
             this.button1.Location = new System.Drawing.Point(15, 78);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 20);
+            this.button1.Size = new System.Drawing.Size(83, 20);
             this.button1.TabIndex = 6;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
@@ -214,10 +214,9 @@ namespace Komparte.forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(732, 378);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "frmPais";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Komparte Pais";
