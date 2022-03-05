@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Komparte.forms
 {
-    public partial class frmPaís : Form
+    public partial class frmPais : Form
     {
-        public frmPaís()
+        public frmPais()
         {
             InitializeComponent();
         }
@@ -23,6 +23,16 @@ namespace Komparte.forms
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
