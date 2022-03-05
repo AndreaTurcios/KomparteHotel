@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace Komparte.forms
 {
-    public partial class frmClientes : Form
+    public partial class frmPaís : Form
     {
-        public frmClientes()
+        public frmPaís()
         {
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void Pais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
