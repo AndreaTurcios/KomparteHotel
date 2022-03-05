@@ -62,7 +62,7 @@ namespace Komparte.forms
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(732, 378);
             this.panel1.TabIndex = 0;
@@ -85,9 +85,9 @@ namespace Komparte.forms
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(10, 54);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(714, 317);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -97,7 +97,7 @@ namespace Komparte.forms
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(391, 58);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(112, 23);
             this.textBox4.TabIndex = 15;
@@ -126,7 +126,7 @@ namespace Komparte.forms
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(598, 33);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(96, 23);
             this.comboBox1.TabIndex = 12;
@@ -136,7 +136,7 @@ namespace Komparte.forms
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(73, 58);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(229, 23);
             this.textBox3.TabIndex = 11;
@@ -154,7 +154,7 @@ namespace Komparte.forms
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(389, 33);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(114, 23);
             this.textBox2.TabIndex = 9;
@@ -182,7 +182,7 @@ namespace Komparte.forms
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(138, 33);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(164, 23);
             this.textBox1.TabIndex = 6;
@@ -190,7 +190,7 @@ namespace Komparte.forms
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(614, 110);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(78, 20);
             this.button4.TabIndex = 5;
@@ -200,7 +200,7 @@ namespace Komparte.forms
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(419, 110);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(78, 20);
             this.button3.TabIndex = 4;
@@ -210,7 +210,7 @@ namespace Komparte.forms
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(193, 110);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(78, 20);
             this.button2.TabIndex = 3;
@@ -220,7 +220,7 @@ namespace Komparte.forms
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(20, 110);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 20);
             this.button1.TabIndex = 2;
@@ -232,9 +232,9 @@ namespace Komparte.forms
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(20, 134);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(681, 172);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
@@ -243,7 +243,7 @@ namespace Komparte.forms
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(594, 142);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(78, 19);
             this.button5.TabIndex = 6;
@@ -254,7 +254,7 @@ namespace Komparte.forms
             // 
             this.dataGridView1.ColumnHeadersHeight = 34;
             this.dataGridView1.Location = new System.Drawing.Point(13, 18);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(659, 120);
@@ -265,7 +265,7 @@ namespace Komparte.forms
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(732, 50);
             this.panel2.TabIndex = 1;
@@ -289,7 +289,7 @@ namespace Komparte.forms
             this.ClientSize = new System.Drawing.Size(732, 379);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmClientes";
             this.Text = "frmClientes";
             this.panel1.ResumeLayout(false);
