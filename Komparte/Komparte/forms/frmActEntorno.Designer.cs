@@ -1,7 +1,7 @@
 ﻿
 namespace Komparte.forms
 {
-    partial class frmEntornoyActividades
+    partial class frmActEntorno
     {
         /// <summary>
         /// Required designer variable.
@@ -34,14 +34,15 @@ namespace Komparte.forms
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -107,20 +108,6 @@ namespace Komparte.forms
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Control de Entorno";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(415, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(110, 39);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 9;
-            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(596, 122);
@@ -130,6 +117,13 @@ namespace Komparte.forms
             this.button4.TabIndex = 13;
             this.button4.Text = "Limpiar";
             this.button4.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(415, 39);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 8;
             // 
             // button3
             // 
@@ -141,6 +135,13 @@ namespace Komparte.forms
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(110, 39);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 23);
+            this.textBox2.TabIndex = 9;
             // 
             // button2
             // 
@@ -174,6 +175,7 @@ namespace Komparte.forms
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(12, 266);
             this.groupBox2.Name = "groupBox2";
@@ -182,7 +184,17 @@ namespace Komparte.forms
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos";
             // 
-            // frmEntornoyActividades
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(665, 139);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(78, 28);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Imprimir";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // frmActEntorno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -191,8 +203,8 @@ namespace Komparte.forms
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmEntornoyActividades";
-            this.Text = "frmEntornoyActividades";
+            this.Name = "frmActEntorno";
+            this.Text = "frmActEntorno";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -218,5 +230,6 @@ namespace Komparte.forms
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button5;
     }
 }

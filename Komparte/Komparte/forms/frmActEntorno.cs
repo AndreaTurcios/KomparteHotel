@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Komparte.forms
 {
-    public partial class frmEntornoyActividades : Form
+    public partial class frmActEntorno : Form
     {
-        public frmEntornoyActividades()
+        public frmActEntorno()
         {
             InitializeComponent();
         }
