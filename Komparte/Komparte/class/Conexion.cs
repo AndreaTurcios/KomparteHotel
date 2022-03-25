@@ -7,21 +7,25 @@ using System.Data.SqlClient;
 
 namespace Komparte.Class
 {
-    class Conexion
+    public abstract class ConnectionToSql
     {
-        public static SqlConnection Conectar()
+        /// <summary>
+        /// Esta clase abstracta es responsable de establecer la cadena de conexion
+        /// y obtener la conexion a SQL.
+        /// </summary>
+        /// 
+
+        private readonly string connectionString;//Obtiene o establece la cadena de conexión.
+
+        public ConnectionToSql()
         {
-            try
-            {
-                SqlConnection cn = new SqlConnection("SERVER=LAPTOP-ANDREA;DATABASE=dbkomparte;integrated security=true;");
-                cn.Open();
-                return cn;
-            }
-            catch (Exception ex)
-            {
-                //throw new Exception("Error en la conexion");
-                return null;
-            }
+            //Establecer la cadena de conexión.
+            connectionString = "Server=LAPTOP-ANDREA; DataBase= dbkomparte; Integrated Security= true";
+        }
+        protected SqlConnection GetConnection()
+        {
+            //Este métedo se encarga de establecer y devolver el objeto de conexión a SQL Server.
+            return new SqlConnection(connectionString);
         }
     }
 }

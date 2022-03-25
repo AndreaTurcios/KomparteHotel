@@ -19,7 +19,6 @@ namespace Komparte.forms
     {
         public frmLogin()
         {
-            Conexion.Conectar();
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             //Estas lineas eliminan los parpadeos del formulario o controles en la interfaz grafica (Pero no en un 100%)
