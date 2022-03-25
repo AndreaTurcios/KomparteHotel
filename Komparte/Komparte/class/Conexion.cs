@@ -11,9 +11,17 @@ namespace Komparte.Class
     {
         public static SqlConnection Conectar()
         {
-            SqlConnection cn = new SqlConnection("");
-            cn.Open();
-            return cn;
+            try
+            {
+                SqlConnection cn = new SqlConnection("SERVER=LAPTOP-ANDREA;DATABASE=dbkomparte;integrated security=true;");
+                cn.Open();
+                return cn;
+            }
+            catch (Exception ex)
+            {
+                //throw new Exception("Error en la conexion");
+                return null;
+            }
         }
     }
 }

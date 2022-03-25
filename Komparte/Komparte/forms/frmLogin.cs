@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Komparte.Class;
 
 namespace Komparte.forms
 {
@@ -15,6 +16,7 @@ namespace Komparte.forms
     {
         public frmLogin()
         {
+            Conexion.Conectar();
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             //Estas lineas eliminan los parpadeos del formulario o controles en la interfaz grafica (Pero no en un 100%)
