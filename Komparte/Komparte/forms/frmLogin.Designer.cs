@@ -30,15 +30,19 @@ namespace Komparte.forms
         private void InitializeComponent()
         {
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtClave = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -52,20 +56,17 @@ namespace Komparte.forms
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.txtClave = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.panelLogo.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLogo
@@ -87,6 +88,78 @@ namespace Komparte.forms
             this.panelLogo.Size = new System.Drawing.Size(1124, 507);
             this.panelLogo.TabIndex = 0;
             this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(213, 481);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(179, 20);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "¿Problemas al ingresar?";
+            // 
+            // txtClave
+            // 
+            this.txtClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
+            this.txtClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtClave.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.txtClave.Location = new System.Drawing.Point(69, 305);
+            this.txtClave.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.Size = new System.Drawing.Size(270, 19);
+            this.txtClave.TabIndex = 11;
+            this.txtClave.Text = "CLAVE";
+            this.txtClave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtClave.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseClick_1);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Komparte.Properties.Resources.blancolinea;
+            this.pictureBox2.Location = new System.Drawing.Point(410, 11);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 475);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Komparte.Properties.Resources.straight_white_line_png_1_1;
+            this.pictureBox5.Location = new System.Drawing.Point(18, 317);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(374, 31);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 10;
+            this.pictureBox5.TabStop = false;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.txtUsuario.Location = new System.Drawing.Point(66, 256);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(270, 19);
+            this.txtUsuario.TabIndex = 8;
+            this.txtUsuario.Text = "USUARIO";
+            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUsuario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUsuario_MouseClick);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Komparte.Properties.Resources.straight_white_line_png_1_1;
+            this.pictureBox4.Location = new System.Drawing.Point(18, 264);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(374, 31);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
             // 
             // button4
             // 
@@ -126,17 +199,6 @@ namespace Komparte.forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(627, 490);
             this.panel1.TabIndex = 4;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Komparte.Properties.Resources.blancolinea;
-            this.pictureBox2.Location = new System.Drawing.Point(410, 11);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 475);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
             // 
             // panel5
             // 
@@ -190,17 +252,6 @@ namespace Komparte.forms
             this.label7.TabIndex = 11;
             this.label7.Text = "\"Donde puedes sentirte como en tu hogar";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(213, 481);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(179, 20);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "¿Problemas al ingresar?";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -225,6 +276,7 @@ namespace Komparte.forms
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(130)))), ((int)(((byte)(97)))));
+            this.panel4.Controls.Add(this.button3);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.button2);
@@ -351,55 +403,20 @@ namespace Komparte.forms
             this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
             this.panel7.Move += new System.EventHandler(this.panel7_Move);
             // 
-            // txtUsuario
+            // button3
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.txtUsuario.Location = new System.Drawing.Point(66, 256);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(270, 19);
-            this.txtUsuario.TabIndex = 8;
-            this.txtUsuario.Text = "USUARIO";
-            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUsuario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUsuario_MouseClick);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Komparte.Properties.Resources.straight_white_line_png_1_1;
-            this.pictureBox4.Location = new System.Drawing.Point(18, 264);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(374, 31);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Komparte.Properties.Resources.straight_white_line_png_1_1;
-            this.pictureBox5.Location = new System.Drawing.Point(18, 317);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(374, 31);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 10;
-            this.pictureBox5.TabStop = false;
-            // 
-            // txtClave
-            // 
-            this.txtClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
-            this.txtClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtClave.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.txtClave.Location = new System.Drawing.Point(69, 305);
-            this.txtClave.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtClave.Name = "txtClave";
-            this.txtClave.Size = new System.Drawing.Size(270, 19);
-            this.txtClave.TabIndex = 11;
-            this.txtClave.Text = "CLAVE";
-            this.txtClave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtClave.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseClick_1);
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button3.Location = new System.Drawing.Point(450, 184);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(140, 32);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Generar QR";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // frmLogin
             // 
@@ -417,8 +434,10 @@ namespace Komparte.forms
             this.Text = "frmLogin";
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -426,8 +445,6 @@ namespace Komparte.forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -460,5 +477,6 @@ namespace Komparte.forms
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox txtClave;
+        private System.Windows.Forms.Button button3;
     }
 }

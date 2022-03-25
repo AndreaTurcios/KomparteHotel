@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Komparte.Class;
+using Komparte.forms;
+using WindowsFormsApp1;
 
 namespace Komparte.forms
 {
@@ -157,6 +159,13 @@ namespace Komparte.forms
             {
                 txtClave.Text = "CLAVE";
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmQR frm = new frmQR();
+            frm.Show();
+            this.Hide();
         }
 
         private void panel7_Paint(object sender, PaintEventArgs e)
