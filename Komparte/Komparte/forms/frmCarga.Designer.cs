@@ -96,7 +96,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(886, 140);
+            this.panel1.Size = new System.Drawing.Size(875, 139);
             this.panel1.TabIndex = 10;
             // 
             // circularProgressBar1
@@ -109,7 +109,7 @@
             this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.circularProgressBar1.InnerMargin = 2;
             this.circularProgressBar1.InnerWidth = -1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(528, 252);
+            this.circularProgressBar1.Location = new System.Drawing.Point(531, 280);
             this.circularProgressBar1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar1.Name = "circularProgressBar1";
@@ -136,10 +136,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Komparte.Properties.Resources.logojpgkomparte;
-            this.pictureBox1.Location = new System.Drawing.Point(-32, 94);
+            this.pictureBox1.Location = new System.Drawing.Point(-32, 141);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(438, 476);
+            this.pictureBox1.Size = new System.Drawing.Size(451, 429);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -148,8 +148,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(130)))), ((int)(((byte)(97)))));
-            this.ClientSize = new System.Drawing.Size(886, 546);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(217)))), ((int)(((byte)(200)))));
+            this.ClientSize = new System.Drawing.Size(875, 570);
             this.Controls.Add(this.circularProgressBar1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblUsername);
