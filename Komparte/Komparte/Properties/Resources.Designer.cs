@@ -103,6 +103,16 @@ namespace Komparte.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logojpgkomparte {
+            get {
+                object obj = ResourceManager.GetObject("logojpgkomparte", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logopngkomparte {
             get {
                 object obj = ResourceManager.GetObject("logopngkomparte", resourceCulture);

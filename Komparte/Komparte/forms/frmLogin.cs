@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using Komparte.Class;
 using Komparte.forms;
 using WindowsFormsApp1;
+using Presentation;
 
 namespace Komparte.forms
 {
@@ -67,9 +68,12 @@ namespace Komparte.forms
 
         private void button4_Click(object sender, EventArgs e)
         {
+            this.Hide();//Ocultar el formualario login.
+            var frmCarga = new frmCarga("Welcome");//Mostrar el formulario de bienvenida.
+            frmCarga.ShowDialog();
             frmMain frm = new frmMain();
             frm.Show();
-            this.Hide();
+
         }
 
         private void label8_Click(object sender, EventArgs e)

@@ -2,13 +2,16 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net461</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>resources\iconoKomparte.ico</ApplicationIcon>
-    <StartupObject />
+    <StartupObject></StartupObject>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CircularProgressBar" Version="2.8.0.16" />
+    <PackageReference Include="WinFormAnimation" Version="1.6.0.4" />
     <PackageReference Include="Zen.Barcode.Rendering.Framework" Version="3.1.10729.1" />
   </ItemGroup>
 
