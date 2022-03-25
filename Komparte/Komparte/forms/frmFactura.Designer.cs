@@ -45,7 +45,8 @@ namespace Komparte.forms
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -65,7 +66,8 @@ namespace Komparte.forms
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.monthCalendar1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.button6);
@@ -76,7 +78,7 @@ namespace Komparte.forms
             this.groupBox1.Size = new System.Drawing.Size(1020, 528);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Gestión de reservaciones";
+            this.groupBox1.Text = "Factura";
             // 
             // groupBox5
             // 
@@ -130,14 +132,14 @@ namespace Komparte.forms
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(104, 34);
+            this.textBox1.Location = new System.Drawing.Point(104, 52);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(245, 31);
             this.textBox1.TabIndex = 18;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(355, 30);
+            this.button6.Location = new System.Drawing.Point(355, 49);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(112, 34);
             this.button6.TabIndex = 17;
@@ -147,7 +149,7 @@ namespace Komparte.forms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 43);
+            this.label2.Location = new System.Drawing.Point(29, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 25);
             this.label2.TabIndex = 7;
@@ -212,11 +214,21 @@ namespace Komparte.forms
             this.label1.TabIndex = 0;
             this.label1.Text = "Factura";
             // 
-            // monthCalendar1
+            // dateTimePicker1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(643, 5);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 6;
+            this.dateTimePicker1.Location = new System.Drawing.Point(664, 50);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(338, 31);
+            this.dateTimePicker1.TabIndex = 27;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(569, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 25);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Fecha:";
             // 
             // frmFactura
             // 
@@ -257,6 +269,7 @@ namespace Komparte.forms
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
