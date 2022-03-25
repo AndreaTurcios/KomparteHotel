@@ -46,6 +46,7 @@ namespace Komparte.forms
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@ namespace Komparte.forms
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -287,6 +287,21 @@ namespace Komparte.forms
             this.panel4.Size = new System.Drawing.Size(590, 217);
             this.panel4.TabIndex = 2;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button3.Location = new System.Drawing.Point(450, 184);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(140, 32);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Generar QR";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -373,8 +388,8 @@ namespace Komparte.forms
             this.lineShape1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lineShape1.BorderColor = System.Drawing.SystemColors.ButtonFace;
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 29;
-            this.lineShape1.X2 = 391;
+            this.lineShape1.X1 = -63;
+            this.lineShape1.X2 = 299;
             this.lineShape1.Y1 = 339;
             this.lineShape1.Y2 = 338;
             this.lineShape1.Click += new System.EventHandler(this.lineShape1_Click);
@@ -402,21 +417,6 @@ namespace Komparte.forms
             this.panel7.MouseCaptureChanged += new System.EventHandler(this.panel7_MouseCaptureChanged);
             this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
             this.panel7.Move += new System.EventHandler(this.panel7_Move);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(450, 184);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 32);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Generar QR";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // frmLogin
             // 

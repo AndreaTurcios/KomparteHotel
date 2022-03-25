@@ -93,6 +93,16 @@ namespace Komparte.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flechas_hacia_atras {
+            get {
+                object obj = ResourceManager.GetObject("flechas-hacia-atras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logopngkomparte {
             get {
                 object obj = ResourceManager.GetObject("logopngkomparte", resourceCulture);
