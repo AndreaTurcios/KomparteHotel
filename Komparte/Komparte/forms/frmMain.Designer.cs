@@ -45,6 +45,9 @@ namespace Komparte
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnClose = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnChildFormClose = new System.Windows.Forms.Button();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.lblCaption = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelBotones2.SuspendLayout();
             this.panelBotones.SuspendLayout();
@@ -98,6 +101,7 @@ namespace Komparte
             this.btnTipoEntorno.Text = "Entorno";
             this.btnTipoEntorno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTipoEntorno.UseVisualStyleBackColor = false;
+            this.btnTipoEntorno.Click += new System.EventHandler(this.btnTipoEntorno_Click);
             // 
             // btnTipoActividades
             // 
@@ -201,6 +205,7 @@ namespace Komparte
             this.button3.Text = "Clientes";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -285,12 +290,40 @@ namespace Komparte
             this.btnClose.Size = new System.Drawing.Size(36, 24);
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnChildFormClose
+            // 
+            this.btnChildFormClose.Location = new System.Drawing.Point(381, 28);
+            this.btnChildFormClose.Name = "btnChildFormClose";
+            this.btnChildFormClose.Size = new System.Drawing.Size(158, 41);
+            this.btnChildFormClose.TabIndex = 2;
+            this.btnChildFormClose.Text = "btnChildFormClose";
+            this.btnChildFormClose.UseVisualStyleBackColor = true;
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.Location = new System.Drawing.Point(391, 75);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(1072, 658);
+            this.panelDesktop.TabIndex = 3;
+            // 
+            // lblCaption
+            // 
+            this.lblCaption.AutoSize = true;
+            this.lblCaption.Location = new System.Drawing.Point(580, 38);
+            this.lblCaption.Name = "lblCaption";
+            this.lblCaption.Size = new System.Drawing.Size(51, 20);
+            this.lblCaption.TabIndex = 0;
+            this.lblCaption.Text = "label1";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1463, 745);
+            this.Controls.Add(this.lblCaption);
+            this.Controls.Add(this.panelDesktop);
+            this.Controls.Add(this.btnChildFormClose);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -330,6 +363,9 @@ namespace Komparte
         private System.Windows.Forms.Panel panelBotones2;
         private System.Windows.Forms.Button btnTipoEntorno;
         private System.Windows.Forms.Button btnTipoActividades;
+        private System.Windows.Forms.Button btnChildFormClose;
+        private System.Windows.Forms.Panel panelDesktop;
+        private System.Windows.Forms.Label lblCaption;
     }
 }
 
