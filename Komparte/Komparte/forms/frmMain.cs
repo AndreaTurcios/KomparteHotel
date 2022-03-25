@@ -88,7 +88,8 @@ namespace Komparte
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            Application.Exit();
         }
 
         private void button2_Click(object sender, EventArgs e)

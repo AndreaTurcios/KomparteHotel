@@ -30,7 +30,6 @@ namespace Komparte
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelBotones2 = new System.Windows.Forms.Panel();
             this.btnTipoEntorno = new System.Windows.Forms.Button();
@@ -294,7 +293,6 @@ namespace Komparte
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MinimumSize = new System.Drawing.Size(1069, 600);
