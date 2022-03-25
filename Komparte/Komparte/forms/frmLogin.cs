@@ -99,6 +99,64 @@ namespace Komparte.forms
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void textBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void lineShape1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (txtUsuario.Text == "USUARIO")
+            {
+                txtUsuario.Text = "";
+            }
+            else if (txtUsuario.Text == "")
+            {
+                txtUsuario.Text = "USUARIO";
+            }
+        }
+
+        private void textBox1_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            if (txtClave.Text == "CLAVE")
+            {
+                txtClave.Text = "";
+            }
+            else if (txtClave.Text == "")
+            {
+                txtClave.Text = "CLAVE";
+            }
+        }
+
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
         }

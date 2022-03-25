@@ -9,6 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\reference assemblies\microsoft\vbpowerpacks\v12.0\microsoft.visualbasic.powerpacks.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
