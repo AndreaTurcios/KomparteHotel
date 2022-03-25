@@ -31,12 +31,10 @@ namespace Komparte.forms
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        private int tolerance = 15;
         private const int WM_NCHITTEST = 132;
         private const int HTBOTTOMRIGHT = 17;
         private Rectangle sizeGripRectangle;
 
-        private int clickx = 0, clicky = 0;
         protected override void WndProc(ref Message m)
         {
             switch (m.Msg)
