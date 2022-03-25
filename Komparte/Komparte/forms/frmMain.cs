@@ -24,7 +24,9 @@ namespace Komparte
             this.FormBorderStyle = FormBorderStyle.None;
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true);
-            }
+            btnChildFormClose.Visible = false;
+            lblCaption.Visible = false;
+        }
         private const int cGrip = 30;      // Grip size
         private const int cCaption = 610;   // Caption bar height;
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -198,6 +200,11 @@ namespace Komparte
         private void button3_Click(object sender, EventArgs e)
         {
             OpenChildForm<frmClientes>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
+
+        private void btnChildFormClose_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

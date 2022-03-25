@@ -64,9 +64,68 @@ namespace Komparte.forms
         {
 
         }
+        /*
+        private void Login()
+        {//Iniciar sesión
+
+            //Validar campos
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text))
+            {
+                MessageBox.Show("Ingrese nombre de usuario o correo electrónico");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtClave.Text))
+            {
+                MessageBox.Show("Ingrese contraseña");
+                return;
+            }
+            //Fin Validar campos
+
+            if (userModel != null)//Si el inicio de sesión fue exitosa.
+            {
+
+
+                Form mainForm;//Definir el campo para el formulario principal.
+
+                if (Common.ActiveUser.Position == Positions.GeneralManager || ActiveUser.Position == Positions.Accountant
+                    || Common.ActiveUser.Position == Positions.AdministrativeAssistant || ActiveUser.Position == Positions.SystemAdministrator)
+                {
+                    //Enviar el modelo de vista del usuario conectado, para mostrar sus datos en el formulario principal. 
+                    mainForm = new frmMain(userModel);
+                }
+                else if (ActiveUser.Position == Positions.HMR)
+                {
+                    mainForm = new ChildForms.FormUsers();
+                }
+                else if (ActiveUser.Position == Positions.Receptionist)
+                {
+                    mainForm = new ChildForms.FormPacients();
+                }
+                else if (ActiveUser.Position == Positions.MarketingGuru)
+                {
+                    mainForm = new ChildForms.FormReports();
+                }
+                else
+                {
+                    mainForm = null;
+                    MessageBox.Show("Usted no tiene un cargo asignado, no puede iniciar sesión.", "Mensaje",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                this.Hide();//Ocultar el formualario login.
+                var welcomeForm = new WelcomeForm(userModel.FullName);//Mostrar el formulario de bienvenida.
+                welcomeForm.ShowDialog();
+                mainForm.FormClosed += new FormClosedEventHandler(MainForm_SessionClosed);//Asociar el evento cerrado, para limpiar el formulario login cuando se cierre sesion desde el formulario principal.
+                mainForm.Show();//Mostrar el formulario principal.
+            }
+            else //Si el inicio de sesión NO fue exitosa, mostrar mensaje.
+                ShowMessage("Usuario o contraseña incorrecto");
+
+        }*/
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //Login();//Invocar el método Iniciar sesión.
             this.Hide();//Ocultar el formualario login.
             var frmCarga = new frmCarga("Welcome");//Mostrar el formulario de bienvenida.
             frmCarga.ShowDialog();

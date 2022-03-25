@@ -298,6 +298,7 @@ namespace Komparte
             this.btnChildFormClose.TabIndex = 2;
             this.btnChildFormClose.Text = "btnChildFormClose";
             this.btnChildFormClose.UseVisualStyleBackColor = true;
+            this.btnChildFormClose.Click += new System.EventHandler(this.btnChildFormClose_Click);
             // 
             // panelDesktop
             // 
