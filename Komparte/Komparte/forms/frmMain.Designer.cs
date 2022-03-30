@@ -320,7 +320,7 @@ namespace Komparte
             this.panelDesktop.Controls.Add(this.pictureBox1);
             this.panelDesktop.Location = new System.Drawing.Point(391, 93);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1213, 703);
+            this.panelDesktop.Size = new System.Drawing.Size(1201, 691);
             this.panelDesktop.TabIndex = 3;
             // 
             // lblCaption
