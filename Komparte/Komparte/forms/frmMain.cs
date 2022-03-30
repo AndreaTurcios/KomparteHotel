@@ -205,7 +205,7 @@ namespace Komparte
 
         private void btnChildFormClose_Click(object sender, EventArgs e)
         {
-
+            CloseChildForm();
         }
     }
 }
