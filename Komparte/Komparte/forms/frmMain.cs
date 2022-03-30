@@ -20,7 +20,8 @@ namespace Komparte
         {
             InitializeComponent();
             hideSubMenu();
-
+            ResetDefaults();
+            listChildForms = new List<Form>();
             this.FormBorderStyle = FormBorderStyle.None;
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true);
