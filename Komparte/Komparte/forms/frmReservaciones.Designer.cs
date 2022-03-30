@@ -294,7 +294,7 @@ namespace Komparte.forms.obj
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(1118, 345);
+            this.groupBox2.Size = new System.Drawing.Size(1175, 345);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos";
@@ -311,7 +311,7 @@ namespace Komparte.forms.obj
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(984, 289);
+            this.button5.Location = new System.Drawing.Point(1052, 289);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(108, 43);
@@ -327,7 +327,7 @@ namespace Komparte.forms.obj
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1075, 262);
+            this.dataGridView1.Size = new System.Drawing.Size(1143, 262);
             this.dataGridView1.TabIndex = 0;
             // 
             // panel2

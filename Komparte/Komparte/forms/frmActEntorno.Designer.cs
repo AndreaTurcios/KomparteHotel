@@ -54,30 +54,29 @@ namespace Komparte.forms
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(1, 1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(799, 83);
+            this.panel2.Size = new System.Drawing.Size(1027, 111);
             this.panel2.TabIndex = 7;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(276, 15);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(355, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 25);
+            this.label3.Size = new System.Drawing.Size(256, 38);
             this.label3.TabIndex = 0;
             this.label3.Text = "Gestión de entorno";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 42);
+            this.label1.Location = new System.Drawing.Point(30, 56);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 15);
+            this.label1.Size = new System.Drawing.Size(66, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "Entorno";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -85,9 +84,10 @@ namespace Komparte.forms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(312, 42);
+            this.label2.Location = new System.Drawing.Point(602, 62);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 15);
+            this.label2.Size = new System.Drawing.Size(90, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "Actividades";
             // 
@@ -101,36 +101,37 @@ namespace Komparte.forms
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 89);
+            this.groupBox1.Location = new System.Drawing.Point(15, 119);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 151);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(998, 201);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Control de Entorno";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(596, 122);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Location = new System.Drawing.Point(766, 163);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(78, 20);
+            this.button4.Size = new System.Drawing.Size(100, 27);
             this.button4.TabIndex = 13;
             this.button4.Text = "Limpiar";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(415, 39);
+            this.textBox1.Location = new System.Drawing.Point(739, 56);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.Size = new System.Drawing.Size(127, 26);
             this.textBox1.TabIndex = 8;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(415, 122);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(534, 163);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(78, 20);
+            this.button3.Size = new System.Drawing.Size(100, 27);
             this.button3.TabIndex = 12;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
@@ -138,17 +139,17 @@ namespace Komparte.forms
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(110, 39);
+            this.textBox2.Location = new System.Drawing.Point(141, 52);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
+            this.textBox2.Size = new System.Drawing.Size(127, 26);
             this.textBox2.TabIndex = 9;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(226, 122);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(291, 163);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 20);
+            this.button2.Size = new System.Drawing.Size(100, 27);
             this.button2.TabIndex = 11;
             this.button2.Text = "Actualizar";
             this.button2.UseVisualStyleBackColor = true;
@@ -156,10 +157,9 @@ namespace Komparte.forms
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(34, 122);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(44, 163);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 20);
+            this.button1.Size = new System.Drawing.Size(107, 27);
             this.button1.TabIndex = 10;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
@@ -167,42 +167,46 @@ namespace Komparte.forms
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 22);
+            this.dataGridView1.Location = new System.Drawing.Point(22, 27);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(737, 106);
+            this.dataGridView1.Size = new System.Drawing.Size(948, 178);
             this.dataGridView1.TabIndex = 4;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 266);
+            this.groupBox2.Location = new System.Drawing.Point(15, 328);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(776, 172);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(998, 256);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(665, 139);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Location = new System.Drawing.Point(870, 212);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(78, 28);
+            this.button5.Size = new System.Drawing.Size(100, 37);
             this.button5.TabIndex = 8;
             this.button5.Text = "Imprimir";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // frmActEntorno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1029, 600);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmActEntorno";
             this.Text = "frmActEntorno";
             this.panel2.ResumeLayout(false);
