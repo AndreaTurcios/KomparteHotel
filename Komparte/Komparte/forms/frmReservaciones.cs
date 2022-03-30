@@ -12,12 +12,19 @@ namespace Komparte.forms.obj
 {
     public partial class frmReservaciones : Form
     {
+        //private UserModel userModel = new UserModel();
+        //private List<UserModel> userList;
         public frmReservaciones()
         {
             InitializeComponent();
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

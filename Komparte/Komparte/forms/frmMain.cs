@@ -14,7 +14,7 @@ using Komparte.forms.obj;
 namespace Komparte
 {
     public partial class frmMain : Form
-    {     
+    {
         private List<Form> listChildForms; //Obtiene o establece los formularios secundarios abiertos en el panel escritorio del formualario.
         private Form activeChildForm;//Obtiene o establece el formulario secundario mostrado actualmente.
         public frmMain()
@@ -159,6 +159,7 @@ namespace Komparte
             form.Show();//Mostrar el formulario 
             form.BringToFront();// Traer al frente
             form.Focus();//Enfocar el formulario
+            lblCaption.Visible = true;
             lblCaption.Text = form.Text;//Establecer el titulo del formulario.
             activeChildForm = form;//Establecer como formulario activo.
         }

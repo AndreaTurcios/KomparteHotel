@@ -51,9 +51,9 @@ namespace Komparte
             this.panelMenu.SuspendLayout();
             this.panelBotones2.SuspendLayout();
             this.panelBotones.SuspendLayout();
-            this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.panelDesktop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -70,7 +70,7 @@ namespace Komparte
             this.panelMenu.Location = new System.Drawing.Point(0, 28);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(384, 717);
+            this.panelMenu.Size = new System.Drawing.Size(384, 768);
             this.panelMenu.TabIndex = 0;
             // 
             // panelBotones2
@@ -147,7 +147,7 @@ namespace Komparte
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 657);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 708);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -245,7 +245,6 @@ namespace Komparte
             // 
             // panelLogo
             // 
-            this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -256,10 +255,10 @@ namespace Komparte
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Komparte.Properties.Resources.logopngkomparte;
-            this.pictureBox1.Location = new System.Drawing.Point(41, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(416, 136);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(254, 192);
+            this.pictureBox1.Size = new System.Drawing.Size(397, 391);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -275,7 +274,7 @@ namespace Komparte
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1463, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1604, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.btnClose_Click);
@@ -292,27 +291,34 @@ namespace Komparte
             // 
             // btnChildFormClose
             // 
-            this.btnChildFormClose.Location = new System.Drawing.Point(391, 41);
+            this.btnChildFormClose.BackColor = System.Drawing.Color.White;
+            this.btnChildFormClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnChildFormClose.FlatAppearance.BorderSize = 0;
+            this.btnChildFormClose.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnChildFormClose.Location = new System.Drawing.Point(391, 46);
             this.btnChildFormClose.Name = "btnChildFormClose";
-            this.btnChildFormClose.Size = new System.Drawing.Size(59, 31);
+            this.btnChildFormClose.Size = new System.Drawing.Size(58, 41);
             this.btnChildFormClose.TabIndex = 2;
             this.btnChildFormClose.Text = "X";
-            this.btnChildFormClose.UseVisualStyleBackColor = true;
+            this.btnChildFormClose.UseVisualStyleBackColor = false;
             this.btnChildFormClose.Click += new System.EventHandler(this.btnChildFormClose_Click);
             // 
             // panelDesktop
             // 
-            this.panelDesktop.Location = new System.Drawing.Point(391, 75);
+            this.panelDesktop.Controls.Add(this.pictureBox1);
+            this.panelDesktop.Location = new System.Drawing.Point(391, 93);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1072, 658);
+            this.panelDesktop.Size = new System.Drawing.Size(1213, 703);
             this.panelDesktop.TabIndex = 3;
             // 
             // lblCaption
             // 
             this.lblCaption.AutoSize = true;
-            this.lblCaption.Location = new System.Drawing.Point(474, 41);
+            this.lblCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblCaption.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblCaption.Location = new System.Drawing.Point(455, 61);
             this.lblCaption.Name = "lblCaption";
-            this.lblCaption.Size = new System.Drawing.Size(51, 20);
+            this.lblCaption.Size = new System.Drawing.Size(70, 26);
             this.lblCaption.TabIndex = 0;
             this.lblCaption.Text = "label1";
             // 
@@ -321,7 +327,7 @@ namespace Komparte
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1463, 745);
+            this.ClientSize = new System.Drawing.Size(1604, 796);
             this.Controls.Add(this.lblCaption);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.btnChildFormClose);
@@ -338,10 +344,10 @@ namespace Komparte
             this.panelMenu.ResumeLayout(false);
             this.panelBotones2.ResumeLayout(false);
             this.panelBotones.ResumeLayout(false);
-            this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panelDesktop.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
