@@ -292,9 +292,9 @@ namespace Komparte
             // 
             // btnChildFormClose
             // 
-            this.btnChildFormClose.Location = new System.Drawing.Point(391, 31);
+            this.btnChildFormClose.Location = new System.Drawing.Point(391, 41);
             this.btnChildFormClose.Name = "btnChildFormClose";
-            this.btnChildFormClose.Size = new System.Drawing.Size(58, 41);
+            this.btnChildFormClose.Size = new System.Drawing.Size(59, 31);
             this.btnChildFormClose.TabIndex = 2;
             this.btnChildFormClose.Text = "X";
             this.btnChildFormClose.UseVisualStyleBackColor = true;
@@ -310,7 +310,7 @@ namespace Komparte
             // lblCaption
             // 
             this.lblCaption.AutoSize = true;
-            this.lblCaption.Location = new System.Drawing.Point(580, 38);
+            this.lblCaption.Location = new System.Drawing.Point(474, 41);
             this.lblCaption.Name = "lblCaption";
             this.lblCaption.Size = new System.Drawing.Size(51, 20);
             this.lblCaption.TabIndex = 0;

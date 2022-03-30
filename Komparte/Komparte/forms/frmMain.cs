@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Komparte.forms.obj;
 
 namespace Komparte
 {
@@ -20,13 +21,12 @@ namespace Komparte
         {
             InitializeComponent();
             hideSubMenu();
-            ResetDefaults();
-            listChildForms = new List<Form>();
             this.FormBorderStyle = FormBorderStyle.None;
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             btnChildFormClose.Visible = false;
             lblCaption.Visible = false;
+            listChildForms = new List<Form>();
         }
         private const int cGrip = 30;      // Grip size
         private const int cCaption = 610;   // Caption bar height;
@@ -75,7 +75,7 @@ namespace Komparte
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            OpenChildForm<frmReservaciones>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
