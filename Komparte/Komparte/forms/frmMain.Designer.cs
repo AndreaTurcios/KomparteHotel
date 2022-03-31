@@ -379,6 +379,7 @@ namespace Komparte
             // pictureBoxPhoto
             // 
             this.pictureBoxPhoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxPhoto.Image = global::Komparte.Properties.Resources.DefaultUserProfile;
             this.pictureBoxPhoto.Location = new System.Drawing.Point(27, 23);
             this.pictureBoxPhoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxPhoto.Name = "pictureBoxPhoto";
