@@ -291,7 +291,7 @@ namespace Komparte
             this.lblPosition.AutoSize = true;
             this.lblPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPosition.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblPosition.Location = new System.Drawing.Point(144, 97);
+            this.lblPosition.Location = new System.Drawing.Point(179, 73);
             this.lblPosition.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPosition.Name = "lblPosition";
             this.lblPosition.Size = new System.Drawing.Size(76, 24);
@@ -303,7 +303,7 @@ namespace Komparte
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastName.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblLastName.Location = new System.Drawing.Point(166, 49);
+            this.lblLastName.Location = new System.Drawing.Point(144, 49);
             this.lblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(94, 24);
