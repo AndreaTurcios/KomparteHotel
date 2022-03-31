@@ -23,6 +23,7 @@ namespace Domain
         private string _position;
         private string _email;
         private string _telefono;
+        private string _direccion;
         private byte[] _photo;
         private UserDao _userDao;
         #endregion
@@ -34,9 +35,10 @@ namespace Domain
             _userDao = new UserDao();
         }
 
-        public UserModel(int id, string firstName, string userName, string password,  string DUI, string telefono,string position, string email, byte[] photo)
+        public UserModel(int id, string firstName, string userName, string password,  string DUI, string telefono, string direccion, string email, string position)
         {
             Id = id;
+            Direction = direccion;
             Username = userName;
             Password = password;
             FirstName = firstName;
@@ -44,7 +46,6 @@ namespace Domain
             Phone = telefono;
             Position = position;
             Email = email;
-
             _userDao = new UserDao();
         }
         #endregion
@@ -103,11 +104,20 @@ namespace Domain
             set { _DUI = value; }
         }
 
+        [DisplayName("Direccion")]//Nombre a visualizar.
+        [Browsable(false)]//Ocultar visualización
+        [Required(ErrorMessage = "Por favor ingrese Direccion.")]//Validaciones
+        public string Direction
+        {
+            get { return _direccion; }
+            set { _direccion = value; }
+        }
+
         //Posición 5
         [DisplayName("Telefono")]//Nombre a visualizar.
         [Browsable(false)]//Ocultar visualización
         [Required(ErrorMessage = "Por favor ingrese DUI.")]//Validaciones
-        [StringLength(100, MinimumLength = 10, ErrorMessage = "El apellido debe contener 10 digitos incluyendo guion")]
+        [StringLength(100, MinimumLength = 8, ErrorMessage = "El telefono debe contener 8 digitos incluyendo guion")]
         public string Phone
         {
             get { return _telefono; }

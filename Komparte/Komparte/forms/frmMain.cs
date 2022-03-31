@@ -47,7 +47,8 @@ namespace Komparte
         public void LoadUserData(Domain.UserModel userModel)
         {
             //Cargar los datos del usuario conectado en el menú lateral.
-            lblName.Text = userModel.FirstName;
+            lblName.Text = userModel.Username;
+            lblUserr.Text = userModel.Username;
             lblLastName.Text = userModel.Email;
             lblPosition.Text = userModel.Position;
         }
@@ -234,6 +235,17 @@ namespace Komparte
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void horaFecha_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("HH:mm");
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void pictureBoxPhoto_Click(object sender, EventArgs e)
         {
 
         }

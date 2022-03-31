@@ -118,13 +118,6 @@ namespace DataAccess.DBServices
                     command.Parameters.AddWithValue("@DUI", user.DUI);
                     command.Parameters.AddWithValue("@position", user.Position);
                     command.Parameters.AddWithValue("@email", user.Email);
-                    if (user.Photo != null)//Si la propiedad Foto es diferente a nulo, asignar el valor de la propiedad.
-                        command.Parameters.Add(new SqlParameter("@photo", user.Photo) { SqlDbType = SqlDbType.VarBinary });
-                    else //Caso contrario asignar un valor nulo de SQL.  
-                        command.Parameters.Add(new SqlParameter("@photo", DBNull.Value) { SqlDbType = SqlDbType.VarBinary });
-                    //En este caso del campo Foto, es importante especificar explícitamente el tipo de dato de SQL.
-                    //Puedes hacer lo mismo con los otros parámetros, sin embargo es opcional, El tipo de datos será derivará del tipo de dato de su valor.
-
                     command.CommandType = CommandType.Text;
                     result = command.ExecuteNonQuery(); //Ejecutar el comando de texto y asignar el resultado al campo result.
                 }
@@ -141,8 +134,8 @@ namespace DataAccess.DBServices
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = @"update  Users	
-	                                        set userName=@userName,password=@password,firstName=@firstName,lastName= @lastName,position= @position,email=@email, profilePicture=@photo  
+                    command.CommandText = @"update  empleado	
+	                                        set nombre_usuario=@userName,password=@password,firstName=@firstName,lastName= @lastName,position= @position,email=@email, profilePicture=@photo  
 	                                        where id=@id ";
                     command.Parameters.AddWithValue("@id", user.Id);
                     command.Parameters.AddWithValue("@userName", user.Username);
@@ -151,11 +144,6 @@ namespace DataAccess.DBServices
                     command.Parameters.AddWithValue("@lastName", user.DUI);
                     command.Parameters.AddWithValue("@position", user.Position);
                     command.Parameters.AddWithValue("@email", user.Email);
-                    if (user.Photo != null)
-                        command.Parameters.Add(new SqlParameter("@photo", user.Photo) { SqlDbType = SqlDbType.VarBinary });
-                    else
-                        command.Parameters.Add(new SqlParameter("@photo", DBNull.Value) { SqlDbType = SqlDbType.VarBinary });
-
                     command.CommandType = CommandType.Text;
                     result = command.ExecuteNonQuery();
                 }
@@ -213,7 +201,7 @@ namespace DataAccess.DBServices
                 }
             }
         }
-        public User GetUserByUsername(string user)
+        public User GetUserByUsername(string user, string email)
         {//Obtener usuario por nombre de usuario o email.
             using (var connection = GetConnection())
             {
@@ -223,6 +211,7 @@ namespace DataAccess.DBServices
                     command.Connection = connection;
                     command.CommandText = "select *from empleado where nombre_usuario=@user or correo=@user";
                     command.Parameters.AddWithValue("@user", user);
+                    command.Parameters.AddWithValue("@user", email);
                     command.CommandType = CommandType.Text;
 
                     SqlDataReader reader = command.ExecuteReader();
@@ -231,12 +220,13 @@ namespace DataAccess.DBServices
                         var userObj = new User
                         {
                             Id = (int)reader[0],
-                            FirstName = reader[1].ToString(),
-                            Username = reader[2].ToString(),
-                            Password = reader[3].ToString(),
+                            Username = reader[1].ToString(),
+                            Password = reader[2].ToString(),
+                            FirstName = reader[3].ToString(),
                             DUI = reader[4].ToString(),
-                            Position = reader[5].ToString(),
-                            Email = reader[6].ToString()
+                            Direction = reader[5].ToString(),
+                            Position = reader[6].ToString(),
+                            Email = reader[7].ToString()
                         };
                         return userObj;
                     }
@@ -270,9 +260,9 @@ namespace DataAccess.DBServices
                                 Password = reader[2].ToString(),
                                 FirstName = reader[3].ToString(),
                                 DUI = reader[4].ToString(),
-                                Position = reader[5].ToString(),
-                                Email = reader[6].ToString(),
-                                Photo = reader[7] != DBNull.Value ? (byte[])reader[7] : null
+                                Direction = reader[5].ToString(),
+                                Position = reader[6].ToString(),
+                                Email = reader[7].ToString()
                             };
                             userList.Add(userObj);
                         }

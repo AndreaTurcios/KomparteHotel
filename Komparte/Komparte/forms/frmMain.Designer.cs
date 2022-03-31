@@ -30,6 +30,7 @@ namespace Komparte
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelBotones2 = new System.Windows.Forms.Panel();
             this.btnTipoEntorno = new System.Windows.Forms.Button();
@@ -53,6 +54,11 @@ namespace Komparte
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCaption = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.horaFecha = new System.Windows.Forms.Timer(this.components);
+            this.lblUserr = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelBotones2.SuspendLayout();
             this.panelBotones.SuspendLayout();
@@ -327,6 +333,7 @@ namespace Komparte
             this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPhoto.TabIndex = 14;
             this.pictureBoxPhoto.TabStop = false;
+            this.pictureBoxPhoto.Click += new System.EventHandler(this.pictureBoxPhoto_Click);
             // 
             // menuStrip1
             // 
@@ -369,6 +376,10 @@ namespace Komparte
             // 
             // panelDesktop
             // 
+            this.panelDesktop.Controls.Add(this.lblUserr);
+            this.panelDesktop.Controls.Add(this.label2);
+            this.panelDesktop.Controls.Add(this.lblFecha);
+            this.panelDesktop.Controls.Add(this.lblHora);
             this.panelDesktop.Controls.Add(this.pictureBox1);
             this.panelDesktop.Location = new System.Drawing.Point(391, 93);
             this.panelDesktop.Name = "panelDesktop";
@@ -378,10 +389,10 @@ namespace Komparte
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Komparte.Properties.Resources.logopngkomparte;
-            this.pictureBox1.Location = new System.Drawing.Point(416, 136);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 127);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(397, 391);
+            this.pictureBox1.Size = new System.Drawing.Size(461, 444);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -397,6 +408,59 @@ namespace Komparte
             this.lblCaption.Size = new System.Drawing.Size(71, 26);
             this.lblCaption.TabIndex = 0;
             this.lblCaption.Text = "Home";
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.BackColor = System.Drawing.Color.Transparent;
+            this.lblHora.Font = new System.Drawing.Font("Sanseriffic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
+            this.lblHora.Location = new System.Drawing.Point(433, 247);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(163, 75);
+            this.lblHora.TabIndex = 1;
+            this.lblHora.Text = "hora";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.BackColor = System.Drawing.Color.Transparent;
+            this.lblFecha.Font = new System.Drawing.Font("Sanseriffic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.Color.Silver;
+            this.lblFecha.Location = new System.Drawing.Point(490, 322);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(140, 55);
+            this.lblFecha.TabIndex = 2;
+            this.lblFecha.Text = "fecha";
+            // 
+            // horaFecha
+            // 
+            this.horaFecha.Enabled = true;
+            this.horaFecha.Tick += new System.EventHandler(this.horaFecha_Tick);
+            // 
+            // lblUserr
+            // 
+            this.lblUserr.AutoSize = true;
+            this.lblUserr.BackColor = System.Drawing.Color.Transparent;
+            this.lblUserr.Font = new System.Drawing.Font("Sanseriffic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
+            this.lblUserr.Location = new System.Drawing.Point(602, 32);
+            this.lblUserr.Name = "lblUserr";
+            this.lblUserr.Size = new System.Drawing.Size(111, 55);
+            this.lblUserr.TabIndex = 3;
+            this.lblUserr.Text = "user";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Sanseriffic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Silver;
+            this.label2.Location = new System.Drawing.Point(333, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(263, 55);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Bienvenid@,";
             // 
             // frmMain
             // 
@@ -426,6 +490,7 @@ namespace Komparte
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panelDesktop.ResumeLayout(false);
+            this.panelDesktop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -457,6 +522,11 @@ namespace Komparte
         internal System.Windows.Forms.Label lblLastName;
         internal System.Windows.Forms.Label lblName;
         internal System.Windows.Forms.PictureBox pictureBoxPhoto;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Timer horaFecha;
+        private System.Windows.Forms.Label lblUserr;
+        private System.Windows.Forms.Label label2;
     }
 }
 
