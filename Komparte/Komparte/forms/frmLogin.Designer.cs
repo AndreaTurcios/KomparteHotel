@@ -29,8 +29,8 @@ namespace Komparte.forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -58,6 +58,9 @@ namespace Komparte.forms
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblErrorMessage = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -68,14 +71,16 @@ namespace Komparte.forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLogo
             // 
             this.panelLogo.Controls.Add(this.lblErrorMessage);
-            this.panelLogo.Controls.Add(this.label4);
+            this.panelLogo.Controls.Add(this.pictureBox6);
             this.panelLogo.Controls.Add(this.txtClave);
-            this.panelLogo.Controls.Add(this.pictureBox2);
             this.panelLogo.Controls.Add(this.pictureBox5);
             this.panelLogo.Controls.Add(this.txtUsuario);
             this.panelLogo.Controls.Add(this.pictureBox4);
@@ -84,23 +89,15 @@ namespace Komparte.forms
             this.panelLogo.Controls.Add(this.panel1);
             this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Controls.Add(this.shapeContainer1);
-            this.panelLogo.Location = new System.Drawing.Point(0, 51);
+            this.panelLogo.Controls.Add(this.pictureBox8);
+            this.panelLogo.Controls.Add(this.pictureBox2);
+            this.panelLogo.Controls.Add(this.pictureBox7);
+            this.panelLogo.Location = new System.Drawing.Point(13, 51);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(1124, 507);
+            this.panelLogo.Size = new System.Drawing.Size(1111, 507);
             this.panelLogo.TabIndex = 0;
             this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(213, 481);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(179, 20);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "¿Problemas al ingresar?";
             // 
             // txtClave
             // 
@@ -119,10 +116,10 @@ namespace Komparte.forms
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Komparte.Properties.Resources.blancolinea;
-            this.pictureBox2.Location = new System.Drawing.Point(410, 11);
+            this.pictureBox2.Location = new System.Drawing.Point(410, -1);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 475);
+            this.pictureBox2.Size = new System.Drawing.Size(37, 508);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -170,7 +167,7 @@ namespace Komparte.forms
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(12, 367);
+            this.button4.Location = new System.Drawing.Point(23, 368);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
@@ -193,18 +190,19 @@ namespace Komparte.forms
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Location = new System.Drawing.Point(475, 11);
+            this.panel1.Location = new System.Drawing.Point(454, 26);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(627, 490);
+            this.panel1.Size = new System.Drawing.Size(635, 472);
             this.panel1.TabIndex = 4;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
+            this.panel5.Controls.Add(this.button3);
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.label7);
@@ -239,8 +237,9 @@ namespace Komparte.forms
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(590, 39);
             this.button1.TabIndex = 8;
-            this.button1.Text = "Recuperación por administrador";
+            this.button1.Text = "Recuperación por preguntas";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label7
             // 
@@ -278,7 +277,6 @@ namespace Komparte.forms
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(130)))), ((int)(((byte)(97)))));
-            this.panel4.Controls.Add(this.button3);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.button2);
@@ -286,7 +284,7 @@ namespace Komparte.forms
             this.panel4.Location = new System.Drawing.Point(24, 253);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(590, 217);
+            this.panel4.Size = new System.Drawing.Size(590, 198);
             this.panel4.TabIndex = 2;
             // 
             // button3
@@ -295,7 +293,7 @@ namespace Komparte.forms
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(450, 184);
+            this.button3.Location = new System.Drawing.Point(444, 184);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(140, 32);
@@ -372,7 +370,7 @@ namespace Komparte.forms
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape2,
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(1124, 507);
+            this.shapeContainer1.Size = new System.Drawing.Size(1111, 507);
             this.shapeContainer1.TabIndex = 7;
             this.shapeContainer1.TabStop = false;
             // 
@@ -390,8 +388,8 @@ namespace Komparte.forms
             this.lineShape1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lineShape1.BorderColor = System.Drawing.SystemColors.ButtonFace;
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = -63;
-            this.lineShape1.X2 = 299;
+            this.lineShape1.X1 = -70;
+            this.lineShape1.X2 = 292;
             this.lineShape1.Y1 = 339;
             this.lineShape1.Y2 = 338;
             this.lineShape1.Click += new System.EventHandler(this.lineShape1_Click);
@@ -399,9 +397,9 @@ namespace Komparte.forms
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Komparte.Properties.Resources.cerrar;
-            this.pictureBox3.Location = new System.Drawing.Point(1091, 12);
+            this.pictureBox3.Location = new System.Drawing.Point(1065, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(21, 24);
+            this.pictureBox3.Size = new System.Drawing.Size(33, 38);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -413,7 +411,7 @@ namespace Komparte.forms
             this.panel7.Controls.Add(this.pictureBox3);
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1129, 45);
+            this.panel7.Size = new System.Drawing.Size(1111, 45);
             this.panel7.TabIndex = 5;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             this.panel7.MouseCaptureChanged += new System.EventHandler(this.panel7_MouseCaptureChanged);
@@ -423,19 +421,59 @@ namespace Komparte.forms
             // lblErrorMessage
             // 
             this.lblErrorMessage.AutoSize = true;
+            this.lblErrorMessage.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorMessage.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblErrorMessage.Location = new System.Drawing.Point(14, 448);
+            this.lblErrorMessage.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorMessage.Image")));
+            this.lblErrorMessage.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorMessage.Location = new System.Drawing.Point(18, 446);
+            this.lblErrorMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblErrorMessage.MaximumSize = new System.Drawing.Size(548, 0);
             this.lblErrorMessage.Name = "lblErrorMessage";
-            this.lblErrorMessage.Size = new System.Drawing.Size(66, 30);
-            this.lblErrorMessage.TabIndex = 12;
-            this.lblErrorMessage.Text = "Error";
+            this.lblErrorMessage.Size = new System.Drawing.Size(125, 26);
+            this.lblErrorMessage.TabIndex = 18;
+            this.lblErrorMessage.Text = "    Message";
+            this.lblErrorMessage.Visible = false;
+            this.lblErrorMessage.Click += new System.EventHandler(this.lblErrorMessage_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Komparte.Properties.Resources.straight_white_line_png_1_1;
+            this.pictureBox6.Location = new System.Drawing.Point(-97, -15);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(1304, 35);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 19;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Komparte.Properties.Resources.blancolinea;
+            this.pictureBox7.Location = new System.Drawing.Point(-13, 3);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(37, 504);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 20;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Komparte.Properties.Resources.straight_white_line_png_1_1;
+            this.pictureBox8.Location = new System.Drawing.Point(-38, 478);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(511, 35);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 21;
+            this.pictureBox8.TabStop = false;
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
-            this.ClientSize = new System.Drawing.Size(1124, 561);
+            this.ClientSize = new System.Drawing.Size(1113, 561);
             this.Controls.Add(this.panelLogo);
             this.Controls.Add(this.panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -457,6 +495,9 @@ namespace Komparte.forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -472,7 +513,6 @@ namespace Komparte.forms
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button2;
@@ -491,5 +531,8 @@ namespace Komparte.forms
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lblErrorMessage;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }

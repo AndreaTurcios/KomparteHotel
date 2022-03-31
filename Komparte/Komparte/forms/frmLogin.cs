@@ -69,6 +69,7 @@ namespace Komparte.forms
         {
             lblErrorMessage.Text = "    " + message;
             lblErrorMessage.Visible = true;
+
         }
 
         private void SetPlaceholder()
@@ -156,7 +157,7 @@ namespace Komparte.forms
                 mainForm.Show();//Mostrar el formulario principal.
             }
             else //Si el inicio de sesión NO fue exitosa, mostrar mensaje.
-                MessageBox.Show("Inicio de sesion erróneo");
+                ShowMessage("Usuario o contraseña incorrecto");
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -261,6 +262,16 @@ namespace Komparte.forms
 
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        private void lblErrorMessage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
