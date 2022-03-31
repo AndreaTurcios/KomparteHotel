@@ -42,14 +42,10 @@ namespace DataAccess.DBServices
                         var userObj = new User //Crear objeto y asignar los datos del resultado.
                         {
                             Id = (int)reader[0], //Posicion 0
-                            Username = reader[1].ToString(),
-                            FirstName = reader[3].ToString(),
-                            LastName = reader[4].ToString(),
+                            FirstName = reader[1].ToString(),
+                            Username = reader[2].ToString(),
+                            LastName = reader[3].ToString(),
                             Position = reader[5].ToString(),
-                            Email = reader[6].ToString(),
-                            //En este caso, establecer el valor si el valor de celda es diferente a DBNull, caso contrario establecer NULL (Esto es importante, ya que se produce Null exception ).
-                            Photo = reader[7] != DBNull.Value ? (byte[])reader[7] : null 
-                            //Por seguridad, no almacenar la contraseña del usuario en el objeto.
                         };
                         //Asignar los datos del usuario conectado actualmente en la aplicacion.
                         ActiveUser.Id = userObj.Id;                      
