@@ -117,35 +117,37 @@ namespace Komparte.forms
             //Fin Validar campos
 
             var UserModel = new UserModel().Login(txtUsuario.Text, txtClave.Text);//Devuelve un objeto UserModel como resultado.
-            if (UserModel != null)//Si el inicio de sesión fue exitosa.
+            if (UserModel != null)//Si el inicio de sesión fue exitoso.
             {
                 Form mainForm;//Definir el campo para el formulario principal.
+                mainForm = new frmMain(UserModel);
+                /* if (Common.ActiveUser.Position == Positions.GeneralManager || ActiveUser.Position == Positions.Accountant
+                     || Common.ActiveUser.Position == Positions.AdministrativeAssistant || ActiveUser.Position == Positions.SystemAdministrator)
+                 {
+                     //Enviar el modelo de vista del usuario conectado, para mostrar sus datos en el formulario principal. 
+                     mainForm = new frmMain(UserModel);
+                 }
 
-                if (Common.ActiveUser.Position == Positions.GeneralManager || ActiveUser.Position == Positions.Accountant
-                    || Common.ActiveUser.Position == Positions.AdministrativeAssistant || ActiveUser.Position == Positions.SystemAdministrator)
-                {
-                    //Enviar el modelo de vista del usuario conectado, para mostrar sus datos en el formulario principal. 
-                    mainForm = new frmMain(UserModel);
-                }
-                else if (ActiveUser.Position == Positions.HMR)
-                {
-                    mainForm = new forms.frmClientes();
-                }
-                else if (ActiveUser.Position == Positions.Receptionist)
-                {
-                    mainForm = new forms.frmFactura();
-                }
-                else if (ActiveUser.Position == Positions.MarketingGuru)
-                {
-                    mainForm = new forms.frmHoteles();
-                }
-                else
-                {
-                    mainForm = null;
-                    MessageBox.Show("Usted no tiene un cargo asignado, no puede iniciar sesión.", "Mensaje",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                 else if (ActiveUser.Position == Positions.HMR)
+                 {
+                     mainForm = new forms.frmClientes();
+                 }
+                 else if (ActiveUser.Position == Positions.Receptionist)
+                 {
+                     mainForm = new forms.frmFactura();
+                 }
+                 else if (ActiveUser.Position == Positions.MarketingGuru)
+                 {
+                     mainForm = new forms.frmHoteles();
+                 }
+                 else
+                 {
+                     mainForm = null;
+                     MessageBox.Show("Usted no tiene un cargo asignado, no puede iniciar sesión.", "Mensaje",
+                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+                     return;
+                 }
+                */
                 this.Hide();//Ocultar el formualario login.
                 var frmCarga = new frmCarga(UserModel.FullName);//Mostrar el formulario de bienvenida.
                 frmCarga.ShowDialog();
@@ -154,17 +156,11 @@ namespace Komparte.forms
             }
             else //Si el inicio de sesión NO fue exitosa, mostrar mensaje.
                 MessageBox.Show("Inicio de sesion erroneo");
-
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Login();//Invocar el método Iniciar sesión.
-            this.Hide();//Ocultar el formualario login.
-            var frmCarga = new frmCarga("Bienvenid@");//Mostrar el formulario de bienvenida.
-            frmCarga.ShowDialog();
-            frmMain frm = new frmMain();
-            frm.Show();
 
         }
 

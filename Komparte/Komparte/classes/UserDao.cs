@@ -110,7 +110,7 @@ namespace DataAccess.DBServices
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = @"insert into Users 
+                    command.CommandText = @"insert into empleado 
 	                                        values (@userName,@password, @firstName, @lastName,@position,@email,@photo)";
                     command.Parameters.AddWithValue("@userName", user.Username);
                     command.Parameters.AddWithValue("@password", user.Password);
@@ -172,7 +172,7 @@ namespace DataAccess.DBServices
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = @"delete from Users where id=@id ";
+                    command.CommandText = @"delete from empleado where ID_empleado=@id ";
                     command.Parameters.AddWithValue("@id", id);
                 
                     command.CommandType = CommandType.Text;
@@ -189,7 +189,7 @@ namespace DataAccess.DBServices
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select *from Users where id=@id";
+                    command.CommandText = "select *from empleado where ID_empleado=@id";
                     command.Parameters.AddWithValue("@id", id);
                     command.CommandType = CommandType.Text;
 
@@ -199,13 +199,12 @@ namespace DataAccess.DBServices
                         var userObj = new User
                         {
                             Id = (int)reader[0],
-                            Username = reader[1].ToString(),
-                            Password = reader[2].ToString(),
-                            FirstName = reader[3].ToString(),
+                            FirstName = reader[1].ToString(),
+                            Username = reader[2].ToString(),
+                            Password = reader[3].ToString(),
                             LastName = reader[4].ToString(),
                             Position = reader[5].ToString(),
-                            Email = reader[6].ToString(),
-                            Photo = reader[7] != DBNull.Value ? (byte[])reader[7] : null
+                            Email = reader[6].ToString()
                         };
                         return userObj; //Retornar resultado (objeto).
                     }
@@ -222,7 +221,7 @@ namespace DataAccess.DBServices
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select *from Users where username=@user or email=@user";
+                    command.CommandText = "select *from empleado where nombre_usuario=@user or correo=@user";
                     command.Parameters.AddWithValue("@user", user);
                     command.CommandType = CommandType.Text;
 
@@ -232,13 +231,12 @@ namespace DataAccess.DBServices
                         var userObj = new User
                         {
                             Id = (int)reader[0],
-                            Username = reader[1].ToString(),
-                            Password = reader[2].ToString(),
-                            FirstName = reader[3].ToString(),
+                            FirstName = reader[1].ToString(),
+                            Username = reader[2].ToString(),
+                            Password = reader[3].ToString(),
                             LastName = reader[4].ToString(),
                             Position = reader[5].ToString(),
-                            Email = reader[6].ToString(),
-                            Photo = reader[7] != DBNull.Value ? (byte[])reader[7] : null
+                            Email = reader[6].ToString()
                         };
                         return userObj;
                     }
@@ -257,7 +255,7 @@ namespace DataAccess.DBServices
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select *from Users ";
+                    command.CommandText = "select *from empleado ";
                     command.CommandType = CommandType.Text;
 
                     SqlDataReader reader = command.ExecuteReader();
