@@ -19,9 +19,10 @@ namespace Domain
         private string _username;
         private string _password;
         private string _firstName;
-        private string _lastName;
+        private string _DUI;
         private string _position;
         private string _email;
+        private string _telefono;
         private byte[] _photo;
         private UserDao _userDao;
         #endregion
@@ -33,13 +34,14 @@ namespace Domain
             _userDao = new UserDao();
         }
 
-        public UserModel(int id, string userName, string password, string firstName, string lastName, string position, string email, byte[] photo)
+        public UserModel(int id, string firstName, string userName, string password,  string DUI, string telefono,string position, string email, byte[] photo)
         {
             Id = id;
             Username = userName;
             Password = password;
             FirstName = firstName;
-            LastName = lastName;
+            DUI = DUI;
+            Phone = telefono;
             Position = position;
             Email = email;
 
@@ -91,23 +93,25 @@ namespace Domain
         }
 
         //Posición 4
-        [DisplayName("Apellido")]//Nombre a visualizar.
+        [DisplayName("DUI")]//Nombre a visualizar.
         [Browsable(false)]//Ocultar visualización
-        [Required(ErrorMessage = "Por favor ingrese apellido.")]//Validaciones
-        [RegularExpression("^[a-zA-Z ]+$", ErrorMessage = "El apellido debe ser solo letras")]
-        [StringLength(100, MinimumLength = 3, ErrorMessage = "El apellido debe contener un mínimo de 3 caracteres.")]
-        public string LastName
+        [Required(ErrorMessage = "Por favor ingrese DUI.")]//Validaciones
+        [StringLength(100, MinimumLength = 10, ErrorMessage = "El apellido debe contener 10 digitos incluyendo guion")]
+        public string DUI
         {
-            get { return _lastName; }
-            set { _lastName = value; }
+            get { return _DUI; }
+            set { _DUI = value; }
         }
 
         //Posición 5
-        [ReadOnly(true)]//Solo lectura.
-        [DisplayName("Nombre completo")]//Nombre a visualizar.
-        public string FullName
+        [DisplayName("Telefono")]//Nombre a visualizar.
+        [Browsable(false)]//Ocultar visualización
+        [Required(ErrorMessage = "Por favor ingrese DUI.")]//Validaciones
+        [StringLength(100, MinimumLength = 10, ErrorMessage = "El apellido debe contener 10 digitos incluyendo guion")]
+        public string Phone
         {
-            get { return _firstName + ", " + _lastName; }
+            get { return _telefono; }
+            set { _telefono = value; }
         }
 
         //Posición 6
@@ -226,7 +230,8 @@ namespace Domain
                 Username = userModel.Username,
                 Password = userModel.Password,
                 FirstName = userModel.FirstName,
-                LastName = userModel.LastName,
+                DUI = userModel.DUI,
+                Phone = userModel.Phone,
                 Position = userModel.Position,
                 Email = userModel.Email
             };
@@ -242,7 +247,7 @@ namespace Domain
                 Username = userEntity.Username,
                 Password = userEntity.Password,
                 FirstName = userEntity.FirstName,
-                LastName = userEntity.LastName,
+                DUI = userEntity.DUI,
                 Position = userEntity.Position,
                 Email = userEntity.Email
             };

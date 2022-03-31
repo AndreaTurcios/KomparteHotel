@@ -153,7 +153,7 @@ namespace Komparte.forms
                  }
                 */
                 this.Hide();//Ocultar el formualario login.
-                var frmCarga = new frmCarga(UserModel.FullName);//Mostrar el formulario de bienvenida.
+                var frmCarga = new frmCarga(UserModel.Username);//Mostrar el formulario de bienvenida.
                 frmCarga.ShowDialog();
                 mainForm.FormClosed += new FormClosedEventHandler(MainForm_SessionClosed);//Asociar el evento cerrado, para limpiar el formulario login cuando se cierre sesion desde el formulario principal.
                 mainForm.Show();//Mostrar el formulario principal.

@@ -48,7 +48,7 @@ namespace Komparte
         {
             //Cargar los datos del usuario conectado en el menú lateral.
             lblName.Text = userModel.FirstName;
-            lblLastName.Text = userModel.LastName;
+            lblLastName.Text = userModel.Email;
             lblPosition.Text = userModel.Position;
         }
         /*
@@ -231,6 +231,11 @@ namespace Komparte
         private void btnChildFormClose_Click(object sender, EventArgs e)
         {
             CloseChildForm();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

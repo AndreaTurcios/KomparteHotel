@@ -44,7 +44,7 @@ namespace DataAccess.DBServices
                             Id = (int)reader[0], //Posicion 0
                             FirstName = reader[1].ToString(),
                             Username = reader[2].ToString(),
-                            LastName = reader[3].ToString(),
+                            DUI = reader[3].ToString(),
                             Position = reader[5].ToString(),
                         };
                         //Asignar los datos del usuario conectado actualmente en la aplicacion.
@@ -111,11 +111,11 @@ namespace DataAccess.DBServices
                 {
                     command.Connection = connection;
                     command.CommandText = @"insert into empleado 
-	                                        values (@userName,@password, @firstName, @lastName,@position,@email,@photo)";
+	                                        values (@userName,@password, @firstName, @DUI,@position,@email,@photo)";
                     command.Parameters.AddWithValue("@userName", user.Username);
                     command.Parameters.AddWithValue("@password", user.Password);
                     command.Parameters.AddWithValue("@firstName", user.FirstName);
-                    command.Parameters.AddWithValue("@lastName", user.LastName);
+                    command.Parameters.AddWithValue("@DUI", user.DUI);
                     command.Parameters.AddWithValue("@position", user.Position);
                     command.Parameters.AddWithValue("@email", user.Email);
                     if (user.Photo != null)//Si la propiedad Foto es diferente a nulo, asignar el valor de la propiedad.
@@ -148,7 +148,7 @@ namespace DataAccess.DBServices
                     command.Parameters.AddWithValue("@userName", user.Username);
                     command.Parameters.AddWithValue("@password", user.Password);
                     command.Parameters.AddWithValue("@firstName", user.FirstName);
-                    command.Parameters.AddWithValue("@lastName", user.LastName);
+                    command.Parameters.AddWithValue("@lastName", user.DUI);
                     command.Parameters.AddWithValue("@position", user.Position);
                     command.Parameters.AddWithValue("@email", user.Email);
                     if (user.Photo != null)
@@ -202,7 +202,7 @@ namespace DataAccess.DBServices
                             FirstName = reader[1].ToString(),
                             Username = reader[2].ToString(),
                             Password = reader[3].ToString(),
-                            LastName = reader[4].ToString(),
+                            DUI = reader[4].ToString(),
                             Position = reader[5].ToString(),
                             Email = reader[6].ToString()
                         };
@@ -234,7 +234,7 @@ namespace DataAccess.DBServices
                             FirstName = reader[1].ToString(),
                             Username = reader[2].ToString(),
                             Password = reader[3].ToString(),
-                            LastName = reader[4].ToString(),
+                            DUI = reader[4].ToString(),
                             Position = reader[5].ToString(),
                             Email = reader[6].ToString()
                         };
@@ -269,7 +269,7 @@ namespace DataAccess.DBServices
                                 Username = reader[1].ToString(),
                                 Password = reader[2].ToString(),
                                 FirstName = reader[3].ToString(),
-                                LastName = reader[4].ToString(),
+                                DUI = reader[4].ToString(),
                                 Position = reader[5].ToString(),
                                 Email = reader[6].ToString(),
                                 Photo = reader[7] != DBNull.Value ? (byte[])reader[7] : null
