@@ -42,25 +42,25 @@ namespace Komparte
             this.button2 = new System.Windows.Forms.Button();
             this.btnMen1 = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.linkProfile = new System.Windows.Forms.LinkLabel();
+            this.lblPosition = new System.Windows.Forms.Label();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnClose = new System.Windows.Forms.ToolStripMenuItem();
             this.btnChildFormClose = new System.Windows.Forms.Button();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.lblCaption = new System.Windows.Forms.Label();
-            this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblLastName = new System.Windows.Forms.Label();
-            this.lblPosition = new System.Windows.Forms.Label();
-            this.linkProfile = new System.Windows.Forms.LinkLabel();
             this.panelMenu.SuspendLayout();
             this.panelBotones2.SuspendLayout();
             this.panelBotones.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panelDesktop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -264,6 +264,68 @@ namespace Komparte
             this.panelLogo.Size = new System.Drawing.Size(384, 192);
             this.panelLogo.TabIndex = 0;
             // 
+            // linkProfile
+            // 
+            this.linkProfile.ActiveLinkColor = System.Drawing.SystemColors.Highlight;
+            this.linkProfile.AutoSize = true;
+            this.linkProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkProfile.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            this.linkProfile.Location = new System.Drawing.Point(25, 135);
+            this.linkProfile.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkProfile.Name = "linkProfile";
+            this.linkProfile.Size = new System.Drawing.Size(98, 25);
+            this.linkProfile.TabIndex = 20;
+            this.linkProfile.TabStop = true;
+            this.linkProfile.Text = "My Profile";
+            // 
+            // lblPosition
+            // 
+            this.lblPosition.AutoSize = true;
+            this.lblPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosition.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblPosition.Location = new System.Drawing.Point(144, 97);
+            this.lblPosition.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPosition.Name = "lblPosition";
+            this.lblPosition.Size = new System.Drawing.Size(76, 24);
+            this.lblPosition.TabIndex = 19;
+            this.lblPosition.Text = "Position";
+            // 
+            // lblLastName
+            // 
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastName.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblLastName.Location = new System.Drawing.Point(144, 49);
+            this.lblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(94, 24);
+            this.lblLastName.TabIndex = 18;
+            this.lblLastName.Text = "LastName";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblName.Location = new System.Drawing.Point(143, 24);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(68, 25);
+            this.lblName.TabIndex = 15;
+            this.lblName.Text = "Name";
+            // 
+            // pictureBoxPhoto
+            // 
+            this.pictureBoxPhoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxPhoto.Location = new System.Drawing.Point(27, 23);
+            this.pictureBoxPhoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBoxPhoto.Name = "pictureBoxPhoto";
+            this.pictureBoxPhoto.Size = new System.Drawing.Size(96, 98);
+            this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxPhoto.TabIndex = 14;
+            this.pictureBoxPhoto.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Komparte.Properties.Resources.logopngkomparte;
@@ -334,68 +396,6 @@ namespace Komparte
             this.lblCaption.TabIndex = 0;
             this.lblCaption.Text = "label1";
             // 
-            // pictureBoxPhoto
-            // 
-            this.pictureBoxPhoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxPhoto.Location = new System.Drawing.Point(27, 23);
-            this.pictureBoxPhoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBoxPhoto.Name = "pictureBoxPhoto";
-            this.pictureBoxPhoto.Size = new System.Drawing.Size(96, 98);
-            this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxPhoto.TabIndex = 14;
-            this.pictureBoxPhoto.TabStop = false;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblName.Location = new System.Drawing.Point(143, 24);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(68, 25);
-            this.lblName.TabIndex = 15;
-            this.lblName.Text = "Name";
-            // 
-            // lblLastName
-            // 
-            this.lblLastName.AutoSize = true;
-            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblLastName.Location = new System.Drawing.Point(144, 49);
-            this.lblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(94, 24);
-            this.lblLastName.TabIndex = 18;
-            this.lblLastName.Text = "LastName";
-            // 
-            // lblPosition
-            // 
-            this.lblPosition.AutoSize = true;
-            this.lblPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosition.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblPosition.Location = new System.Drawing.Point(144, 97);
-            this.lblPosition.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(76, 24);
-            this.lblPosition.TabIndex = 19;
-            this.lblPosition.Text = "Position";
-            // 
-            // linkProfile
-            // 
-            this.linkProfile.ActiveLinkColor = System.Drawing.SystemColors.Highlight;
-            this.linkProfile.AutoSize = true;
-            this.linkProfile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkProfile.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.linkProfile.Location = new System.Drawing.Point(25, 135);
-            this.linkProfile.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkProfile.Name = "linkProfile";
-            this.linkProfile.Size = new System.Drawing.Size(98, 25);
-            this.linkProfile.TabIndex = 20;
-            this.linkProfile.TabStop = true;
-            this.linkProfile.Text = "My Profile";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -420,11 +420,11 @@ namespace Komparte
             this.panelBotones.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panelDesktop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

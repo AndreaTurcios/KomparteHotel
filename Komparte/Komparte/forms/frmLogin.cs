@@ -1,22 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Common;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using Komparte.Class;
-using Komparte.forms;
 using WindowsFormsApp1;
 using Presentation;
+using Domain;
 
 namespace Komparte.forms
 {
     public partial class frmLogin : Form
     {
+        private string usernamePlaceholder;//Marca de agua(Placeholder) para el cuadro de texto usuario.
+        private string passwordPlaceholder;//Marca de agua(Placeholder) para el cuadro de texto contraseña.
+        private Color placeholderColor;//Color del marca de agua(Placeholder).
+        private Color textColor;//Color para el texto del cuadro texto.
+
         public frmLogin()
         {
             InitializeComponent();
@@ -64,7 +63,43 @@ namespace Komparte.forms
         {
 
         }
-        /*
+
+        private void ShowMessage(string message)
+        {
+            lblErrorMessage.Text = "    " + message;
+            lblErrorMessage.Visible = true;
+        }
+
+        private void SetPlaceholder()
+        {//Establecer la marca de agua (Placeholder) al cuadro de texto usuario y contraseña,
+            //Siempre en cuando el valor sea nulo o tiene espacios en blanco.
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text))//Usuario
+            {
+                txtUsuario.Text = usernamePlaceholder;
+                txtUsuario.ForeColor = placeholderColor;
+            }
+            if (string.IsNullOrWhiteSpace(txtClave.Text))//Contraseña
+            {
+                txtClave.Text = passwordPlaceholder;
+                txtClave.ForeColor = placeholderColor;
+                txtClave.UseSystemPasswordChar = false;//Quitar el enmascaramiento de caracteres.
+            }
+        }
+
+        private void Logout()
+        {//Limpiar campos cuando se cierre sesión, este metodo se invoca en el metodo de evento MainForm_SessionClosed(..).
+            this.Show();//Volver a mostrar el formulario login.
+            txtUsuario.Clear();
+            txtClave.Clear();
+            SetPlaceholder();
+            lblErrorMessage.Visible = false;
+        }
+
+        private void MainForm_SessionClosed(object sender, FormClosedEventArgs e)
+        {
+            Logout();////Invocar el método Cerrar sesión, cuando en el formulario principal se haya cerrado sesión.
+        }
+
         private void Login()
         {//Iniciar sesión
 
@@ -81,29 +116,28 @@ namespace Komparte.forms
             }
             //Fin Validar campos
 
-            if (userModel != null)//Si el inicio de sesión fue exitosa.
+            var UserModel = new UserModel().Login(txtUsuario.Text, txtClave.Text);//Devuelve un objeto UserModel como resultado.
+            if (UserModel != null)//Si el inicio de sesión fue exitosa.
             {
-
-
                 Form mainForm;//Definir el campo para el formulario principal.
 
                 if (Common.ActiveUser.Position == Positions.GeneralManager || ActiveUser.Position == Positions.Accountant
                     || Common.ActiveUser.Position == Positions.AdministrativeAssistant || ActiveUser.Position == Positions.SystemAdministrator)
                 {
                     //Enviar el modelo de vista del usuario conectado, para mostrar sus datos en el formulario principal. 
-                    mainForm = new frmMain(userModel);
+                    mainForm = new frmMain(UserModel);
                 }
                 else if (ActiveUser.Position == Positions.HMR)
                 {
-                    mainForm = new ChildForms.FormUsers();
+                    mainForm = new forms.frmClientes();
                 }
                 else if (ActiveUser.Position == Positions.Receptionist)
                 {
-                    mainForm = new ChildForms.FormPacients();
+                    mainForm = new forms.frmFactura();
                 }
                 else if (ActiveUser.Position == Positions.MarketingGuru)
                 {
-                    mainForm = new ChildForms.FormReports();
+                    mainForm = new forms.frmHoteles();
                 }
                 else
                 {
@@ -113,21 +147,21 @@ namespace Komparte.forms
                     return;
                 }
                 this.Hide();//Ocultar el formualario login.
-                var welcomeForm = new WelcomeForm(userModel.FullName);//Mostrar el formulario de bienvenida.
-                welcomeForm.ShowDialog();
+                var frmCarga = new frmCarga(UserModel.FullName);//Mostrar el formulario de bienvenida.
+                frmCarga.ShowDialog();
                 mainForm.FormClosed += new FormClosedEventHandler(MainForm_SessionClosed);//Asociar el evento cerrado, para limpiar el formulario login cuando se cierre sesion desde el formulario principal.
                 mainForm.Show();//Mostrar el formulario principal.
             }
             else //Si el inicio de sesión NO fue exitosa, mostrar mensaje.
-                ShowMessage("Usuario o contraseña incorrecto");
+                MessageBox.Show("Inicio de sesion erroneo");
 
-        }*/
+        }
 
         private void button4_Click(object sender, EventArgs e)
         {
             //Login();//Invocar el método Iniciar sesión.
             this.Hide();//Ocultar el formualario login.
-            var frmCarga = new frmCarga("Welcome");//Mostrar el formulario de bienvenida.
+            var frmCarga = new frmCarga("Bienvenid@");//Mostrar el formulario de bienvenida.
             frmCarga.ShowDialog();
             frmMain frm = new frmMain();
             frm.Show();

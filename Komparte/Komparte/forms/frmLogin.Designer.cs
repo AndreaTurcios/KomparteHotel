@@ -57,6 +57,7 @@ namespace Komparte.forms
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.lblErrorMessage = new System.Windows.Forms.Label();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -71,6 +72,7 @@ namespace Komparte.forms
             // 
             // panelLogo
             // 
+            this.panelLogo.Controls.Add(this.lblErrorMessage);
             this.panelLogo.Controls.Add(this.label4);
             this.panelLogo.Controls.Add(this.txtClave);
             this.panelLogo.Controls.Add(this.pictureBox2);
@@ -418,6 +420,15 @@ namespace Komparte.forms
             this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
             this.panel7.Move += new System.EventHandler(this.panel7_Move);
             // 
+            // lblErrorMessage
+            // 
+            this.lblErrorMessage.AutoSize = true;
+            this.lblErrorMessage.Location = new System.Drawing.Point(14, 448);
+            this.lblErrorMessage.Name = "lblErrorMessage";
+            this.lblErrorMessage.Size = new System.Drawing.Size(66, 30);
+            this.lblErrorMessage.TabIndex = 12;
+            this.lblErrorMessage.Text = "Error";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -478,5 +489,6 @@ namespace Komparte.forms
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lblErrorMessage;
     }
 }

@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Komparte.forms.obj;
+using Komparte.forms;
+using Domain;
 
 namespace Komparte
 {
@@ -35,6 +37,28 @@ namespace Komparte
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+        public frmMain(UserModel userModel)
+        {
+            InitializeComponent();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            listChildForms = new List<Form>();
+            LoadUserData(userModel);
+        }
+        public void LoadUserData(Domain.UserModel userModel)
+        {
+            //Cargar los datos del usuario conectado en el menú lateral.
+            lblName.Text = userModel.FirstName;
+            lblLastName.Text = userModel.LastName;
+            lblPosition.Text = userModel.Position;
+        }
+        /*
+        public frmMain(UserModel userModel)
+        {
+            InitializeComponent();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            listChildForms = new List<Form>();
+            LoadUserData(userModel);
+        }*/
         private void showSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
