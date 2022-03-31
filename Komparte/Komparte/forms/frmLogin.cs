@@ -24,6 +24,8 @@ namespace Komparte.forms
             //Estas lineas eliminan los parpadeos del formulario o controles en la interfaz grafica (Pero no en un 100%)
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
+            usernamePlaceholder = txtUsuario.Text;//Establecer placeholder del cuadro de texto usuario.
+            passwordPlaceholder = txtClave.Text;//Establecer placeholder del cuadro de texto contraseña.
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -78,12 +80,12 @@ namespace Komparte.forms
             if (string.IsNullOrWhiteSpace(txtUsuario.Text))//Usuario
             {
                 txtUsuario.Text = usernamePlaceholder;
-                txtUsuario.ForeColor = placeholderColor;
+                txtUsuario.ForeColor = Color.White;
             }
             if (string.IsNullOrWhiteSpace(txtClave.Text))//Contraseña
             {
                 txtClave.Text = passwordPlaceholder;
-                txtClave.ForeColor = placeholderColor;
+                txtClave.ForeColor = Color.White;
                 txtClave.UseSystemPasswordChar = false;//Quitar el enmascaramiento de caracteres.
             }
         }
@@ -232,26 +234,12 @@ namespace Komparte.forms
 
         private void txtUsuario_MouseClick(object sender, MouseEventArgs e)
         {
-            if (txtUsuario.Text == "USUARIO")
-            {
-                txtUsuario.Text = "";
-            }
-            else if (txtUsuario.Text == "")
-            {
-                txtUsuario.Text = "USUARIO";
-            }
+           
         }
 
         private void textBox1_MouseClick_1(object sender, MouseEventArgs e)
         {
-            if (txtClave.Text == "CLAVE")
-            {
-                txtClave.Text = "";
-            }
-            else if (txtClave.Text == "")
-            {
-                txtClave.Text = "CLAVE";
-            }
+         
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -285,32 +273,20 @@ namespace Komparte.forms
             if (e.KeyCode == Keys.Enter)
                 Login();//Invocar el método Iniciar sesión, si preciona enter en el cuadro de texto contraseña.
         }
+
+
         private void RemovePlaceHolder(TextBox textBox, string placeholderText)
         {//Quitar la marca de agua (Placeholder) de un cuadro de texto.
             if (textBox.Text == placeholderText)
             {
                 textBox.Text = "";//Quitar placeholder
-                textBox.ForeColor = textColor;//Establecer color normal de texto
+                textBox.ForeColor = Color.White;//Establecer color normal de texto
                 if (textBox == txtClave)//Si el cuadro de texto es contraseña, enmascarar los caracteres.
                     textBox.UseSystemPasswordChar = true;
-
             }
         }
 
-        private void txtClave_Enter(object sender, EventArgs e)
-        {
-            //Quitar la marca de agua cuando el cursor ingrese en el cuadro de texto contraseña.
-            RemovePlaceHolder(txtClave, passwordPlaceholder);
-        }
-
-
         private void txtClave_Leave(object sender, EventArgs e)
-        {
-            SetPlaceholder();
-        }
-
-        
-        private void textBox1_Leave(object sender, EventArgs e)
         {
             SetPlaceholder();
         }
@@ -320,5 +296,21 @@ namespace Komparte.forms
             //Quitar la marca de agua cuando el cursor ingrese en el cuadro de texto contraseña.
             RemovePlaceHolder(txtClave, passwordPlaceholder);
         }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            SetPlaceholder();
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            RemovePlaceHolder(txtUsuario, usernamePlaceholder);
+        }
     }
 }
+
