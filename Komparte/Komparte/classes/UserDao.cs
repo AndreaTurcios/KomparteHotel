@@ -30,7 +30,7 @@ namespace DataAccess.DBServices
                 {
                     command.Connection = connection;//Establecer la conexión.
                     //Establecer el comando de texto.
-                    command.CommandText = "select *from Users where (userName=@username and password=@pass) or (Email=@username and password=@pass)";
+                    command.CommandText = "select *from empleado where (nombre_usuario=@username and contrasenia_usuario=@pass) or (correo=@username and contrasenia_usuario=@pass)";
                     //Establecer los parametros.
                     command.Parameters.AddWithValue("@username", username);
                     command.Parameters.AddWithValue("@pass", password);
@@ -76,7 +76,7 @@ namespace DataAccess.DBServices
                     {
                         command.Connection = connection;
                         //Obtener la contraseña del usuario conectado.
-                        command.CommandText = "select password from Users where id=@id";//Establecer el comando de texto
+                        command.CommandText = "select contrasenia_usuario from empleado where ID_empleado=@id";//Establecer el comando de texto
                         command.Parameters.AddWithValue("@id", ActiveUser.Id);
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
@@ -85,7 +85,7 @@ namespace DataAccess.DBServices
                             command.Parameters.Clear();//Limpiar los parametros para la siguiente consulta.
                         }
                         //Validar usuario conectado.
-                        command.CommandText = "select *from Users where userName=@username or Email=@username and Password=@pass and Id=@id";
+                        command.CommandText = "select *from empleado where nombre_usuario=@username or correo=@username and contrasenia_usuario=@pass and ID_empleado=@id";
                         command.Parameters.AddWithValue("@username", ActiveUser.Username);
                         command.Parameters.AddWithValue("@pass", activeUserPass);
                         command.Parameters.AddWithValue("@id", ActiveUser.Id);
