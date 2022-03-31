@@ -159,7 +159,7 @@ namespace Komparte.forms
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //Login();//Invocar el método Iniciar sesión.
+            Login();//Invocar el método Iniciar sesión.
             this.Hide();//Ocultar el formualario login.
             var frmCarga = new frmCarga("Bienvenid@");//Mostrar el formulario de bienvenida.
             frmCarga.ShowDialog();

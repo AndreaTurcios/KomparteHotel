@@ -42,7 +42,6 @@ namespace Domain
             LastName = lastName;
             Position = position;
             Email = email;
-            Photo = photo;
 
             _userDao = new UserDao();
         }
@@ -131,15 +130,7 @@ namespace Domain
             set { _email = value; }
         }
 
-        //Posición 8
-        [DisplayName("Foto")]//Nombre a visualizar.
-        //[Browsable(false)]//Ocultar visualización
-        public byte[] Photo
-        {
-            get { return _photo; }
-            set { _photo = value; }
-
-        }
+       
         #endregion
 
         #region -> Métodos Públicos
@@ -237,8 +228,7 @@ namespace Domain
                 FirstName = userModel.FirstName,
                 LastName = userModel.LastName,
                 Position = userModel.Position,
-                Email = userModel.Email,
-                Photo = userModel.Photo
+                Email = userModel.Email
             };
             return userEntity;
         }
@@ -254,8 +244,7 @@ namespace Domain
                 FirstName = userEntity.FirstName,
                 LastName = userEntity.LastName,
                 Position = userEntity.Position,
-                Email = userEntity.Email,
-                Photo = userEntity.Photo
+                Email = userEntity.Email
             };
             return userModel;
         }
