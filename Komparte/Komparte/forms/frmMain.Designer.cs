@@ -291,31 +291,32 @@ namespace Komparte
             this.lblPosition.AutoSize = true;
             this.lblPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPosition.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblPosition.Location = new System.Drawing.Point(179, 73);
+            this.lblPosition.Location = new System.Drawing.Point(185, 165);
             this.lblPosition.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPosition.Name = "lblPosition";
             this.lblPosition.Size = new System.Drawing.Size(76, 24);
             this.lblPosition.TabIndex = 19;
             this.lblPosition.Text = "Position";
+            this.lblPosition.Visible = false;
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastName.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblLastName.Location = new System.Drawing.Point(144, 49);
+            this.lblLastName.Location = new System.Drawing.Point(132, 77);
             this.lblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(94, 24);
+            this.lblLastName.Size = new System.Drawing.Size(48, 20);
             this.lblLastName.TabIndex = 18;
-            this.lblLastName.Text = "LastName";
+            this.lblLastName.Text = "Email";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblName.Location = new System.Drawing.Point(143, 24);
+            this.lblName.Location = new System.Drawing.Point(131, 40);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(68, 25);
@@ -372,6 +373,7 @@ namespace Komparte
             this.btnChildFormClose.TabIndex = 2;
             this.btnChildFormClose.Text = "X";
             this.btnChildFormClose.UseVisualStyleBackColor = false;
+            this.btnChildFormClose.Visible = false;
             this.btnChildFormClose.Click += new System.EventHandler(this.btnChildFormClose_Click);
             // 
             // panelDesktop

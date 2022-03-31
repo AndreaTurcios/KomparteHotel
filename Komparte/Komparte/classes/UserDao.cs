@@ -42,12 +42,13 @@ namespace DataAccess.DBServices
                         var userObj = new User //Crear objeto y asignar los datos del resultado.
                         {
                             Id = (int)reader[0],
-                            Username = reader[1].ToString(),
-                            Password = reader[2].ToString(),
-                            FirstName = reader[3].ToString(),
+                            Username = reader[2].ToString(),
+                            Password = reader[3].ToString(),
+                            FirstName = reader[1].ToString(),
                             DUI = reader[4].ToString(),
-                            Direction = reader[5].ToString(),
-                            Position = reader[6].ToString(),
+                            Phone = reader[5].ToString(),
+                            Direction = reader[6].ToString(),
+                            Position = reader[8].ToString(),
                             Email = reader[7].ToString()
                         };
                         //Asignar los datos del usuario conectado actualmente en la aplicacion.
@@ -190,12 +191,14 @@ namespace DataAccess.DBServices
                         var userObj = new User
                         {
                             Id = (int)reader[0],
-                            FirstName = reader[1].ToString(),
                             Username = reader[2].ToString(),
                             Password = reader[3].ToString(),
+                            FirstName = reader[1].ToString(),
                             DUI = reader[4].ToString(),
-                            Position = reader[5].ToString(),
-                            Email = reader[6].ToString()
+                            Phone = reader[5].ToString(),
+                            Direction = reader[6].ToString(),
+                            Position = reader[8].ToString(),
+                            Email = reader[7].ToString()
                         };
                         return userObj; //Retornar resultado (objeto).
                     }
@@ -223,12 +226,13 @@ namespace DataAccess.DBServices
                         var userObj = new User
                         {
                             Id = (int)reader[0],
-                            Username = reader[1].ToString(),
-                            Password = reader[2].ToString(),
-                            FirstName = reader[3].ToString(),
+                            Username = reader[2].ToString(),
+                            Password = reader[3].ToString(),
+                            FirstName = reader[1].ToString(),
                             DUI = reader[4].ToString(),
-                            Direction = reader[5].ToString(),
-                            Position = reader[6].ToString(),
+                            Phone = reader[5].ToString(),
+                            Direction = reader[6].ToString(),
+                            Position = reader[8].ToString(),
                             Email = reader[7].ToString()
                         };
                         return userObj;
@@ -259,12 +263,13 @@ namespace DataAccess.DBServices
                             var userObj = new User
                             {
                                 Id = (int)reader[0],
-                                Username = reader[1].ToString(),
-                                Password = reader[2].ToString(),
-                                FirstName = reader[3].ToString(),
+                                Username = reader[2].ToString(),
+                                Password = reader[3].ToString(),
+                                FirstName = reader[1].ToString(),
                                 DUI = reader[4].ToString(),
-                                Direction = reader[5].ToString(),
-                                Position = reader[6].ToString(),
+                                Phone = reader[5].ToString(),
+                                Direction = reader[6].ToString(),
+                                Position = reader[8].ToString(),
                                 Email = reader[7].ToString()
                             };
                             userList.Add(userObj);

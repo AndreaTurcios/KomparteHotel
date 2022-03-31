@@ -35,7 +35,7 @@ namespace Domain
             _userDao = new UserDao();
         }
 
-        public UserModel(int id, string firstName, string userName, string password,  string DUI, string telefono, string direccion, string email, string position)
+        public UserModel(int id, string userName, string firstName, string password,  string DUI, string telefono, string direccion, string email, string position)
         {
             Id = id;
             Direction = direccion;
