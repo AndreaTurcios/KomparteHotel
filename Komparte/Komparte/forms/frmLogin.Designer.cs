@@ -423,6 +423,7 @@ namespace Komparte.forms
             // lblErrorMessage
             // 
             this.lblErrorMessage.AutoSize = true;
+            this.lblErrorMessage.ForeColor = System.Drawing.Color.DarkRed;
             this.lblErrorMessage.Location = new System.Drawing.Point(14, 448);
             this.lblErrorMessage.Name = "lblErrorMessage";
             this.lblErrorMessage.Size = new System.Drawing.Size(66, 30);

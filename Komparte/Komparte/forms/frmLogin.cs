@@ -156,7 +156,7 @@ namespace Komparte.forms
                 mainForm.Show();//Mostrar el formulario principal.
             }
             else //Si el inicio de sesión NO fue exitosa, mostrar mensaje.
-                MessageBox.Show("Inicio de sesion erroneo");
+                MessageBox.Show("Inicio de sesion erróneo");
         }
 
         private void button4_Click(object sender, EventArgs e)
