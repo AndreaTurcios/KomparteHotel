@@ -207,6 +207,7 @@ namespace Komparte.forms
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
+            RemovePlaceHolder(txtClave, passwordPlaceholder);
         }
 
         private void textBox2_Enter(object sender, EventArgs e)
@@ -272,6 +273,52 @@ namespace Komparte.forms
         private void button1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtClave_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClave_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Login();//Invocar el método Iniciar sesión, si preciona enter en el cuadro de texto contraseña.
+        }
+        private void RemovePlaceHolder(TextBox textBox, string placeholderText)
+        {//Quitar la marca de agua (Placeholder) de un cuadro de texto.
+            if (textBox.Text == placeholderText)
+            {
+                textBox.Text = "";//Quitar placeholder
+                textBox.ForeColor = textColor;//Establecer color normal de texto
+                if (textBox == txtClave)//Si el cuadro de texto es contraseña, enmascarar los caracteres.
+                    textBox.UseSystemPasswordChar = true;
+
+            }
+        }
+
+        private void txtClave_Enter(object sender, EventArgs e)
+        {
+            //Quitar la marca de agua cuando el cursor ingrese en el cuadro de texto contraseña.
+            RemovePlaceHolder(txtClave, passwordPlaceholder);
+        }
+
+
+        private void txtClave_Leave(object sender, EventArgs e)
+        {
+            SetPlaceholder();
+        }
+
+        
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            SetPlaceholder();
+        }
+
+        private void txtClave_Enter_1(object sender, EventArgs e)
+        {
+            //Quitar la marca de agua cuando el cursor ingrese en el cuadro de texto contraseña.
+            RemovePlaceHolder(txtClave, passwordPlaceholder);
         }
     }
 }

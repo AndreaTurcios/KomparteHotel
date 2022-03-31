@@ -100,7 +100,7 @@ namespace Komparte
             this.btnTipoEntorno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTipoEntorno.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
             this.btnTipoEntorno.ForeColor = System.Drawing.Color.White;
-            this.btnTipoEntorno.Location = new System.Drawing.Point(0, 71);
+            this.btnTipoEntorno.Location = new System.Drawing.Point(0, 65);
             this.btnTipoEntorno.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnTipoEntorno.Name = "btnTipoEntorno";
             this.btnTipoEntorno.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
@@ -123,7 +123,7 @@ namespace Komparte
             this.btnTipoActividades.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnTipoActividades.Name = "btnTipoActividades";
             this.btnTipoActividades.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnTipoActividades.Size = new System.Drawing.Size(358, 71);
+            this.btnTipoActividades.Size = new System.Drawing.Size(358, 65);
             this.btnTipoActividades.TabIndex = 7;
             this.btnTipoActividades.Text = "Actividades";
             this.btnTipoActividades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -188,11 +188,11 @@ namespace Komparte
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 147);
+            this.button4.Location = new System.Drawing.Point(0, 119);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(356, 69);
+            this.button4.Size = new System.Drawing.Size(356, 54);
             this.button4.TabIndex = 2;
             this.button4.Text = "Empleados";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -205,11 +205,11 @@ namespace Komparte
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 77);
+            this.button3.Location = new System.Drawing.Point(0, 55);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(356, 70);
+            this.button3.Size = new System.Drawing.Size(356, 64);
             this.button3.TabIndex = 1;
             this.button3.Text = "Clientes";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -227,7 +227,7 @@ namespace Komparte
             this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(356, 77);
+            this.button2.Size = new System.Drawing.Size(356, 55);
             this.button2.TabIndex = 0;
             this.button2.Text = "Reservaciones";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -393,11 +393,11 @@ namespace Komparte
             this.lblCaption.AutoSize = true;
             this.lblCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lblCaption.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblCaption.Location = new System.Drawing.Point(455, 61);
+            this.lblCaption.Location = new System.Drawing.Point(475, 48);
             this.lblCaption.Name = "lblCaption";
-            this.lblCaption.Size = new System.Drawing.Size(70, 26);
+            this.lblCaption.Size = new System.Drawing.Size(71, 26);
             this.lblCaption.TabIndex = 0;
-            this.lblCaption.Text = "label1";
+            this.lblCaption.Text = "Home";
             // 
             // btnActividad
             // 
@@ -406,13 +406,13 @@ namespace Komparte
             this.btnActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActividad.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
             this.btnActividad.ForeColor = System.Drawing.Color.White;
-            this.btnActividad.Location = new System.Drawing.Point(0, 216);
+            this.btnActividad.Location = new System.Drawing.Point(0, 173);
             this.btnActividad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnActividad.Name = "btnActividad";
             this.btnActividad.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnActividad.Size = new System.Drawing.Size(356, 69);
+            this.btnActividad.Size = new System.Drawing.Size(356, 67);
             this.btnActividad.TabIndex = 3;
-            this.btnActividad.Text = "Actividad";
+            this.btnActividad.Text = "Entorno";
             this.btnActividad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnActividad.UseVisualStyleBackColor = true;
             this.btnActividad.Click += new System.EventHandler(this.btnActividad_Click);
