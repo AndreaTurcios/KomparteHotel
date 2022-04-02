@@ -80,10 +80,10 @@ namespace Komparte
             this.panelMenu.Controls.Add(this.btnMen1);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 32);
+            this.panelMenu.Location = new System.Drawing.Point(0, 28);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(387, 758);
+            this.panelMenu.Size = new System.Drawing.Size(387, 762);
             this.panelMenu.TabIndex = 0;
             // 
             // panelBotones2
@@ -105,11 +105,11 @@ namespace Komparte
             this.btnTipoEntorno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTipoEntorno.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
             this.btnTipoEntorno.ForeColor = System.Drawing.Color.White;
-            this.btnTipoEntorno.Location = new System.Drawing.Point(0, 107);
+            this.btnTipoEntorno.Location = new System.Drawing.Point(0, 74);
             this.btnTipoEntorno.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnTipoEntorno.Name = "btnTipoEntorno";
             this.btnTipoEntorno.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnTipoEntorno.Size = new System.Drawing.Size(387, 113);
+            this.btnTipoEntorno.Size = new System.Drawing.Size(387, 76);
             this.btnTipoEntorno.TabIndex = 8;
             this.btnTipoEntorno.Text = "Entorno";
             this.btnTipoEntorno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,7 +128,7 @@ namespace Komparte
             this.btnTipoActividades.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnTipoActividades.Name = "btnTipoActividades";
             this.btnTipoActividades.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnTipoActividades.Size = new System.Drawing.Size(387, 107);
+            this.btnTipoActividades.Size = new System.Drawing.Size(387, 74);
             this.btnTipoActividades.TabIndex = 7;
             this.btnTipoActividades.Text = "Actividades";
             this.btnTipoActividades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -160,7 +160,7 @@ namespace Komparte
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 698);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 702);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -192,11 +192,11 @@ namespace Komparte
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 221);
+            this.button4.Location = new System.Drawing.Point(0, 144);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(385, 107);
+            this.button4.Size = new System.Drawing.Size(385, 61);
             this.button4.TabIndex = 2;
             this.button4.Text = "Empleados";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -210,11 +210,11 @@ namespace Komparte
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 116);
+            this.button3.Location = new System.Drawing.Point(0, 75);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(385, 105);
+            this.button3.Size = new System.Drawing.Size(385, 69);
             this.button3.TabIndex = 1;
             this.button3.Text = "Clientes";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -232,7 +232,7 @@ namespace Komparte
             this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(385, 116);
+            this.button2.Size = new System.Drawing.Size(385, 75);
             this.button2.TabIndex = 0;
             this.button2.Text = "Reservaciones";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -333,7 +333,7 @@ namespace Komparte
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1606, 32);
+            this.menuStrip1.Size = new System.Drawing.Size(1606, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.btnClose_Click);
