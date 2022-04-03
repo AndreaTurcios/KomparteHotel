@@ -263,14 +263,14 @@ namespace DataAccess.DBServices
                             var userObj = new User
                             {
                                 Id = (int)reader[0],
+                                FirstName = reader[1].ToString(),
                                 Username = reader[2].ToString(),
                                 Password = reader[3].ToString(),
-                                FirstName = reader[1].ToString(),
                                 DUI = reader[4].ToString(),
                                 Phone = reader[5].ToString(),
                                 Direction = reader[6].ToString(),
-                                Position = reader[8].ToString(),
-                                Email = reader[7].ToString()
+                                Email = reader[7].ToString(),
+                                Position = reader[8].ToString()
                             };
                             userList.Add(userObj);
                         }

@@ -47,26 +47,26 @@ namespace Komparte
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.btnClose = new System.Windows.Forms.ToolStripMenuItem();
             this.btnChildFormClose = new System.Windows.Forms.Button();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.lblUserr = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCaption = new System.Windows.Forms.Label();
             this.horaFecha = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
-            this.btnClose = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMenu.SuspendLayout();
             this.panelBotones2.SuspendLayout();
             this.panelBotones.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -80,10 +80,10 @@ namespace Komparte
             this.panelMenu.Controls.Add(this.btnMen1);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 28);
+            this.panelMenu.Location = new System.Drawing.Point(0, 32);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(387, 762);
+            this.panelMenu.Size = new System.Drawing.Size(387, 758);
             this.panelMenu.TabIndex = 0;
             // 
             // panelBotones2
@@ -160,7 +160,7 @@ namespace Komparte
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 702);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 698);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -323,6 +323,19 @@ namespace Komparte
             this.lblName.TabIndex = 15;
             this.lblName.Text = "Name";
             // 
+            // pictureBoxPhoto
+            // 
+            this.pictureBoxPhoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxPhoto.Image = global::Komparte.Properties.Resources.DefaultUserProfile;
+            this.pictureBoxPhoto.Location = new System.Drawing.Point(27, 23);
+            this.pictureBoxPhoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBoxPhoto.Name = "pictureBoxPhoto";
+            this.pictureBoxPhoto.Size = new System.Drawing.Size(96, 98);
+            this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPhoto.TabIndex = 14;
+            this.pictureBoxPhoto.TabStop = false;
+            this.pictureBoxPhoto.Click += new System.EventHandler(this.pictureBoxPhoto_Click);
+            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
@@ -333,11 +346,20 @@ namespace Komparte
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1606, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1606, 32);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.btnClose_Click);
             this.menuStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.menuStrip1_MouseDown);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Image = global::Komparte.Properties.Resources.close;
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(36, 28);
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnChildFormClose
             // 
@@ -414,6 +436,18 @@ namespace Komparte
             this.lblHora.TabIndex = 1;
             this.lblHora.Text = "hora";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Komparte.Properties.Resources.logopngkomparte;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 127);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(461, 444);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // lblCaption
             // 
             this.lblCaption.AutoSize = true;
@@ -429,40 +463,6 @@ namespace Komparte
             // 
             this.horaFecha.Enabled = true;
             this.horaFecha.Tick += new System.EventHandler(this.horaFecha_Tick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Komparte.Properties.Resources.logopngkomparte;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 127);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(461, 444);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBoxPhoto
-            // 
-            this.pictureBoxPhoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxPhoto.Image = global::Komparte.Properties.Resources.DefaultUserProfile;
-            this.pictureBoxPhoto.Location = new System.Drawing.Point(27, 23);
-            this.pictureBoxPhoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBoxPhoto.Name = "pictureBoxPhoto";
-            this.pictureBoxPhoto.Size = new System.Drawing.Size(96, 98);
-            this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxPhoto.TabIndex = 14;
-            this.pictureBoxPhoto.TabStop = false;
-            this.pictureBoxPhoto.Click += new System.EventHandler(this.pictureBoxPhoto_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnClose.Image = global::Komparte.Properties.Resources.close;
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(36, 50);
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmMain
             // 
@@ -488,12 +488,12 @@ namespace Komparte
             this.panelBotones.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

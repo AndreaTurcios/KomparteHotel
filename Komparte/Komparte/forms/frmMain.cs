@@ -91,11 +91,16 @@ namespace Komparte
         {
         }
 
+        protected void CloseApp()
+        {
+            if (MessageBox.Show("¿Está seguro de cerrar Komparte?", "Mensaje",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Application.Exit();//Cierra toda la aplicación finalizando todos los procesos.
+        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            Application.Exit();
+            this.CloseApp();//Cierra la aplicación.
         }
 
         private void button2_Click(object sender, EventArgs e)
