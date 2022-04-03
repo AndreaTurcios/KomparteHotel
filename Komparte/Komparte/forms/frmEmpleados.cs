@@ -20,6 +20,22 @@ namespace Komparte.forms
             //FillFields();   //LLenar los campos del formulario con el modelo de usuario (Ver metodo).                 
             ListUsers();
             txtClaveA.UseSystemPasswordChar = false;//Quitar el enmascaramiento de caracteres.
+            //Combota tu lista de eSTADO
+            List<classes.EstadoEmpleado> listClaseEmpleados = new List<classes.EstadoEmpleado>();
+            listClaseEmpleados.Clear();
+            /*classes.EstadoEmpleado estado1 = new classes.EstadoEmpleado(1,"Estado 1");
+            classes.EstadoEmpleado estado2 = new classes.EstadoEmpleado(2, "Estado 2");
+            listClaseEmpleados.Add(estado1);
+            listClaseEmpleados.Add(estado2);*/
+            Console.WriteLine(listClaseEmpleados);
+          //  this.comboBox1 = new ComboBox();
+            foreach (classes.EstadoEmpleado item in listClaseEmpleados) {
+                this.comboBox1.Items.Add(item);
+                this.comboBox2.Items.Add(item);
+            }
+
+            //this.comboBox1.DataSource = listClaseEmpleados;
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -181,6 +197,11 @@ namespace Komparte.forms
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FillFields();
         }
     }
     }

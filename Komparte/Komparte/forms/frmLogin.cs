@@ -13,8 +13,6 @@ namespace Komparte.forms
     {
         private string usernamePlaceholder;//Marca de agua(Placeholder) para el cuadro de texto usuario.
         private string passwordPlaceholder;//Marca de agua(Placeholder) para el cuadro de texto contraseña.
-        private Color placeholderColor;//Color del marca de agua(Placeholder).
-        private Color textColor;//Color para el texto del cuadro texto.
 
         public frmLogin()
         {

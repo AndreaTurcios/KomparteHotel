@@ -12,6 +12,7 @@ namespace Komparte.classes.helpers
 {
     public class TipoEmpleado
     {
-        
+        private int id;
+        private string tipoempleado;
     }
 }
