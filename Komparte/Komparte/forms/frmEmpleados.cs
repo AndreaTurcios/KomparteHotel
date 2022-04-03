@@ -15,6 +15,7 @@ namespace Komparte.forms
         public frmEmpleados()
         {
             InitializeComponent();
+            txtClaveA.UseSystemPasswordChar = false;//Quitar el enmascaramiento de caracteres.
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -34,16 +35,28 @@ namespace Komparte.forms
 
         private void cbClave_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbClave.Checked == true)
+
+        }
+
+        private void txtClave_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClaveA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            if (txtClaveA.PasswordChar == '*')
             {
-                if (txtClave.PasswordChar == '*')
-                {
-                    txtClave.PasswordChar = '\0';
-                }
+                txtClaveA.PasswordChar = '\0';
             }
             else
             {
-                txtClave.PasswordChar = '*';
+                txtClaveA.PasswordChar = '*';
             }
         }
     }
