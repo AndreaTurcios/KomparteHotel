@@ -211,22 +211,19 @@ namespace Domain
             if (result != null)
             {
                 var userModel = MapUserModel(result);
-                //var mailService = new EmailService();
-                //mailService.Send(
-                //    recipient: userModel.Email,
-                  //  subject: "Solicitud de recuperación de contraseña",
-                 //   body: "Hola " + userModel.FirstName + ",\nSolicitó recuperar su contraseña.\n" +
-                 //   "Tu contraseña actual es: " + userModel.Password + "\nSin embargo, le pedimos que cambie" +
-                 //   "su contraseña inmediatamente una vez ingrese a la aplicacíon");
-               // return userModel;
+                var mailService = new EmailService();
+                mailService.Send(
+                    recipient: userModel.Email,
+                    subject: "Solicitud de recuperación de contraseña",
+                    body: "Hola " + userModel.FirstName + ",\nSolicitó recuperar su contraseña.\n" +
+                    "Tu contraseña actual es: " + userModel.Password + "\nSin embargo, le pedimos que cambie" +
+                    "su contraseña inmediatamente una vez ingrese a la aplicacíon");
+                return userModel;
             }
             else
                 return null;
-            /*Nota: Eso es simplemente un ejemplo para enviar correos electrónicos,
-             * no es buena idea enviar directamente la contraseña del usuario,
-             * en su lugar, es mejor enviar una contraseña temporal.
-        }*/
-
+        }
+        */
         #endregion
 
         #region -> Métodos Privados (Mapear datos)
