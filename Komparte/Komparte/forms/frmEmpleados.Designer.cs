@@ -30,6 +30,8 @@ namespace Komparte.forms
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtConfirmPass = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.txtClaveA = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -62,8 +64,6 @@ namespace Komparte.forms
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtConfirmPass = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -104,6 +104,25 @@ namespace Komparte.forms
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gestión de empleados";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(445, 113);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 20);
+            this.label11.TabIndex = 45;
+            this.label11.Text = "Clave:";
+            // 
+            // txtConfirmPass
+            // 
+            this.txtConfirmPass.Location = new System.Drawing.Point(503, 107);
+            this.txtConfirmPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtConfirmPass.Name = "txtConfirmPass";
+            this.txtConfirmPass.PasswordChar = '*';
+            this.txtConfirmPass.Size = new System.Drawing.Size(135, 26);
+            this.txtConfirmPass.TabIndex = 44;
+            this.txtConfirmPass.UseSystemPasswordChar = true;
             // 
             // button6
             // 
@@ -194,7 +213,7 @@ namespace Komparte.forms
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(106, 129);
+            this.txtCorreo.Location = new System.Drawing.Point(106, 91);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(314, 26);
@@ -203,7 +222,7 @@ namespace Komparte.forms
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(32, 129);
+            this.label8.Location = new System.Drawing.Point(32, 94);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 20);
             this.label8.TabIndex = 37;
@@ -228,7 +247,7 @@ namespace Komparte.forms
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(106, 91);
+            this.txtPhone.Location = new System.Drawing.Point(106, 121);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(145, 26);
@@ -237,7 +256,7 @@ namespace Komparte.forms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 96);
+            this.label4.Location = new System.Drawing.Point(32, 124);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 20);
             this.label4.TabIndex = 33;
@@ -404,6 +423,7 @@ namespace Komparte.forms
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(1120, 262);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel2
             // 
@@ -425,25 +445,6 @@ namespace Komparte.forms
             this.label1.Size = new System.Drawing.Size(293, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Gestión de empleados";
-            // 
-            // txtConfirmPass
-            // 
-            this.txtConfirmPass.Location = new System.Drawing.Point(503, 110);
-            this.txtConfirmPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtConfirmPass.Name = "txtConfirmPass";
-            this.txtConfirmPass.PasswordChar = '*';
-            this.txtConfirmPass.Size = new System.Drawing.Size(135, 26);
-            this.txtConfirmPass.TabIndex = 44;
-            this.txtConfirmPass.UseSystemPasswordChar = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(445, 120);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 20);
-            this.label11.TabIndex = 45;
-            this.label11.Text = "Clave:";
             // 
             // frmEmpleados
             // 
