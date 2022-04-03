@@ -17,6 +17,7 @@ namespace Komparte.forms
         public frmEmpleados()
         {
             InitializeComponent();
+            //FillFields();   //LLenar los campos del formulario con el modelo de usuario (Ver metodo).                 
             ListUsers();
             txtClaveA.UseSystemPasswordChar = false;//Quitar el enmascaramiento de caracteres.
         }
@@ -141,6 +142,18 @@ namespace Komparte.forms
         private void button1_Click(object sender, EventArgs e)
         {
             Save();
+            ListUsers();
+        }
+
+        private void FillFields()
+        {//Cargar los datos del modelo  en los campos del formulario.
+            txtNombre.Text = userModel.FirstName;
+            txtUser.Text = userModel.Username;
+            txtPhone.Text = userModel.Phone;
+            txtDUI.Text = userModel.DUI;
+            txtClaveA.Text = userModel.Password;
+            txtCorreo.Text = userModel.Email;
+            txtDireccion.Text = userModel.Direction;
         }
 
         private void button3_Click(object sender, EventArgs e)

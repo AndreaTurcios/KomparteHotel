@@ -115,13 +115,18 @@ namespace DataAccess.DBServices
                 {
                     command.Connection = connection;
                     command.CommandText = @"insert into empleado 
-	                                        values (@userName,@password, @firstName, @DUI,@position,@email,@photo)";
+	                                        values (@firstName,@userName,@password,@DUI,@phone,@direction,@email,@estadoempleado,@position,@idhotel)";
+
+                    command.Parameters.AddWithValue("@firstName", user.FirstName);
                     command.Parameters.AddWithValue("@userName", user.Username);
                     command.Parameters.AddWithValue("@password", user.Password);
-                    command.Parameters.AddWithValue("@firstName", user.FirstName);
                     command.Parameters.AddWithValue("@DUI", user.DUI);
-                    command.Parameters.AddWithValue("@position", user.Position);
+                    command.Parameters.AddWithValue("@phone", user.Phone);
+                    command.Parameters.AddWithValue("@direction", user.Direction);
                     command.Parameters.AddWithValue("@email", user.Email);
+                    command.Parameters.AddWithValue("@estado", user.Estado);
+                    command.Parameters.AddWithValue("@position", user.Position);
+                    command.Parameters.AddWithValue("@idhotel", user.IdHotel);
                     command.CommandType = CommandType.Text;
                     result = command.ExecuteNonQuery(); //Ejecutar el comando de texto y asignar el resultado al campo result.
                 }
@@ -141,13 +146,15 @@ namespace DataAccess.DBServices
                     command.CommandText = @"update  empleado	
 	                                        set nombre_usuario=@userName,password=@password,firstName=@firstName,lastName= @lastName,position= @position,email=@email, profilePicture=@photo  
 	                                        where id=@id ";
-                    command.Parameters.AddWithValue("@id", user.Id);
                     command.Parameters.AddWithValue("@userName", user.Username);
                     command.Parameters.AddWithValue("@password", user.Password);
                     command.Parameters.AddWithValue("@firstName", user.FirstName);
-                    command.Parameters.AddWithValue("@lastName", user.DUI);
+                    command.Parameters.AddWithValue("@DUI", user.DUI);
                     command.Parameters.AddWithValue("@position", user.Position);
                     command.Parameters.AddWithValue("@email", user.Email);
+                    command.Parameters.AddWithValue("@estado", user.Estado);
+                    command.Parameters.AddWithValue("@tipoempleado", user.TipoEmpleado);
+                    command.Parameters.AddWithValue("@idhotel", user.IdHotel);
                     command.CommandType = CommandType.Text;
                     result = command.ExecuteNonQuery();
                 }

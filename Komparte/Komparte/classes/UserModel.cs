@@ -24,7 +24,9 @@ namespace Domain
         private string _email;
         private string _telefono;
         private string _direccion;
-        private byte[] _photo;
+        private string _estado;
+        private string _tipoempleado;
+        private string _idhotel;
         private UserDao _userDao;
         #endregion
 
@@ -35,7 +37,7 @@ namespace Domain
             _userDao = new UserDao();
         }
 
-        public UserModel(int id, string userName, string firstName, string password,  string DUI, string telefono, string direccion, string email, string position)
+        public UserModel(int id, string userName, string firstName, string password,  string DUI, string telefono, string direccion, string email, string position, string estadoempleado, string idtipoempleado, string idhotel)
         {
             Id = id;
             Direction = direccion;
@@ -46,6 +48,9 @@ namespace Domain
             Phone = telefono;
             Position = position;
             Email = email;
+            Estado = estadoempleado;
+            TipoEmpleado = idtipoempleado;
+            IdHotel = idhotel;
             _userDao = new UserDao();
         }
         #endregion
@@ -53,7 +58,7 @@ namespace Domain
         #region -> Propiedades + Validacíon y Visualización de Datos
 
         //Posición 0 
-        [DisplayName("Num")]//Nombre a visualizar (Por ejemplo en la columna del datagridview se mostrará como Num).
+        [DisplayName("Id")]//Nombre a visualizar (Por ejemplo en la columna del datagridview se mostrará como Num).
         public int Id
         {
             get { return _id; }
@@ -144,7 +149,37 @@ namespace Domain
             set { _email = value; }
         }
 
-       
+        //Posición 8
+        [DisplayName("Estado")]//Nombre a visualizar.
+        [Required(ErrorMessage = "Por favor ingrese correo electrónico.")]//Validaciones
+        [EmailAddress(ErrorMessage = "Ingrese un estado válido: example@gmail.com")]
+        public string Estado
+        {
+            get { return _estado; }
+            set { _estado = value; }
+        }
+
+        //Posición 9
+        [DisplayName("TipoEmpleado")]//Nombre a visualizar.
+        [Required(ErrorMessage = "Por favor ingrese correo electrónico.")]//Validaciones
+        [EmailAddress(ErrorMessage = "Ingrese un estado válido: example@gmail.com")]
+        public string TipoEmpleado
+        {
+            get { return _tipoempleado; }
+            set { _tipoempleado = value; }
+        }
+
+        //Posición 10
+        [DisplayName("IdHotel")]//Nombre a visualizar.
+        [Required(ErrorMessage = "Por favor ingrese correo electrónico.")]//Validaciones
+        [EmailAddress(ErrorMessage = "Ingrese un estado válido: example@gmail.com")]
+        public string IdHotel
+        {
+            get { return _idhotel; }
+            set { _idhotel = value; }
+        }
+
+
         #endregion
 
         #region -> Métodos Públicos

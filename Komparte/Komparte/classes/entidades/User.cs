@@ -20,5 +20,9 @@ namespace DataAccess.DBServices.Entities
         public string Position { get; set; }
        public string Email { get; set; }
 
+        public string Estado { get; set; }
+        public string TipoEmpleado { get; set; }
+        public string IdHotel { get; set; }
+
     }
 }
