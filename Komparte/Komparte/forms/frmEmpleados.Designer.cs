@@ -36,7 +36,6 @@ namespace Komparte.forms
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
@@ -46,7 +45,7 @@ namespace Komparte.forms
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,16 +57,24 @@ namespace Komparte.forms
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtIdHotel = new System.Windows.Forms.TextBox();
+            this.cbClave = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbClave);
+            this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.label8);
@@ -77,13 +84,12 @@ namespace Komparte.forms
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtClave);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(12, 71);
@@ -158,16 +164,6 @@ namespace Komparte.forms
             this.textBox1.Size = new System.Drawing.Size(314, 26);
             this.textBox1.TabIndex = 18;
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(644, 72);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(52, 28);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "Ver";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -180,6 +176,7 @@ namespace Komparte.forms
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtIdHotel);
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(18, 248);
@@ -259,14 +256,15 @@ namespace Komparte.forms
             this.label5.TabIndex = 29;
             this.label5.Text = "Clave:";
             // 
-            // textBox3
+            // txtClave
             // 
-            this.textBox3.Location = new System.Drawing.Point(503, 73);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(135, 26);
-            this.textBox3.TabIndex = 30;
-            this.textBox3.UseSystemPasswordChar = true;
+            this.txtClave.Location = new System.Drawing.Point(503, 73);
+            this.txtClave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.Size = new System.Drawing.Size(135, 26);
+            this.txtClave.TabIndex = 30;
+            this.txtClave.UseSystemPasswordChar = true;
             // 
             // label6
             // 
@@ -344,7 +342,7 @@ namespace Komparte.forms
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(241, 63);
+            this.groupBox3.Size = new System.Drawing.Size(228, 63);
             this.groupBox3.TabIndex = 39;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Estado empleado";
@@ -369,11 +367,64 @@ namespace Komparte.forms
             this.label9.TabIndex = 13;
             this.label9.Text = "Estado:";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.comboBox2);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Location = new System.Drawing.Point(976, 77);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(177, 63);
+            this.groupBox4.TabIndex = 40;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Tipo empleado";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(63, 28);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(108, 28);
+            this.comboBox2.TabIndex = 12;
+            this.comboBox2.Tag = "";
+            this.comboBox2.Text = "Tipo";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(12, 36);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 30);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Tipo:";
+            // 
+            // txtIdHotel
+            // 
+            this.txtIdHotel.Location = new System.Drawing.Point(18, 306);
+            this.txtIdHotel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIdHotel.Name = "txtIdHotel";
+            this.txtIdHotel.Size = new System.Drawing.Size(43, 26);
+            this.txtIdHotel.TabIndex = 33;
+            this.txtIdHotel.Visible = false;
+            // 
+            // cbClave
+            // 
+            this.cbClave.AutoSize = true;
+            this.cbClave.Location = new System.Drawing.Point(644, 76);
+            this.cbClave.Name = "cbClave";
+            this.cbClave.Size = new System.Drawing.Size(60, 24);
+            this.cbClave.TabIndex = 41;
+            this.cbClave.Text = "Ver";
+            this.cbClave.UseVisualStyleBackColor = true;
+            this.cbClave.CheckedChanged += new System.EventHandler(this.cbClave_CheckedChanged);
+            // 
             // frmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 455);
+            this.ClientSize = new System.Drawing.Size(1222, 683);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -383,11 +434,14 @@ namespace Komparte.forms
             this.groupBox1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -401,14 +455,13 @@ namespace Komparte.forms
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
@@ -423,5 +476,10 @@ namespace Komparte.forms
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtIdHotel;
+        private System.Windows.Forms.CheckBox cbClave;
     }
 }
