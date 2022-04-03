@@ -20,8 +20,9 @@ namespace Komparte.forms
             //FillFields();   //LLenar los campos del formulario con el modelo de usuario (Ver metodo).                 
             ListUsers();
             txtClaveA.UseSystemPasswordChar = false;//Quitar el enmascaramiento de caracteres.
-            //Combota tu lista de eSTADO
-            List<classes.EstadoEmpleado> listClaseEmpleados = new List<classes.EstadoEmpleado>();
+            txtConfirmPass.UseSystemPasswordChar = false;
+           //Combota tu lista de eSTADO
+           List <classes.EstadoEmpleado> listClaseEmpleados = new List<classes.EstadoEmpleado>();
             listClaseEmpleados.Clear();
             /*classes.EstadoEmpleado estado1 = new classes.EstadoEmpleado(1,"Estado 1");
             classes.EstadoEmpleado estado2 = new classes.EstadoEmpleado(2, "Estado 2");
@@ -70,13 +71,17 @@ namespace Komparte.forms
 
         private void button6_Click_1(object sender, EventArgs e)
         {
-            if (txtClaveA.PasswordChar == '*')
+            if (txtClaveA.PasswordChar == '*' || txtConfirmPass.PasswordChar == '*')
             {
+                button6.Text="Ocultar";
                 txtClaveA.PasswordChar = '\0';
+                txtConfirmPass.PasswordChar = '\0';
             }
             else
             {
+                button6.Text = "Mostrar";
                 txtClaveA.PasswordChar = '*';
+                txtConfirmPass.PasswordChar = '*';
             }
         }
 

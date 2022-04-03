@@ -254,5 +254,10 @@ namespace Komparte
         {
 
         }
+
+        private void btnTipoActividades_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<frmActEntorno>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
     }
 }

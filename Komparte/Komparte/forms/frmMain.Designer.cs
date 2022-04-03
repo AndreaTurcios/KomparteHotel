@@ -133,6 +133,7 @@ namespace Komparte
             this.btnTipoActividades.Text = "Actividades";
             this.btnTipoActividades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTipoActividades.UseVisualStyleBackColor = false;
+            this.btnTipoActividades.Click += new System.EventHandler(this.btnTipoActividades_Click);
             // 
             // btnInformacion
             // 
@@ -358,7 +359,7 @@ namespace Komparte
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClose.Image = global::Komparte.Properties.Resources.close;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(36, 28);
+            this.btnClose.Size = new System.Drawing.Size(36, 24);
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnChildFormClose

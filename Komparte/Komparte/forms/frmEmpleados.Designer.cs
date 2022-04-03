@@ -75,7 +75,6 @@ namespace Komparte.forms
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtConfirmPass);
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.txtClaveA);
@@ -96,6 +95,7 @@ namespace Komparte.forms
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Location = new System.Drawing.Point(12, 71);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
@@ -110,27 +110,26 @@ namespace Komparte.forms
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(445, 113);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 20);
+            this.label11.Size = new System.Drawing.Size(123, 30);
             this.label11.TabIndex = 45;
-            this.label11.Text = "Clave:";
+            this.label11.Text = "Confirmar:";
             // 
             // txtConfirmPass
             // 
-            this.txtConfirmPass.Location = new System.Drawing.Point(503, 107);
+            this.txtConfirmPass.Location = new System.Drawing.Point(532, 107);
             this.txtConfirmPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtConfirmPass.Name = "txtConfirmPass";
             this.txtConfirmPass.PasswordChar = '*';
-            this.txtConfirmPass.Size = new System.Drawing.Size(135, 26);
+            this.txtConfirmPass.Size = new System.Drawing.Size(106, 26);
             this.txtConfirmPass.TabIndex = 44;
-            this.txtConfirmPass.UseSystemPasswordChar = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(644, 71);
+            this.button6.Location = new System.Drawing.Point(644, 88);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(52, 29);
+            this.button6.Size = new System.Drawing.Size(90, 29);
             this.button6.TabIndex = 43;
-            this.button6.Text = "Ver";
+            this.button6.Text = "Mostrar";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
@@ -239,7 +238,7 @@ namespace Komparte.forms
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(738, 42);
+            this.label7.Location = new System.Drawing.Point(746, 42);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 20);
             this.label7.TabIndex = 35;
@@ -267,7 +266,7 @@ namespace Komparte.forms
             this.txtDUI.Location = new System.Drawing.Point(503, 39);
             this.txtDUI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDUI.Name = "txtDUI";
-            this.txtDUI.Size = new System.Drawing.Size(193, 26);
+            this.txtDUI.Size = new System.Drawing.Size(231, 26);
             this.txtDUI.TabIndex = 32;
             // 
             // label6
