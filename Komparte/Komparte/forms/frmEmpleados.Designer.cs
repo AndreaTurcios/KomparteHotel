@@ -412,9 +412,9 @@ namespace Komparte.forms
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(644, 74);
+            this.button6.Location = new System.Drawing.Point(644, 71);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(52, 26);
+            this.button6.Size = new System.Drawing.Size(52, 29);
             this.button6.TabIndex = 43;
             this.button6.Text = "Ver";
             this.button6.UseVisualStyleBackColor = true;
