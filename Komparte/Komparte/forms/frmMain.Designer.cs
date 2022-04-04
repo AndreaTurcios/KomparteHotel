@@ -33,11 +33,13 @@ namespace Komparte
             this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelBotones2 = new System.Windows.Forms.Panel();
+            this.btnTipoHotel = new System.Windows.Forms.Button();
             this.btnTipoEntorno = new System.Windows.Forms.Button();
             this.btnTipoActividades = new System.Windows.Forms.Button();
             this.btnInformacion = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.panelBotones = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -47,28 +49,26 @@ namespace Komparte
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.btnClose = new System.Windows.Forms.ToolStripMenuItem();
             this.btnChildFormClose = new System.Windows.Forms.Button();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.lblUserr = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCaption = new System.Windows.Forms.Label();
             this.horaFecha = new System.Windows.Forms.Timer(this.components);
-            this.btnTipoHotel = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMenu.SuspendLayout();
             this.panelBotones2.SuspendLayout();
             this.panelBotones.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -85,7 +85,7 @@ namespace Komparte
             this.panelMenu.Location = new System.Drawing.Point(0, 28);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(387, 762);
+            this.panelMenu.Size = new System.Drawing.Size(387, 760);
             this.panelMenu.TabIndex = 0;
             // 
             // panelBotones2
@@ -100,6 +100,25 @@ namespace Komparte
             this.panelBotones2.Size = new System.Drawing.Size(361, 227);
             this.panelBotones2.TabIndex = 5;
             // 
+            // btnTipoHotel
+            // 
+            this.btnTipoHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
+            this.btnTipoHotel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTipoHotel.FlatAppearance.BorderSize = 0;
+            this.btnTipoHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTipoHotel.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
+            this.btnTipoHotel.ForeColor = System.Drawing.Color.White;
+            this.btnTipoHotel.Location = new System.Drawing.Point(0, 157);
+            this.btnTipoHotel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnTipoHotel.Name = "btnTipoHotel";
+            this.btnTipoHotel.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnTipoHotel.Size = new System.Drawing.Size(361, 70);
+            this.btnTipoHotel.TabIndex = 9;
+            this.btnTipoHotel.Text = "Tipo de hotel";
+            this.btnTipoHotel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTipoHotel.UseVisualStyleBackColor = false;
+            this.btnTipoHotel.Click += new System.EventHandler(this.btnTipoHotel_Click);
+            // 
             // btnTipoEntorno
             // 
             this.btnTipoEntorno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
@@ -108,11 +127,11 @@ namespace Komparte
             this.btnTipoEntorno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTipoEntorno.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
             this.btnTipoEntorno.ForeColor = System.Drawing.Color.White;
-            this.btnTipoEntorno.Location = new System.Drawing.Point(0, 74);
+            this.btnTipoEntorno.Location = new System.Drawing.Point(0, 83);
             this.btnTipoEntorno.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnTipoEntorno.Name = "btnTipoEntorno";
             this.btnTipoEntorno.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnTipoEntorno.Size = new System.Drawing.Size(361, 76);
+            this.btnTipoEntorno.Size = new System.Drawing.Size(361, 74);
             this.btnTipoEntorno.TabIndex = 8;
             this.btnTipoEntorno.Text = "Entorno";
             this.btnTipoEntorno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -131,7 +150,7 @@ namespace Komparte
             this.btnTipoActividades.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnTipoActividades.Name = "btnTipoActividades";
             this.btnTipoActividades.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnTipoActividades.Size = new System.Drawing.Size(361, 74);
+            this.btnTipoActividades.Size = new System.Drawing.Size(361, 83);
             this.btnTipoActividades.TabIndex = 7;
             this.btnTipoActividades.Text = "Actividades";
             this.btnTipoActividades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -190,6 +209,24 @@ namespace Komparte
             this.panelBotones.Size = new System.Drawing.Size(361, 296);
             this.panelBotones.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 208);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(359, 72);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Factura";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // button4
             // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -197,11 +234,11 @@ namespace Komparte
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 144);
+            this.button4.Location = new System.Drawing.Point(0, 146);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(359, 74);
+            this.button4.Size = new System.Drawing.Size(359, 62);
             this.button4.TabIndex = 2;
             this.button4.Text = "Empleados";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -219,7 +256,7 @@ namespace Komparte
             this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(359, 69);
+            this.button3.Size = new System.Drawing.Size(359, 71);
             this.button3.TabIndex = 1;
             this.button3.Text = "Clientes";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -328,19 +365,6 @@ namespace Komparte
             this.lblName.TabIndex = 15;
             this.lblName.Text = "Name";
             // 
-            // pictureBoxPhoto
-            // 
-            this.pictureBoxPhoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxPhoto.Image = global::Komparte.Properties.Resources.DefaultUserProfile;
-            this.pictureBoxPhoto.Location = new System.Drawing.Point(27, 23);
-            this.pictureBoxPhoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBoxPhoto.Name = "pictureBoxPhoto";
-            this.pictureBoxPhoto.Size = new System.Drawing.Size(96, 98);
-            this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxPhoto.TabIndex = 14;
-            this.pictureBoxPhoto.TabStop = false;
-            this.pictureBoxPhoto.Click += new System.EventHandler(this.pictureBoxPhoto_Click);
-            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
@@ -351,20 +375,11 @@ namespace Komparte
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1606, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1604, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.btnClose_Click);
             this.menuStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.menuStrip1_MouseDown);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnClose.Image = global::Komparte.Properties.Resources.close;
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(36, 24);
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnChildFormClose
             // 
@@ -441,18 +456,6 @@ namespace Komparte
             this.lblHora.TabIndex = 1;
             this.lblHora.Text = "hora";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Komparte.Properties.Resources.logopngkomparte;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 127);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(461, 444);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // lblCaption
             // 
             this.lblCaption.AutoSize = true;
@@ -469,49 +472,46 @@ namespace Komparte
             this.horaFecha.Enabled = true;
             this.horaFecha.Tick += new System.EventHandler(this.horaFecha_Tick);
             // 
-            // btnTipoHotel
+            // pictureBox1
             // 
-            this.btnTipoHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
-            this.btnTipoHotel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTipoHotel.FlatAppearance.BorderSize = 0;
-            this.btnTipoHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTipoHotel.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
-            this.btnTipoHotel.ForeColor = System.Drawing.Color.White;
-            this.btnTipoHotel.Location = new System.Drawing.Point(0, 150);
-            this.btnTipoHotel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnTipoHotel.Name = "btnTipoHotel";
-            this.btnTipoHotel.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnTipoHotel.Size = new System.Drawing.Size(361, 76);
-            this.btnTipoHotel.TabIndex = 9;
-            this.btnTipoHotel.Text = "Tipo de hotel";
-            this.btnTipoHotel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTipoHotel.UseVisualStyleBackColor = false;
-            this.btnTipoHotel.Click += new System.EventHandler(this.btnTipoHotel_Click);
+            this.pictureBox1.Image = global::Komparte.Properties.Resources.logopngkomparte;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 127);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(461, 444);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button1
+            // pictureBoxPhoto
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 218);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(359, 77);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Factura";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.pictureBoxPhoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxPhoto.Image = global::Komparte.Properties.Resources.DefaultUserProfile;
+            this.pictureBoxPhoto.Location = new System.Drawing.Point(27, 23);
+            this.pictureBoxPhoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBoxPhoto.Name = "pictureBoxPhoto";
+            this.pictureBoxPhoto.Size = new System.Drawing.Size(96, 98);
+            this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPhoto.TabIndex = 14;
+            this.pictureBoxPhoto.TabStop = false;
+            this.pictureBoxPhoto.Click += new System.EventHandler(this.pictureBoxPhoto_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Image = global::Komparte.Properties.Resources.close;
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(36, 24);
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1606, 790);
+            this.ClientSize = new System.Drawing.Size(1604, 788);
             this.Controls.Add(this.lblCaption);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.btnChildFormClose);
@@ -530,12 +530,12 @@ namespace Komparte
             this.panelBotones.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
