@@ -30,7 +30,6 @@ namespace Komparte.forms
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.txtConfirmPass = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.txtClaveA = new System.Windows.Forms.TextBox();
@@ -62,6 +61,7 @@ namespace Komparte.forms
             this.txtIdHotel = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -104,15 +104,6 @@ namespace Komparte.forms
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gestión de empleados";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(445, 113);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(123, 30);
-            this.label11.TabIndex = 45;
-            this.label11.Text = "Confirmar:";
             // 
             // txtConfirmPass
             // 
@@ -249,7 +240,7 @@ namespace Komparte.forms
             this.txtPhone.Location = new System.Drawing.Point(106, 121);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(145, 26);
+            this.txtPhone.Size = new System.Drawing.Size(154, 26);
             this.txtPhone.TabIndex = 34;
             // 
             // label4
@@ -424,6 +415,15 @@ namespace Komparte.forms
             this.dataGridView1.Size = new System.Drawing.Size(1120, 262);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(445, 113);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(82, 20);
+            this.label11.TabIndex = 45;
+            this.label11.Text = "Confirmar:";
             // 
             // panel2
             // 
