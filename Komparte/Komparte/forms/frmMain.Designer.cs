@@ -60,6 +60,7 @@ namespace Komparte
             this.lblCaption = new System.Windows.Forms.Label();
             this.horaFecha = new System.Windows.Forms.Timer(this.components);
             this.btnTipoHotel = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelBotones2.SuspendLayout();
             this.panelBotones.SuspendLayout();
@@ -93,7 +94,7 @@ namespace Komparte
             this.panelBotones2.Controls.Add(this.btnTipoEntorno);
             this.panelBotones2.Controls.Add(this.btnTipoActividades);
             this.panelBotones2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBotones2.Location = new System.Drawing.Point(0, 531);
+            this.panelBotones2.Location = new System.Drawing.Point(0, 608);
             this.panelBotones2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelBotones2.Name = "panelBotones2";
             this.panelBotones2.Size = new System.Drawing.Size(361, 227);
@@ -144,7 +145,7 @@ namespace Komparte
             this.btnInformacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInformacion.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
             this.btnInformacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnInformacion.Location = new System.Drawing.Point(0, 471);
+            this.btnInformacion.Location = new System.Drawing.Point(0, 548);
             this.btnInformacion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnInformacion.Name = "btnInformacion";
             this.btnInformacion.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -163,7 +164,7 @@ namespace Komparte
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 758);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 835);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -178,6 +179,7 @@ namespace Komparte
             // 
             this.panelBotones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
             this.panelBotones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelBotones.Controls.Add(this.button1);
             this.panelBotones.Controls.Add(this.button4);
             this.panelBotones.Controls.Add(this.button3);
             this.panelBotones.Controls.Add(this.button2);
@@ -185,7 +187,7 @@ namespace Komparte
             this.panelBotones.Location = new System.Drawing.Point(0, 252);
             this.panelBotones.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(361, 219);
+            this.panelBotones.Size = new System.Drawing.Size(361, 296);
             this.panelBotones.TabIndex = 2;
             // 
             // button4
@@ -199,7 +201,7 @@ namespace Komparte
             this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(359, 61);
+            this.button4.Size = new System.Drawing.Size(359, 74);
             this.button4.TabIndex = 2;
             this.button4.Text = "Empleados";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -486,6 +488,24 @@ namespace Komparte
             this.btnTipoHotel.UseVisualStyleBackColor = false;
             this.btnTipoHotel.Click += new System.EventHandler(this.btnTipoHotel_Click);
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 218);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(359, 77);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Factura";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -552,6 +572,7 @@ namespace Komparte
         private System.Windows.Forms.Label lblUserr;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnTipoHotel;
+        private System.Windows.Forms.Button button1;
     }
 }
 

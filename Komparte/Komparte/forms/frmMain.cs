@@ -264,5 +264,10 @@ namespace Komparte
         {
             OpenChildForm<frmTipoHotel>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm<frmFactura>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
     }
 }
