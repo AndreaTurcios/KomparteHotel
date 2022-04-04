@@ -133,7 +133,7 @@ namespace Komparte
 
         private void btnTipoEntorno_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm<frmEntorno>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
         }
         private void ActivateButton(Button menuButton)
         {
