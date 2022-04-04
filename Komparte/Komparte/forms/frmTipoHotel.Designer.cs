@@ -61,7 +61,7 @@ namespace Komparte.forms
             this.panel1.Location = new System.Drawing.Point(0, -4);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1217, 732);
+            this.panel1.Size = new System.Drawing.Size(1217, 717);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -96,7 +96,7 @@ namespace Komparte.forms
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1187, 628);
+            this.groupBox1.Size = new System.Drawing.Size(1187, 605);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Control de tipo de hotel";
@@ -164,14 +164,14 @@ namespace Komparte.forms
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(1153, 362);
+            this.groupBox2.Size = new System.Drawing.Size(1153, 340);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(939, 303);
+            this.button5.Location = new System.Drawing.Point(939, 277);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(192, 52);
             this.button5.TabIndex = 9;
@@ -187,7 +187,7 @@ namespace Komparte.forms
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1105, 255);
+            this.dataGridView1.Size = new System.Drawing.Size(1105, 229);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -237,7 +237,7 @@ namespace Komparte.forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1215, 726);
+            this.ClientSize = new System.Drawing.Size(1215, 715);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);

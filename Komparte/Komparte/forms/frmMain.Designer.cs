@@ -59,6 +59,7 @@ namespace Komparte
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCaption = new System.Windows.Forms.Label();
             this.horaFecha = new System.Windows.Forms.Timer(this.components);
+            this.btnTipoHotel = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelBotones2.SuspendLayout();
             this.panelBotones.SuspendLayout();
@@ -88,13 +89,14 @@ namespace Komparte
             // 
             // panelBotones2
             // 
+            this.panelBotones2.Controls.Add(this.btnTipoHotel);
             this.panelBotones2.Controls.Add(this.btnTipoEntorno);
             this.panelBotones2.Controls.Add(this.btnTipoActividades);
             this.panelBotones2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBotones2.Location = new System.Drawing.Point(0, 531);
             this.panelBotones2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelBotones2.Name = "panelBotones2";
-            this.panelBotones2.Size = new System.Drawing.Size(387, 146);
+            this.panelBotones2.Size = new System.Drawing.Size(361, 227);
             this.panelBotones2.TabIndex = 5;
             // 
             // btnTipoEntorno
@@ -109,7 +111,7 @@ namespace Komparte
             this.btnTipoEntorno.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnTipoEntorno.Name = "btnTipoEntorno";
             this.btnTipoEntorno.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnTipoEntorno.Size = new System.Drawing.Size(387, 76);
+            this.btnTipoEntorno.Size = new System.Drawing.Size(361, 76);
             this.btnTipoEntorno.TabIndex = 8;
             this.btnTipoEntorno.Text = "Entorno";
             this.btnTipoEntorno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,7 +130,7 @@ namespace Komparte
             this.btnTipoActividades.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnTipoActividades.Name = "btnTipoActividades";
             this.btnTipoActividades.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnTipoActividades.Size = new System.Drawing.Size(387, 74);
+            this.btnTipoActividades.Size = new System.Drawing.Size(361, 74);
             this.btnTipoActividades.TabIndex = 7;
             this.btnTipoActividades.Text = "Actividades";
             this.btnTipoActividades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -146,7 +148,7 @@ namespace Komparte
             this.btnInformacion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnInformacion.Name = "btnInformacion";
             this.btnInformacion.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnInformacion.Size = new System.Drawing.Size(387, 60);
+            this.btnInformacion.Size = new System.Drawing.Size(361, 60);
             this.btnInformacion.TabIndex = 4;
             this.btnInformacion.Text = "Información";
             this.btnInformacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -161,11 +163,11 @@ namespace Komparte
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 702);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 758);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnCerrarSesion.Size = new System.Drawing.Size(387, 60);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(361, 60);
             this.btnCerrarSesion.TabIndex = 3;
             this.btnCerrarSesion.Text = "Cerrar sesión";
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -183,7 +185,7 @@ namespace Komparte
             this.panelBotones.Location = new System.Drawing.Point(0, 252);
             this.panelBotones.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(387, 219);
+            this.panelBotones.Size = new System.Drawing.Size(361, 219);
             this.panelBotones.TabIndex = 2;
             // 
             // button4
@@ -197,7 +199,7 @@ namespace Komparte
             this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(385, 61);
+            this.button4.Size = new System.Drawing.Size(359, 61);
             this.button4.TabIndex = 2;
             this.button4.Text = "Empleados";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -215,7 +217,7 @@ namespace Komparte
             this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(385, 69);
+            this.button3.Size = new System.Drawing.Size(359, 69);
             this.button3.TabIndex = 1;
             this.button3.Text = "Clientes";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -233,7 +235,7 @@ namespace Komparte
             this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(385, 75);
+            this.button2.Size = new System.Drawing.Size(359, 75);
             this.button2.TabIndex = 0;
             this.button2.Text = "Reservaciones";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -251,7 +253,7 @@ namespace Komparte
             this.btnMen1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnMen1.Name = "btnMen1";
             this.btnMen1.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnMen1.Size = new System.Drawing.Size(387, 60);
+            this.btnMen1.Size = new System.Drawing.Size(361, 60);
             this.btnMen1.TabIndex = 1;
             this.btnMen1.Text = "Administración";
             this.btnMen1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -269,7 +271,7 @@ namespace Komparte
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(387, 192);
+            this.panelLogo.Size = new System.Drawing.Size(361, 192);
             this.panelLogo.TabIndex = 0;
             // 
             // linkProfile
@@ -465,6 +467,25 @@ namespace Komparte
             this.horaFecha.Enabled = true;
             this.horaFecha.Tick += new System.EventHandler(this.horaFecha_Tick);
             // 
+            // btnTipoHotel
+            // 
+            this.btnTipoHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
+            this.btnTipoHotel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTipoHotel.FlatAppearance.BorderSize = 0;
+            this.btnTipoHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTipoHotel.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
+            this.btnTipoHotel.ForeColor = System.Drawing.Color.White;
+            this.btnTipoHotel.Location = new System.Drawing.Point(0, 150);
+            this.btnTipoHotel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnTipoHotel.Name = "btnTipoHotel";
+            this.btnTipoHotel.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnTipoHotel.Size = new System.Drawing.Size(361, 76);
+            this.btnTipoHotel.TabIndex = 9;
+            this.btnTipoHotel.Text = "Tipo de hotel";
+            this.btnTipoHotel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTipoHotel.UseVisualStyleBackColor = false;
+            this.btnTipoHotel.Click += new System.EventHandler(this.btnTipoHotel_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -530,6 +551,7 @@ namespace Komparte
         private System.Windows.Forms.Timer horaFecha;
         private System.Windows.Forms.Label lblUserr;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnTipoHotel;
     }
 }
 
