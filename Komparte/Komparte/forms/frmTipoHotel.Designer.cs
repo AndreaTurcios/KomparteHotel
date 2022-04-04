@@ -61,7 +61,7 @@ namespace Komparte.forms
             this.panel1.Location = new System.Drawing.Point(0, -4);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1217, 717);
+            this.panel1.Size = new System.Drawing.Size(1216, 717);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -243,7 +243,7 @@ namespace Komparte.forms
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTipoHotel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Komparte Pais";
+            this.Text = "Lista de tipo de hoteles";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

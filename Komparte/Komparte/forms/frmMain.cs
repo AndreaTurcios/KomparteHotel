@@ -23,6 +23,8 @@ namespace Komparte
         {
             InitializeComponent();
             hideSubMenu();
+            panelBotones.Visible = false;
+            panelBotones2.Visible = false;
             this.FormBorderStyle = FormBorderStyle.None;
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true);

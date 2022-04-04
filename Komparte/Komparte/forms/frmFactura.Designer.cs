@@ -62,7 +62,7 @@ namespace Komparte.forms
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1221, 667);
+            this.panel1.Size = new System.Drawing.Size(1224, 667);
             this.panel1.TabIndex = 2;
             // 
             // groupBox1
@@ -257,7 +257,7 @@ namespace Komparte.forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmFactura";
-            this.Text = "frmFactura";
+            this.Text = "Lista de factura";
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
