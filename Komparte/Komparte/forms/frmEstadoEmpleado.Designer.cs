@@ -62,7 +62,7 @@ namespace Komparte.forms
             this.groupBox1.Size = new System.Drawing.Size(1188, 592);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Control de Habitaciones";
+            this.groupBox1.Text = "Control de Estado de empleado";
             // 
             // groupBox5
             // 
@@ -167,9 +167,9 @@ namespace Komparte.forms
             this.label2.Location = new System.Drawing.Point(33, 56);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 20);
+            this.label2.Size = new System.Drawing.Size(207, 30);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Código habitación:";
+            this.label2.Text = "Estado empleado:";
             // 
             // panel2
             // 
@@ -185,9 +185,9 @@ namespace Komparte.forms
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(464, 10);
+            this.label3.Location = new System.Drawing.Point(385, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(615, 57);
+            this.label3.Size = new System.Drawing.Size(410, 38);
             this.label3.TabIndex = 0;
             this.label3.Text = "Gestión de estado de empleado";
             // 
@@ -200,7 +200,7 @@ namespace Komparte.forms
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEstadoEmpleado";
-            this.Text = "frmEstadoEmpleado";
+            this.Text = "Listado de estados de empleado";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
