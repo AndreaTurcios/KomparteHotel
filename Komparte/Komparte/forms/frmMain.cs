@@ -299,7 +299,22 @@ namespace Komparte
 
         private void button10_Click(object sender, EventArgs e)
         {
-            OpenChildForm<frmEntorno>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+            OpenChildForm<frmEstadoCliente>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<frmEstadoReservacion>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<frmDepartamento>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<frmEventos>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
         }
     }
 }

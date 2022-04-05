@@ -1,7 +1,7 @@
 ﻿
 namespace Komparte.forms
 {
-    partial class frmEstadoCliente
+    partial class frmAgenda
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,7 @@ namespace Komparte.forms
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtAct = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,16 +53,16 @@ namespace Komparte.forms
             // 
             this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.txtAct);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 71);
+            this.groupBox1.Location = new System.Drawing.Point(12, 73);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1188, 592);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Control de Estado de cliente";
+            this.groupBox1.Text = "Control de Agenda";
             // 
             // groupBox5
             // 
@@ -153,13 +153,13 @@ namespace Komparte.forms
             this.dataGridView1.Size = new System.Drawing.Size(1107, 232);
             this.dataGridView1.TabIndex = 4;
             // 
-            // txtAct
+            // textBox1
             // 
-            this.txtAct.Location = new System.Drawing.Point(158, 50);
-            this.txtAct.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAct.Name = "txtAct";
-            this.txtAct.Size = new System.Drawing.Size(972, 26);
-            this.txtAct.TabIndex = 8;
+            this.textBox1.Location = new System.Drawing.Point(158, 50);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(972, 26);
+            this.textBox1.TabIndex = 8;
             // 
             // label2
             // 
@@ -167,9 +167,9 @@ namespace Komparte.forms
             this.label2.Location = new System.Drawing.Point(33, 56);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 30);
+            this.label2.Size = new System.Drawing.Size(185, 30);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Estado";
+            this.label2.Text = "Nombre agenda";
             // 
             // panel2
             // 
@@ -185,22 +185,22 @@ namespace Komparte.forms
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(416, 10);
+            this.label3.Location = new System.Drawing.Point(464, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(376, 38);
+            this.label3.Size = new System.Drawing.Size(374, 57);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Gestión de estado del cliente";
+            this.label3.Text = "Gestión de agenda";
             // 
-            // frmEstadoCliente
+            // frmAgenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1217, 698);
+            this.ClientSize = new System.Drawing.Size(1219, 696);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmEstadoCliente";
-            this.Text = "Listado de Estado de Clientes";
+            this.Name = "frmAgenda";
+            this.Text = "Lista de agendas";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -223,7 +223,7 @@ namespace Komparte.forms
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtAct;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;

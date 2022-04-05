@@ -1,7 +1,7 @@
 ﻿
 namespace Komparte.forms
 {
-    partial class frmEstadoCliente
+    partial class frmEstadoReservacion
     {
         /// <summary>
         /// Required designer variable.
@@ -55,14 +55,14 @@ namespace Komparte.forms
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.txtAct);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 71);
+            this.groupBox1.Location = new System.Drawing.Point(9, 71);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1188, 592);
-            this.groupBox1.TabIndex = 8;
+            this.groupBox1.Size = new System.Drawing.Size(1188, 613);
+            this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Control de Estado de cliente";
+            this.groupBox1.Text = "Control de Estado de reservación";
             // 
             // groupBox5
             // 
@@ -127,14 +127,14 @@ namespace Komparte.forms
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(1148, 350);
+            this.groupBox2.Size = new System.Drawing.Size(1148, 389);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(941, 266);
+            this.button5.Location = new System.Drawing.Point(941, 321);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(192, 52);
             this.button5.TabIndex = 8;
@@ -150,7 +150,7 @@ namespace Komparte.forms
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1107, 232);
+            this.dataGridView1.Size = new System.Drawing.Size(1107, 287);
             this.dataGridView1.TabIndex = 4;
             // 
             // txtAct
@@ -167,7 +167,7 @@ namespace Komparte.forms
             this.label2.Location = new System.Drawing.Point(33, 56);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 30);
+            this.label2.Size = new System.Drawing.Size(60, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "Estado";
             // 
@@ -175,10 +175,10 @@ namespace Komparte.forms
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(-3, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1219, 64);
-            this.panel2.TabIndex = 9;
+            this.panel2.TabIndex = 11;
             // 
             // label3
             // 
@@ -187,20 +187,20 @@ namespace Komparte.forms
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(416, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(376, 38);
+            this.label3.Size = new System.Drawing.Size(428, 38);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Gestión de estado del cliente";
+            this.label3.Text = "Gestión de estado de reservación";
             // 
-            // frmEstadoCliente
+            // frmEstadoReservacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1217, 698);
+            this.ClientSize = new System.Drawing.Size(1213, 697);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmEstadoCliente";
-            this.Text = "Listado de Estado de Clientes";
+            this.Name = "frmEstadoReservacion";
+            this.Text = "Lista de estado de reservaciones";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
