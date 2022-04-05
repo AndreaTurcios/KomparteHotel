@@ -33,6 +33,7 @@ namespace Komparte
             this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelBotones2 = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -71,7 +72,7 @@ namespace Komparte
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCaption = new System.Windows.Forms.Label();
             this.horaFecha = new System.Windows.Forms.Timer(this.components);
-            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelBotones2.SuspendLayout();
             this.panelBotones.SuspendLayout();
@@ -101,6 +102,7 @@ namespace Komparte
             // 
             // panelBotones2
             // 
+            this.panelBotones2.Controls.Add(this.button16);
             this.panelBotones2.Controls.Add(this.button15);
             this.panelBotones2.Controls.Add(this.button14);
             this.panelBotones2.Controls.Add(this.button13);
@@ -117,8 +119,27 @@ namespace Komparte
             this.panelBotones2.Location = new System.Drawing.Point(0, 732);
             this.panelBotones2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelBotones2.Name = "panelBotones2";
-            this.panelBotones2.Size = new System.Drawing.Size(358, 1097);
+            this.panelBotones2.Size = new System.Drawing.Size(358, 1156);
             this.panelBotones2.TabIndex = 7;
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
+            this.button15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
+            this.button15.ForeColor = System.Drawing.Color.White;
+            this.button15.Location = new System.Drawing.Point(0, 959);
+            this.button15.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button15.Name = "button15";
+            this.button15.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button15.Size = new System.Drawing.Size(358, 89);
+            this.button15.TabIndex = 18;
+            this.button15.Text = "IVA";
+            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button14
             // 
@@ -355,7 +376,7 @@ namespace Komparte
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 1829);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 1888);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -718,24 +739,24 @@ namespace Komparte
             this.horaFecha.Enabled = true;
             this.horaFecha.Tick += new System.EventHandler(this.horaFecha_Tick);
             // 
-            // button15
+            // button16
             // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
-            this.button15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(0, 959);
-            this.button15.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button15.Name = "button15";
-            this.button15.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button15.Size = new System.Drawing.Size(358, 89);
-            this.button15.TabIndex = 18;
-            this.button15.Text = "IVA";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button15.UseVisualStyleBackColor = false;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(104)))), ((int)(((byte)(78)))));
+            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Font = new System.Drawing.Font("Yu Gothic", 10.2F);
+            this.button16.ForeColor = System.Drawing.Color.White;
+            this.button16.Location = new System.Drawing.Point(0, 1048);
+            this.button16.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button16.Name = "button16";
+            this.button16.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button16.Size = new System.Drawing.Size(358, 92);
+            this.button16.TabIndex = 19;
+            this.button16.Text = "Estado habitación";
+            this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // frmMain
             // 
@@ -815,6 +836,7 @@ namespace Komparte
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
     }
 }
 
