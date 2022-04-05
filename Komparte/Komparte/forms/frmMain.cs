@@ -366,5 +366,15 @@ namespace Komparte
         {
             OpenChildForm<frmEstadoEmpleado>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<frmTipoPago>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<frmIVA>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
     }
 }
