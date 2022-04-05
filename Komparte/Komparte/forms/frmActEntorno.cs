@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Komparte.classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,25 +39,25 @@ namespace Komparte.forms
 
         }
 
-        /*
-        private void FillUserModel()
-        {//LLenar modelo
-            userModel.FirstName = txtNombre.Text;
-            userModel.Username = txtUser.Text;
-            userModel.Phone = txtPhone.Text;
-            userModel.DUI = txtDUI.Text;
-            userModel.Password = txtClaveA.Text;
-            userModel.Email = txtCorreo.Text;
-            userModel.Direction = txtDireccion.Text;
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+        private void FillActivityModel()
+        {//Crea la variable actividadnombre en el modelo
+
+            //ActividadModel.Actividad = txtAct.Text;
         }
 
 
-        private void Save()
+        /*private void Save()
         {//Guardar cambios.
             int result = -1;
             try
             {
-                FillUserModel();//Obtener modelo de vista.
+                FillActivityModel();//Obtener modelo de vista.
                 var validateData = new DataValidation(userModel);//Validar campos del objeto.
                 var validatePassword = txtClaveA.Text == txtConfirmPass.Text;//Validar contraseñas.
 
@@ -106,12 +107,16 @@ namespace Komparte.forms
             {
                 var message = ExceptionManager.GetMessage(ex);//Obtener mensaje de excepción.
                 MessageBox.Show(message, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);//Mostrar mensaje.
-            }
+            }/*
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Save();
         }*/
+private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

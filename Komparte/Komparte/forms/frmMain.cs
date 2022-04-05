@@ -271,5 +271,35 @@ namespace Komparte
         {
             OpenChildForm<frmFactura>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
         }
+
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<frmPais>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<frmDepartamento>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<frmObjetivo>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<frmHoteles>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<frmEntorno>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
     }
 }
