@@ -187,9 +187,9 @@ namespace Komparte.forms
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(464, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(313, 38);
+            this.label3.Size = new System.Drawing.Size(615, 57);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Gestión de habitaciones";
+            this.label3.Text = "Gestión de estado de empleado";
             // 
             // frmEstadoEmpleado
             // 

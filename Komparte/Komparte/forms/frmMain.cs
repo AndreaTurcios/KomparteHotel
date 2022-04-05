@@ -319,12 +319,52 @@ namespace Komparte
 
         private void button7_Click_1(object sender, EventArgs e)
         {
-
+            OpenChildForm<frmHabitaciones>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
         }
 
         private void btnTipoActividades_Click_1(object sender, EventArgs e)
         {
             OpenChildForm<frmActEntorno>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
+
+        private void btnTipoEntorno_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm<frmEntorno>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
+
+        private void btnTipoHotel_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm<frmTipoHotel>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm<frmPais>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm<frmDepartamento>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm<frmObjetivo>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm<frmEstadoCliente>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm<frmEstadoReservacion>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<frmEstadoEmpleado>(sender);//Si el control es un boton del menu lateral enviar el objeto remitente
         }
     }
 }

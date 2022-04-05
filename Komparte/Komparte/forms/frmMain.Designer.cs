@@ -488,6 +488,7 @@ namespace Komparte
             this.button13.Text = "Estado empleado";
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button11
             // 
@@ -506,6 +507,7 @@ namespace Komparte
             this.button11.Text = "Estado reservación";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click_1);
             // 
             // button10
             // 
@@ -524,6 +526,7 @@ namespace Komparte
             this.button10.Text = "Estado cliente";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click_1);
             // 
             // button8
             // 
@@ -542,6 +545,7 @@ namespace Komparte
             this.button8.Text = "Objetivo";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
             // 
             // button6
             // 
@@ -560,6 +564,7 @@ namespace Komparte
             this.button6.Text = "Departamento";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // button5
             // 
@@ -578,6 +583,7 @@ namespace Komparte
             this.button5.Text = "País";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // btnTipoHotel
             // 
@@ -596,6 +602,7 @@ namespace Komparte
             this.btnTipoHotel.Text = "Tipo de hotel";
             this.btnTipoHotel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTipoHotel.UseVisualStyleBackColor = false;
+            this.btnTipoHotel.Click += new System.EventHandler(this.btnTipoHotel_Click_1);
             // 
             // btnTipoEntorno
             // 
@@ -614,6 +621,7 @@ namespace Komparte
             this.btnTipoEntorno.Text = "Entorno";
             this.btnTipoEntorno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTipoEntorno.UseVisualStyleBackColor = false;
+            this.btnTipoEntorno.Click += new System.EventHandler(this.btnTipoEntorno_Click_1);
             // 
             // btnTipoActividades
             // 
