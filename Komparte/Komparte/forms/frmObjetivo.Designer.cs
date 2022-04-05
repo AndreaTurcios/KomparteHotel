@@ -167,9 +167,9 @@ namespace Komparte.forms
             this.label2.Location = new System.Drawing.Point(33, 56);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 20);
+            this.label2.Size = new System.Drawing.Size(99, 30);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Actividades";
+            this.label2.Text = "Objetivo";
             // 
             // panel2
             // 
@@ -187,7 +187,7 @@ namespace Komparte.forms
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(464, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(404, 57);
+            this.label3.Size = new System.Drawing.Size(269, 38);
             this.label3.TabIndex = 0;
             this.label3.Text = "Gestión de objetivos";
             // 
