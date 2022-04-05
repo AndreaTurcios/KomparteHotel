@@ -222,9 +222,9 @@ namespace DataAccess.DBServices
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select *from empleado where nombre_usuario=@user or correo=@user";
+                    command.CommandText = "select *from empleado where nombre_usuario=@user or correo=@email";
                     command.Parameters.AddWithValue("@user", user);
-                    command.Parameters.AddWithValue("@user", email);
+                    command.Parameters.AddWithValue("@email", email);
                     command.CommandType = CommandType.Text;
 
                     SqlDataReader reader = command.ExecuteReader();
@@ -233,9 +233,9 @@ namespace DataAccess.DBServices
                         var userObj = new User
                         {
                             Id = (int)reader[0],
+                            FirstName = reader[1].ToString(),
                             Username = reader[2].ToString(),
                             Password = reader[3].ToString(),
-                            FirstName = reader[1].ToString(),
                             DUI = reader[4].ToString(),
                             Phone = reader[5].ToString(),
                             Direction = reader[6].ToString(),
