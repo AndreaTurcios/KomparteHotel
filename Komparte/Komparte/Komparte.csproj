@@ -128,4 +128,8 @@
     <None Remove="C:\Users\ElmerW\.nuget\packages\umbraco.sqlserverce\4.0.0.1\build\..\runtimes\win-x86\native\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="forms\obj\Debug\" />
+  </ItemGroup>
+
 </Project>
