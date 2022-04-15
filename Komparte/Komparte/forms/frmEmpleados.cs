@@ -5,6 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using Komparte.classes.model;
+using Komparte.classes.dao;
+using System.Diagnostics;
 
 namespace Komparte.forms
 {
@@ -13,6 +16,9 @@ namespace Komparte.forms
         private bool userModify; //Obtiene o establece un usuario será editado.
         private int userId;//Obtiene o establece el id del usuario a editar.
         private UserModel userModel = new UserModel();
+        private EstadoEmpleadoModel estadoEmpleadoModel = new EstadoEmpleadoModel();
+        private EstadoEmpleadoDao estadoEmpleadoDao = new EstadoEmpleadoDao();
+        private TipoEmpleadoDao tipoEmpleadDao = new TipoEmpleadoDao();
         private List<UserModel> userList;
         public frmEmpleados()
         {
@@ -21,21 +27,38 @@ namespace Komparte.forms
             ListUsers();
             txtClaveA.UseSystemPasswordChar = false;//Quitar el enmascaramiento de caracteres.
             txtConfirmPass.UseSystemPasswordChar = false;
-           //Combota tu lista de eSTADO
-           List <classes.EstadoEmpleado> listClaseEmpleados = new List<classes.EstadoEmpleado>();
-            listClaseEmpleados.Clear();
-            classes.EstadoEmpleado estado1 = new classes.EstadoEmpleado(1,"E1");
-            classes.EstadoEmpleado estado2 = new classes.EstadoEmpleado(2, "E2");
-            listClaseEmpleados.Add(estado1);
-            listClaseEmpleados.Add(estado2);
-            Console.WriteLine(listClaseEmpleados);
-          //  this.comboBox1 = new ComboBox();
-            foreach (classes.EstadoEmpleado item in listClaseEmpleados) {
+            //Combota tu lista de eSTADO
+            List<classes.entidades.EstadoEmpleado> listClaseEmpleados = new List<classes.entidades.EstadoEmpleado>();
+            listClaseEmpleados = (List<classes.entidades.EstadoEmpleado>)estadoEmpleadoDao.GetAllEstadoEmpleados();
+
+            List<classes.entidades.TipoEmpleado> listTipoEmleado = new List<classes.entidades.TipoEmpleado>();
+            listTipoEmleado = (List<classes.entidades.TipoEmpleado>)tipoEmpleadDao.GetAllTipoEmpleado();
+            Debug.WriteLine("Buenasssssssssssssssssssss") ;
+
+            Debug.WriteLine(listClaseEmpleados);
+            /* List <classes.EstadoEmpleado> listClaseEmpleados = new List<classes.EstadoEmpleado>();
+              listClaseEmpleados.Clear();
+              classes.EstadoEmpleado estado1 = new classes.EstadoEmpleado(1,"E1");
+              classes.EstadoEmpleado estado2 = new classes.EstadoEmpleado(2, "E2");
+              listClaseEmpleados.Add(estado1);
+              listClaseEmpleados.Add(estado2);
+              Console.WriteLine(listClaseEmpleados);
+            //  this.comboBox1 = new ComboBox();
+              foreach (classes.EstadoEmpleado item in listClaseEmpleados) {
+                  this.comboBox1.Items.Add(item);
+                  this.comboBox2.Items.Add(item);
+              }
+            */
+            //this.comboBox1.DataSource = listClaseEmpleados;
+            foreach (classes.entidades.EstadoEmpleado item in listClaseEmpleados)
+            {
                 this.comboBox1.Items.Add(item);
-                this.comboBox2.Items.Add(item);
             }
 
-            //this.comboBox1.DataSource = listClaseEmpleados;
+            foreach (classes.entidades.TipoEmpleado item2 in listTipoEmleado)
+            {
+                this.comboBox2.Items.Add(item2);
+            }
 
         }
 
@@ -162,6 +185,15 @@ namespace Komparte.forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Debug.WriteLine(this.comboBox1.ToString());
+            if (this.comboBox1.SelectedItem != null)
+            {
+                Debug.WriteLine(this.comboBox1.SelectedItem.ToString());
+                Debug.WriteLine(this.comboBox1.SelectedItem.GetType());
+                Debug.WriteLine(this.comboBox1.SelectedValue);
+            }
+            
+           
             Save();
             ListUsers();
         }
