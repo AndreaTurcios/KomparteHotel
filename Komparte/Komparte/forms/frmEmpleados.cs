@@ -24,10 +24,10 @@ namespace Komparte.forms
            //Combota tu lista de eSTADO
            List <classes.EstadoEmpleado> listClaseEmpleados = new List<classes.EstadoEmpleado>();
             listClaseEmpleados.Clear();
-            /*classes.EstadoEmpleado estado1 = new classes.EstadoEmpleado(1,"Estado 1");
-            classes.EstadoEmpleado estado2 = new classes.EstadoEmpleado(2, "Estado 2");
+            classes.EstadoEmpleado estado1 = new classes.EstadoEmpleado(1,"E1");
+            classes.EstadoEmpleado estado2 = new classes.EstadoEmpleado(2, "E2");
             listClaseEmpleados.Add(estado1);
-            listClaseEmpleados.Add(estado2);*/
+            listClaseEmpleados.Add(estado2);
             Console.WriteLine(listClaseEmpleados);
           //  this.comboBox1 = new ComboBox();
             foreach (classes.EstadoEmpleado item in listClaseEmpleados) {
