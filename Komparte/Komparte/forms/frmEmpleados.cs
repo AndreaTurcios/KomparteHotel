@@ -124,6 +124,30 @@ namespace Komparte.forms
             userModel.Password = txtClaveA.Text;
             userModel.Email = txtCorreo.Text;
             userModel.Direction = txtDireccion.Text;
+
+            if (this.comboBox1.SelectedItem != null)
+            {
+                //Debug.WriteLine("Estado Empleado " + this.comboBox1.SelectedItem.ToString());
+                //Debug.WriteLine("Objeto  " + this.comboBox1.SelectedItem.GetType());
+                //Debug.WriteLine(this.comboBox1.SelectedValue);
+                classes.entidades.EstadoEmpleado temp = (classes.entidades.EstadoEmpleado) this.comboBox1.SelectedItem;
+                userModel.Estado = temp.idEstadoEmpleado;
+                Debug.WriteLine("idestadoempleado " + userModel.Estado);
+                Debug.WriteLine("idestadoempleado " + temp.idEstadoEmpleado);
+            }
+
+            if (this.comboBox2.SelectedItem != null)
+            {
+                //Debug.WriteLine("Estado Empleado " + this.comboBox1.SelectedItem.ToString());
+                //Debug.WriteLine("Objeto  " + this.comboBox1.SelectedItem.GetType());
+                //Debug.WriteLine(this.comboBox1.SelectedValue);
+                classes.entidades.TipoEmpleado temp2 = (classes.entidades.TipoEmpleado) this.comboBox2.SelectedItem;
+                userModel.TipoEmpleado = temp2.idTipoEmpleado;
+                Debug.WriteLine("idtipoempleado " + userModel.Estado);
+                Debug.WriteLine("idtipoempleado " + temp2.idTipoEmpleado);
+            }
+            userModel.IdHotel = 1;
+
         }
         private void Save()
         {//Guardar cambios.
@@ -185,17 +209,49 @@ namespace Komparte.forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine(this.comboBox1.ToString());
+
+
+            /*
+             Varialbes a mandar  para el create
+            txtNombre                   ->DB    nombre_empleado varchar(30)
+            txtUser                     ->DB    nombre_usuario  varchar(35)
+            txtCorreo                   ->DB    correo varchar(50)
+            txtPhone                    ->DB    telefono varchar(30)
+            txtDUI                      ->DB    DUI_empleado varchar(30)
+            txtClaveA // txtConfirmPass ->DB    constrasenia_usuario varchar(35)
+            txtDireccion                ->DB    direccion varchar(30)
+            Estado empleado ->comboBox1 ->DB    pk_estado_empleado FK int    
+            Tipo empleado -> comboBox2  ->DB    pk_tipo_empleado FK int
+            txtIdHotel                  ->DB    pk_hotel_empleado(FK,int,not null)
+             */
+            Debug.WriteLine("Elementos a enviar");
+           
+
+            Debug.WriteLine("Nombre " + this.txtNombre.Text);
+            Debug.WriteLine("Usuario " + this.txtUser.Text);
+            Debug.WriteLine("Correo " + this.txtCorreo.Text);
+            Debug.WriteLine("Telefono " + this.txtPhone.Text);
+            Debug.WriteLine("DUI " + this.txtDUI.Text);
+            Debug.WriteLine("Contrasenya " + this.txtClaveA.Text);
+            Debug.WriteLine("Direccion " + this.txtDireccion.Text);
             if (this.comboBox1.SelectedItem != null)
             {
-                Debug.WriteLine(this.comboBox1.SelectedItem.ToString());
-                Debug.WriteLine(this.comboBox1.SelectedItem.GetType());
-                Debug.WriteLine(this.comboBox1.SelectedValue);
+                Debug.WriteLine("Estado Empleado " + this.comboBox1.SelectedItem.ToString());
+                Debug.WriteLine("Objeto  " + this.comboBox1.SelectedItem.GetType());
+                //Debug.WriteLine(this.comboBox1.SelectedValue);
             }
-            
-           
+
+            if (this.comboBox2.SelectedItem != null)
+            {
+                Debug.WriteLine("Tipo Empleado " + this.comboBox2.SelectedItem.ToString());
+                Debug.WriteLine("Objeto " + this.comboBox2.SelectedItem.GetType());
+                //Debug.WriteLine(this.comboBox2.SelectedValue);
+            }
+            Debug.WriteLine("Hotel " + this.txtIdHotel.Text);
+
+
             Save();
-            ListUsers();
+            // ListUsers();
         }
 
         private void FillFields()

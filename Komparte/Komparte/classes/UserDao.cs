@@ -115,17 +115,17 @@ namespace DataAccess.DBServices
                 {
                     command.Connection = connection;
                     command.CommandText = @"insert into empleado 
-	                                        values (@firstName,@userName,@password,@DUI,@phone,@direction,@email,@estadoempleado,@position,@idhotel)";
+	                                        values (@nombre_empleado,@nombre_usuario,@contrasenia_usuario,@DUI,@phone,@direction,@email,@estadoEmpleado,@tipoEmpleado,@idhotel)";
 
-                    command.Parameters.AddWithValue("@firstName", user.FirstName);
-                    command.Parameters.AddWithValue("@userName", user.Username);
-                    command.Parameters.AddWithValue("@password", user.Password);
+                    command.Parameters.AddWithValue("@nombre_empleado", user.FirstName);
+                    command.Parameters.AddWithValue("@nombre_usuario", user.Username);
+                    command.Parameters.AddWithValue("@contrasenia_usuario", user.Password);
                     command.Parameters.AddWithValue("@DUI", user.DUI);
                     command.Parameters.AddWithValue("@phone", user.Phone);
                     command.Parameters.AddWithValue("@direction", user.Direction);
                     command.Parameters.AddWithValue("@email", user.Email);
-                    command.Parameters.AddWithValue("@estado", user.Estado);
-                    command.Parameters.AddWithValue("@position", user.Position);
+                    command.Parameters.AddWithValue("@estadoEmpleado", user.Estado);
+                    command.Parameters.AddWithValue("@tipoEmpleado", user.TipoEmpleado);
                     command.Parameters.AddWithValue("@idhotel", user.IdHotel);
                     command.CommandType = CommandType.Text;
                     result = command.ExecuteNonQuery(); //Ejecutar el comando de texto y asignar el resultado al campo result.

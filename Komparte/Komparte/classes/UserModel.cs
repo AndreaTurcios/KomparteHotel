@@ -8,6 +8,7 @@ using DataAccess.DBServices.Entities;
 //using DataAccess.MailServices;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 
 namespace Domain
 {
@@ -24,9 +25,9 @@ namespace Domain
         private string _email;
         private string _telefono;
         private string _direccion;
-        private string _estado;
-        private string _tipoempleado;
-        private string _idhotel;
+        private int _estado;
+        private int _tipoempleado;
+        private int _idhotel;
         private UserDao _userDao;
         #endregion
 
@@ -37,7 +38,7 @@ namespace Domain
             _userDao = new UserDao();
         }
 
-        public UserModel(int id, string userName, string firstName, string password,  string DUI, string telefono, string direccion, string email, string position, string estadoempleado, string idtipoempleado, string idhotel)
+        public UserModel(int id, string userName, string firstName, string password,  string DUI, string telefono, string direccion, string email, string position, int estadoempleado, int idtipoempleado, int idhotel)
         {
             Id = id;
             Direction = direccion;
@@ -68,7 +69,7 @@ namespace Domain
         //Posición 1 
         [DisplayName("Usuario")]//Nombre a visualizar.
         [Required(ErrorMessage = "El nombre de usuario es requerido.")]//Validaciones
-        [StringLength(100, MinimumLength = 5, ErrorMessage = "El nombre de usuario debe contener un mínimo de 5 caracteres.")]
+        [StringLength(100, MinimumLength = 2, ErrorMessage = "El nombre de usuario debe contener un mínimo de 5 caracteres.")]
         public string Username
         {
             get { return _username; }
@@ -90,7 +91,7 @@ namespace Domain
         [DisplayName("Nombre")]//Nombre a visualizar.
         [Browsable(false)]//Ocultar visualización
         [Required(ErrorMessage = "Por favor ingrese nombre")]
-        [RegularExpression("^[a-zA-Z ]+$", ErrorMessage = "El nombre debe ser solo letras")]
+       // [RegularExpression("^[a-zA-Z ]+$", ErrorMessage = "El nombre debe ser solo letras")]
         [StringLength(100, MinimumLength = 3, ErrorMessage = "El nombre debe contener un mínimo de 3 caracteres.")]
         public string FirstName
         {
@@ -102,7 +103,7 @@ namespace Domain
         [DisplayName("DUI")]//Nombre a visualizar.
         [Browsable(false)]//Ocultar visualización
         [Required(ErrorMessage = "Por favor ingrese DUI.")]//Validaciones
-        [StringLength(100, MinimumLength = 10, ErrorMessage = "El apellido debe contener 10 digitos incluyendo guion")]
+        [StringLength(100, MinimumLength = 1, ErrorMessage = "El apellido debe contener 10 digitos incluyendo guion")]
         public string DUI
         {
             get { return _DUI; }
@@ -122,7 +123,7 @@ namespace Domain
         [DisplayName("Telefono")]//Nombre a visualizar.
         [Browsable(false)]//Ocultar visualización
         [Required(ErrorMessage = "Por favor ingrese DUI.")]//Validaciones
-        [StringLength(100, MinimumLength = 8, ErrorMessage = "El telefono debe contener 8 digitos incluyendo guion")]
+        [StringLength(100, MinimumLength = 1, ErrorMessage = "El telefono debe contener 8 digitos incluyendo guion")]
         public string Phone
         {
             get { return _telefono; }
@@ -130,9 +131,9 @@ namespace Domain
         }
 
         //Posición 6
-        [DisplayName("Cargo")]
+        /*[DisplayName("Cargo")]
         [Required(ErrorMessage = "Por favor ingrese un cargo.")]
-        [StringLength(100, MinimumLength = 8, ErrorMessage = "Last name must contain a minimum of 8 characters.")]
+        [StringLength(100, MinimumLength = 1, ErrorMessage = "Last name must contain a minimum of 8 characters.")]*/
         public string Position
         {
             get { return _position; }
@@ -142,7 +143,7 @@ namespace Domain
         //Posición 7
         [DisplayName("Email")]//Nombre a visualizar.
         [Required(ErrorMessage = "Por favor ingrese correo electrónico.")]//Validaciones
-        [EmailAddress(ErrorMessage = "Ingrese un correo electrónico válido: example@gmail.com")]
+       // [EmailAddress(ErrorMessage = "Ingrese un correo electrónico válido: example@gmail.com")]
         public string Email
         {
             get { return _email; }
@@ -151,9 +152,9 @@ namespace Domain
 
         //Posición 8
         [DisplayName("Estado")]//Nombre a visualizar.
-        [Required(ErrorMessage = "Por favor ingrese correo electrónico.")]//Validaciones
-        [EmailAddress(ErrorMessage = "Ingrese un estado válido: example@gmail.com")]
-        public string Estado
+       // [Required(ErrorMessage = "Por favor ingrese Estado.")]//Validaciones
+       // [EmailAddress(ErrorMessage = "Ingrese un estado válido: example@gmail.com")]
+        public int Estado
         {
             get { return _estado; }
             set { _estado = value; }
@@ -161,9 +162,9 @@ namespace Domain
 
         //Posición 9
         [DisplayName("TipoEmpleado")]//Nombre a visualizar.
-        [Required(ErrorMessage = "Por favor ingrese correo electrónico.")]//Validaciones
-        [EmailAddress(ErrorMessage = "Ingrese un estado válido: example@gmail.com")]
-        public string TipoEmpleado
+        //[Required(ErrorMessage = "Por favor ingrese correo electrónico.")]//Validaciones
+       // [EmailAddress(ErrorMessage = "Ingrese un estado válido: example@gmail.com")]
+        public int TipoEmpleado
         {
             get { return _tipoempleado; }
             set { _tipoempleado = value; }
@@ -171,9 +172,9 @@ namespace Domain
 
         //Posición 10
         [DisplayName("IdHotel")]//Nombre a visualizar.
-        [Required(ErrorMessage = "Por favor ingrese correo electrónico.")]//Validaciones
-        [EmailAddress(ErrorMessage = "Ingrese un estado válido: example@gmail.com")]
-        public string IdHotel
+        //[Required(ErrorMessage = "Por favor ingrese Hotel.")]//Validaciones
+       // [EmailAddress(ErrorMessage = "Ingrese un estado válido: example@gmail.com")]
+        public int IdHotel
         {
             get { return _idhotel; }
             set { _idhotel = value; }
@@ -199,12 +200,28 @@ namespace Domain
 
         public int CreateUser()
         {//Agregar nuevo usuario.
+         //...
+         //Aqui podría colocar su logica y reglas de negocio si es el caso.
+         //..
+            Debug.WriteLine("Entradno el metodo create");
+            User userEntity = MapUserEntity(this);
+            Debug.WriteLine("Objeto  "+ userEntity);
+            Debug.WriteLine("Objeto  " + userEntity.Username);
+            Debug.WriteLine("Objeto  " + userEntity.FirstName);
+            Debug.WriteLine("Objeto  estado : " + userEntity.Estado);
+            Debug.WriteLine("Objeto  tipoEplado:" + userEntity.TipoEmpleado);
+            return _userDao.CreateUser(userEntity);
+           // return 1;
+        }
+
+        /*public int CreateUser()
+        {//Agregar nuevo usuario.
             //...
             //Aqui podría colocar su logica y reglas de negocio si es el caso.
             //..
             User userEntity = MapUserEntity(this);
             return _userDao.CreateUser(userEntity);
-        }
+        }*/
         public int ModifyUser()
         {//Actualizar usuario.
 
@@ -269,13 +286,18 @@ namespace Domain
             var userEntity = new User
             {
                 Id = userModel.Id,
+                FirstName = userModel.FirstName,
                 Username = userModel.Username,
                 Password = userModel.Password,
-                FirstName = userModel.FirstName,
                 DUI = userModel.DUI,
                 Phone = userModel.Phone,
-                Position = userModel.Position,
-                Email = userModel.Email
+                Direction = userModel.Direction,
+                //Position = userModel.Position,
+                Email = userModel.Email,
+                Estado= userModel.Estado,
+                TipoEmpleado = userModel.TipoEmpleado,
+                IdHotel = userModel.IdHotel
+
             };
             return userEntity;
         }
@@ -286,12 +308,16 @@ namespace Domain
             var userModel = new UserModel()
             {
                 Id = userEntity.Id,
+                FirstName = userEntity.FirstName,
                 Username = userEntity.Username,
                 Password = userEntity.Password,
-                FirstName = userEntity.FirstName,
                 DUI = userEntity.DUI,
-                Position = userEntity.Position,
-                Email = userEntity.Email
+                Phone = userEntity.Phone,
+                //Position = userEntity.Position,
+                Email = userEntity.Email,
+                Estado = userEntity.Estado,
+                TipoEmpleado = userEntity.TipoEmpleado,
+                IdHotel = userEntity.IdHotel
             };
             return userModel;
         }

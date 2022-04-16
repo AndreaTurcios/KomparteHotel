@@ -21,7 +21,7 @@ namespace Komparte.Class
         public ConnectionToSql()
         {
             //Establecer la cadena de conexión.
-            connectionStringAndrea = "Server=LAPTOP-ANDREA; DataBase= dbkomparte; Integrated Security= true";
+            //connectionStringAndrea = "Server=LAPTOP-ANDREA; DataBase= dbkomparte; Integrated Security= true";
             connectionStringErick = "Server=DESKTOP-HPNEI9A\\SQLEXPRESS; DataBase= dbkomparte; Integrated Security= true";
         }
         protected SqlConnection GetConnection()

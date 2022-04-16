@@ -11,18 +11,17 @@ namespace DataAccess.DBServices.Entities
        //además esto te permite  cambiar facilmente a Entity Framework.
 
        public int Id { get; set; }
-       public string Username { get; set; }
+        public string FirstName { get; set; }
+        public string Username { get; set; }
        public string Password { get; set; }
-       public string FirstName { get; set; }
-        public string Direction { get; set; }
         public string DUI { get; set; }
         public string Phone { get; set; }
+        public string Direction { get; set; }
         public string Position { get; set; }
-       public string Email { get; set; }
-
-        public string Estado { get; set; }
-        public string TipoEmpleado { get; set; }
-        public string IdHotel { get; set; }
+        public string Email { get; set; }
+        public int Estado { get; set; }
+        public int TipoEmpleado { get; set; }
+        public int IdHotel { get; set; }
 
     }
 }
