@@ -184,7 +184,7 @@ namespace Komparte.forms
                         {
                             MessageBox.Show("Usuario agregado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.DialogResult = System.Windows.Forms.DialogResult.OK; //Establecer Ok como resultado de dialogo del formulario.
-                            this.Close();//Cerrar formulario
+                            //this.Close();//Cerrar formulario
                         }
                         else
                         {
@@ -251,7 +251,7 @@ namespace Komparte.forms
 
 
             Save();
-            // ListUsers();
+             ListUsers();
         }
 
         private void FillFields()
