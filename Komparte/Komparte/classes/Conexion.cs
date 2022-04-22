@@ -16,18 +16,16 @@ namespace Komparte.Class
         /// 
 
         private readonly string connectionStringAndrea;//Obtiene o establece la cadena de conexión.
-        private readonly string connectionStringErick;//Obtiene o establece la cadena de conexión.
 
         public ConnectionToSql()
         {
             //Establecer la cadena de conexión.
-            //connectionStringAndrea = "Server=LAPTOP-ANDREA; DataBase= dbkomparte; Integrated Security= true";
-            connectionStringErick = "Server=DESKTOP-HPNEI9A\\SQLEXPRESS; DataBase= dbkomparte; Integrated Security= true";
+            connectionStringAndrea = "Server=LAPTOP-ANDREA; DataBase= dbkomparte; Integrated Security= true";
         }
         protected SqlConnection GetConnection()
         {
             //Este métedo se encarga de establecer y devolver el objeto de conexión a SQL Server.
-            return new SqlConnection(connectionStringErick);
+            return new SqlConnection(connectionStringAndrea);
         }
     }
 }
