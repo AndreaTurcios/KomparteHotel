@@ -149,6 +149,21 @@ namespace Komparte.forms
             userModel.IdHotel = 1;
 
         }
+
+        private void clearField()
+        {
+            txtNombre.Text = "";
+            txtUser.Text = "";
+            txtPhone.Text = "";
+            txtDUI.Text = "";
+            txtClaveA.Text="";
+            txtConfirmPass.Text = "";
+            txtCorreo.Text = "";
+            txtDireccion.Text = "";
+            txtIdHotel.Text = "";
+            comboBox1.SelectedItem = null;
+            comboBox2.SelectedItem = null;
+        }
         private void Save()
         {//Guardar cambios.
             int result = -1;
@@ -185,6 +200,7 @@ namespace Komparte.forms
                             MessageBox.Show("Usuario agregado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.DialogResult = System.Windows.Forms.DialogResult.OK; //Establecer Ok como resultado de dialogo del formulario.
                             //this.Close();//Cerrar formulario
+                            clearField();
                         }
                         else
                         {
