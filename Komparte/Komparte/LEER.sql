@@ -153,3 +153,48 @@ delete empleado where ID_empleado = @id;
 go
 
 exec proc_delete_empleado 12
+
+
+/*********************************************************************/
+/*********************************************************************/
+/**************************Cliente ***********************************/
+select * from cliente;
+select * from hotel;
+select * from estado_cliente;
+
+
+
+
+/*********************************************************************/
+/*********************************************************************/
+/**************************Estado Cliente*****************************/
+select * from estado_cliente;
+
+create procedure proc_create_estado_cliente
+
+as
+insert into estado_cliente values(@estado)
+go
+
+exec proc_create_estado_cliente 'cansado'
+
+
+
+create procedure proc_edit_estado_cliente
+@estado varchar(30),
+@id int
+as
+update estado_cliente set
+					estado = @estado
+where ID_estado_cliente = @id
+go
+
+exec proc_edit_estado_cliente 'procedure', 3
+
+
+create procedure proc_delete_estado_cliente
+@id int
+as
+delete from estado_cliente 
+where ID_estado_cliente = @id
+go
