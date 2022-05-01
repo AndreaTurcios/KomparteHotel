@@ -46,6 +46,39 @@ namespace Komparte.classes.dao
             }
                 return estadoEmpleadosList;
         }
-    
+
+        public EstadoEmpleado get_estado_empleado_by_id(int id)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "select * from estado_empleado where ID_estado_empleado = @id";
+                    //command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@id", id);
+                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        EstadoEmpleado obj = new EstadoEmpleado()
+                        {
+                            idEstadoEmpleado = (int)reader[0],
+                            estado = reader[1].ToString()
+
+                        };
+                        //command.CommandType = CommandType.Text;
+                        return obj;
+                    }
+                    else
+                    {
+                        //se cierra
+                        command.CommandType = CommandType.Text;
+                        return null;
+                    }
+                }
+            }
+        }
+
     }
 }

@@ -117,7 +117,7 @@ namespace Komparte.forms
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(429, 57);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(60, 19);
             this.button6.TabIndex = 43;
@@ -328,6 +328,7 @@ namespace Komparte.forms
             this.button4.TabIndex = 14;
             this.button4.Text = "Limpiar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
@@ -466,7 +467,7 @@ namespace Komparte.forms
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEmpleados";
             this.Text = "Lista de empleados";
             this.groupBox1.ResumeLayout(false);

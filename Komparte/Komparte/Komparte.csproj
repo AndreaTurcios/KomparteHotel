@@ -5,7 +5,7 @@
     <TargetFramework>net472</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>resources\iconoKomparte.ico</ApplicationIcon>
-    <StartupObject></StartupObject>
+    <StartupObject>Komparte.forms.Program</StartupObject>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
 
@@ -23,22 +23,22 @@
     <Reference Include="Microsoft.VisualBasic.PowerPacks">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\reference assemblies\microsoft\vbpowerpacks\v12.0\microsoft.visualbasic.powerpacks.dll</HintPath>
     </Reference>
+    <Reference Include="System.Security" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="forms\frmTipoHotel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="forms\frmEntorno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="forms\frmDepartamento.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="forms\frmTipoHotel.cs" />
+    <Compile Update="forms\frmEntorno.cs" />
+    <Compile Update="forms\frmDepartamento.cs" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -130,6 +130,13 @@
 
   <ItemGroup>
     <Folder Include="forms\obj\Debug\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>
