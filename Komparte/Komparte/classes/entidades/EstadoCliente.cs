@@ -10,5 +10,10 @@ namespace Komparte.classes.entidades
     {
         public int id {get; set;}
         public string estado { get; set; }
+
+        public override string ToString()
+        {
+            return estado;
+        }
     }
 }

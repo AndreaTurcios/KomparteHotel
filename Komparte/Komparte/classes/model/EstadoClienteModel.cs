@@ -21,6 +21,10 @@ namespace Komparte.classes.model
             return tabla;
         }
 
+        public IEnumerable<EstadoCliente> get_all_estados_cliente() {
+            return estadoClienteDao.get_all_estado_cliente();
+        }
+
         public int f_create_estado(EstadoCliente est) {
             int result;
             result = estadoClienteDao.create_estado(est);
@@ -45,6 +49,11 @@ namespace Komparte.classes.model
             EstadoClienteFilter filter = new EstadoClienteFilter();
 
             return filter;
+        }
+
+        public EstadoCliente getEstadoClienteById(int id) {
+            EstadoCliente estado = estadoClienteDao.get_cliente_by_id(id);
+            return estado;
         }
 
     }

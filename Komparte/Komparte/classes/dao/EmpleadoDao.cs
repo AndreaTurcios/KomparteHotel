@@ -33,7 +33,8 @@ namespace Komparte.classes.dao
             }
         }
 
-        public Empleado get_empleado_by_id(int id) {
+        public Empleado get_empleado_by_id(int id) 
+        {
             
             using (var connection = GetConnection())
             {

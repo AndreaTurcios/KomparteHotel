@@ -162,8 +162,81 @@ select * from cliente;
 select * from hotel;
 select * from estado_cliente;
 
+create or alter view view_all_cliente 
+as
+select 
+	cli.ID_cliente as ID,
+	cli.nombre_cliente as Nombre,
+	cli.DUI_cliente as DUI,
+	cli.telefono AS Telefono,
+	cli.direccion as Direccion,
+	cli.correo as Correo,
+	(select estado from estado_cliente where ID_estado_cliente = cli.pk_estado_cliente) as Estado,
+	(select emp_h.encargado_hotel from hotel emp_h where emp_h.ID_hotel = cli.pk_hotel_cliente) as Hotel
+from cliente as cli
+
+select estado from estado_cliente where ID_estado_cliente =1;
+
+select * from hotel;
+select emp_h.encargado_hotel from hotel emp_h where emp_h.ID_hotel=1;
+
+select * from view_all_cliente;
+
+create procedure proc_all_clientes
+as
+select * from view_all_cliente;
+go
+
+exec proc_all_clientes
+
+create procedure proc_create_cliente
+@nombre varchar(30),
+@dui varchar(30),
+@telefono varchar(30),
+@direccion varchar(30),
+@correo varchar(50),
+@pk_estado int,
+@pk_hotel int
+as
+insert into cliente values(@nombre, @dui, @telefono, @direccion, @correo, @pk_estado, @pk_hotel)
+go
+
+exec proc_create_cliente 'Erick', '789456123', '2000-0000', 'Casa', 'eduarod@dominico.com',1,1
 
 
+create procedure proc_one_cliente
+@id int
+as
+select * from cliente where ID_cliente = @id;
+go
+
+
+exec proc_one_cliente 1
+go
+
+create procedure pro_edit_cliente
+@nombre varchar(30),
+@dui varchar(30),
+@telefono varchar(30),
+@direccion varchar(30),
+@correo varchar(50),
+@pk_estado int,
+@pk_hotel int,
+@id int
+as
+update cliente set
+					nombre_cliente = @nombre,
+					DUI_cliente= @dui,
+					telefono = @telefono,
+					direccion = @direccion,
+					correo = @correo,
+					pk_estado_cliente = @pk_estado,
+					pk_hotel_cliente = @pk_hotel
+where ID_cliente = @id
+go
+
+exec proc_all_clientes
+exec pro_edit_cliente 'Erick2', '123456789', '2020-2020', 'Casa', 'eduarod@dominico.com',1,1,1
 
 /*********************************************************************/
 /*********************************************************************/
@@ -198,3 +271,8 @@ as
 delete from estado_cliente 
 where ID_estado_cliente = @id
 go
+
+exec proc_delete_estado_cliente 3
+go
+
+select * from estado_cliente where ID_estado_cliente = 1; 

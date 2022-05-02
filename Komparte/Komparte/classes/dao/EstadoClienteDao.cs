@@ -34,6 +34,71 @@ namespace Komparte.classes.dao
             }
         }
 
+        public IEnumerable<EstadoCliente> get_all_estado_cliente()
+        {
+            var estadoClienteList = new List<EstadoCliente>();
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "select * from estado_cliente";
+                    //command.CommandType = CommandType.StoredProcedure;
+                    command.CommandType = CommandType.Text;
+                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read()) //Agregar los resultados en la lista 
+                        {
+                            var estadoEmpleadoObj = new EstadoCliente
+                            {
+                                id= (int)reader[0],
+                                estado = reader[1].ToString()
+                            };
+                            estadoClienteList.Add(estadoEmpleadoObj);
+                        }
+                    }
+
+                }
+            }
+            return estadoClienteList;
+        }
+
+        public EstadoCliente get_cliente_by_id(int id)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "select * from estado_cliente where ID_estado_cliente = @id";
+                    //command.CommandType = CommandType.StoredProcedure;
+                    command.CommandType = CommandType.Text;
+                    command.Parameters.AddWithValue("@id", id);
+                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        EstadoCliente obj = new EstadoCliente()
+                        {
+                            id = (int)reader[0],
+                            estado = reader[1].ToString()
+
+                        };
+                        //command.CommandType = CommandType.Text;
+                        return obj;
+                    }
+                    else
+                    {
+                        //se cierra
+                        command.CommandType = CommandType.Text;
+                        return null;
+                    }
+                }
+            }
+        }
+
         public int create_estado(EstadoCliente est)
         {
             int result = -1;
@@ -111,6 +176,8 @@ namespace Komparte.classes.dao
                 return result;
             }
         }
+
+
 
 
     }
