@@ -238,6 +238,13 @@ go
 exec proc_all_clientes
 exec pro_edit_cliente 'Erick2', '123456789', '2020-2020', 'Casa', 'eduarod@dominico.com',1,1,1
 
+
+create procedure proc_delete_cliente
+@id int
+as
+delete from cliente 
+where ID_cliente = @id
+go
 /*********************************************************************/
 /*********************************************************************/
 /**************************Estado Cliente*****************************/
