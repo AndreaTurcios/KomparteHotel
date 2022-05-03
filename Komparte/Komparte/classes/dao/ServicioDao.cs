@@ -42,5 +42,39 @@ namespace Komparte.classes.entidades
             }
             return servicioList;
         }
+
+        public Servicio get_servicio_by_id(int id)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "select * from servicio where ID_servicio  = @id";
+                    //command.CommandType = CommandType.StoredProcedure;
+                    command.CommandType = CommandType.Text;
+                    command.Parameters.AddWithValue("@id", id);
+                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        Servicio obj = new Servicio()
+                        {
+                            id = (int)reader[0],
+                            servicio = reader[1].ToString()
+
+                        };
+                        //command.CommandType = CommandType.Text;
+                        return obj;
+                    }
+                    else
+                    {
+                        //se cierra
+                        command.CommandType = CommandType.Text;
+                        return null;
+                    }
+                }
+            }
+        }
     }
 }

@@ -12,6 +12,7 @@ using Komparte.classes.entidades;
 using Komparte.classes.filter;
 using Presentation.Helpers;
 using Presentation.Utils;
+using System.Diagnostics;
 
 namespace Komparte.forms.obj
 {
@@ -23,7 +24,8 @@ namespace Komparte.forms.obj
         EstadoClienteModel estadoClienteModel = new EstadoClienteModel();
         ClienteModel clienteModel = new ClienteModel();
         ServicioModel servicioModel = new ServicioModel();
-        ReservacionFilter reservacionFilter = new ReservacionFilter(); 
+        ReservacionFilter reservacionFilter = new ReservacionFilter();
+        Reservacion re = new Reservacion();
 
         public frmReservaciones()
         {
@@ -52,7 +54,7 @@ namespace Komparte.forms.obj
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            selecRow();
         }
 
         private void listOjb() 
@@ -177,6 +179,27 @@ namespace Komparte.forms.obj
         {
             if (dataGridReservacion.SelectedRows.Count == 1)
             {
+                string srt = dataGridReservacion.CurrentRow.Cells["ID"].Value.ToString();
+                re = reservacionModel.fReservacionById(srt);
+                textAcompa.Text = re.acompaniante;
+                textHoras.Text = re.numero_noches.ToString();
+                checkBoxDia.Checked = re.checkin.Replace(" ","")== "Si" ? true: false;
+                //Debug.WriteLine("Reflja  p" + re.checkin+"p");
+                //Debug.WriteLine("Operacion  " + re.checkin=="Si");
+                //Debug.WriteLine("idestadoempleado " + checkBoxDia.Checked);
+                checkBoxNoche.Checked = re.checkout.Replace(" ", "") == "Si" ? true : false;
+
+                Cliente cli = clienteModel.fClienteById(re.pk_cliente.ToString());
+                PosicionarCombo(this.comboBoxCliente, cli.nombre);
+
+                EstadoCliente temp1 = estadoClienteModel.getEstadoClienteById(re.pk_estado_reservacion);
+                PosicionarCombo(this.comboBoxEstado, temp1.estado);
+
+                Servicio temp2 = servicioModel.getServicioById(re.pk_servicio_reservacion);
+                PosicionarCombo(this.comboBoxServicio, temp2.servicio);
+                reservacionModify = true;
+                reservacionId = srt;
+
             }
         }
 

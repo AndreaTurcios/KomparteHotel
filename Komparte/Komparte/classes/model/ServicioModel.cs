@@ -18,5 +18,11 @@ namespace Komparte.classes.model
             return servicioDao.get_all_servicio();
         }
 
+        public Servicio getServicioById(int id)
+        {
+            Servicio estado = servicioDao.get_servicio_by_id(id);
+            return estado;
+        }
+
     }
 }
