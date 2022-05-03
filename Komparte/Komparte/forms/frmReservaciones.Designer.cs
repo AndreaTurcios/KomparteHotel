@@ -54,8 +54,8 @@ namespace Komparte.forms.obj
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxServicio = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxHoras = new System.Windows.Forms.TextBox();
-            this.textBoxAcompa = new System.Windows.Forms.TextBox();
+            this.textHoras = new System.Windows.Forms.TextBox();
+            this.textAcompa = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -78,8 +78,8 @@ namespace Komparte.forms.obj
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBoxAcompa);
-            this.groupBox1.Controls.Add(this.textBoxHoras);
+            this.groupBox1.Controls.Add(this.textAcompa);
+            this.groupBox1.Controls.Add(this.textHoras);
             this.groupBox1.Controls.Add(this.comboBoxCliente);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox5);
@@ -349,19 +349,19 @@ namespace Komparte.forms.obj
             this.label3.TabIndex = 29;
             this.label3.Text = "Servicio:";
             // 
-            // textBoxHoras
+            // textHoras
             // 
-            this.textBoxHoras.Location = new System.Drawing.Point(65, 73);
-            this.textBoxHoras.Name = "textBoxHoras";
-            this.textBoxHoras.Size = new System.Drawing.Size(100, 20);
-            this.textBoxHoras.TabIndex = 28;
+            this.textHoras.Location = new System.Drawing.Point(65, 73);
+            this.textHoras.Name = "textHoras";
+            this.textHoras.Size = new System.Drawing.Size(100, 20);
+            this.textHoras.TabIndex = 28;
             // 
-            // textBoxAcompa
+            // textAcompa
             // 
-            this.textBoxAcompa.Location = new System.Drawing.Point(276, 70);
-            this.textBoxAcompa.Name = "textBoxAcompa";
-            this.textBoxAcompa.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAcompa.TabIndex = 29;
+            this.textAcompa.Location = new System.Drawing.Point(276, 70);
+            this.textAcompa.Name = "textAcompa";
+            this.textAcompa.Size = new System.Drawing.Size(100, 20);
+            this.textAcompa.TabIndex = 29;
             // 
             // frmReservaciones
             // 
@@ -416,7 +416,7 @@ namespace Komparte.forms.obj
         private System.Windows.Forms.ComboBox comboBoxCliente;
         private System.Windows.Forms.ComboBox comboBoxServicio;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxAcompa;
-        private System.Windows.Forms.TextBox textBoxHoras;
+        private System.Windows.Forms.TextBox textAcompa;
+        private System.Windows.Forms.TextBox textHoras;
     }
 }
