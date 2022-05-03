@@ -385,3 +385,5 @@ select * from reservacion;
 select * from detalle_reservacion
 
 select * from cliente;
+
+select * from servicio where ID_servicio = 1
