@@ -283,3 +283,105 @@ exec proc_delete_estado_cliente 3
 go
 
 select * from estado_cliente where ID_estado_cliente = 1; 
+go
+
+/*********************************************************************/
+/*********************************************************************/
+/**************************Reservacion*****************************/
+
+select * from reservacion;
+select * from estado_cliente;
+select * from servicio;
+select * from cliente;
+go
+
+alter table reservacion add pk_cliente int not null
+go
+alter table reservacion add foreign key (pk_cliente) 
+references cliente(ID_cliente)
+go
+
+insert into servicio values ('Completo');
+
+create or alter view view_all_reservacion 
+as
+select 
+	ID_reservacion as ID,
+	(select nombre_cliente from cliente where ID_cliente=pk_cliente) as Cliente,
+	acompaniante as 'Cantidad Personas',
+	numero_noches as 'Cantidad Horas',
+	checkin as 'Dia',
+	checkout as 'Noche',
+	(select estado from estado_cliente where  ID_estado_cliente = pk_estado_reservacion) as 'Estado',
+	(select servicio from servicio where ID_servicio =pk_servicio_reservacion) as 'Servicio'
+from reservacion;
+
+select nombre_cliente from cliente where ID_cliente=1;
+select servicio from servicio where ID_servicio =1;
+select estado from estado_cliente where  ID_estado_cliente = 1;
+
+create procedure proc_all_reservacion
+as
+select * from view_all_reservacion 
+go
+
+select * from reservacion;
+create or alter procedure proc_create_reservacion
+@acompaniante varchar(30),
+@num_noches int,
+@checkin char(6),
+@checkout char(6),
+@pk_estado int,
+@pk_servicio int,
+@pk_cliente int
+as
+insert into reservacion values(@acompaniante, @num_noches, @checkin, @checkout, @pk_estado, @pk_servicio, @pk_cliente)
+go
+
+exec proc_create_reservacion '30',6,'Si','No',1,1,1
+
+
+create or alter procedure proc_update_reservacion
+@acompaniante varchar(30),
+@num_noches int,
+@checkin char(6),
+@checkout char(6),
+@pk_estado int,
+@pk_servicio int,
+@pk_cliente int,
+@id int
+as
+update reservacion set
+					acompaniante= @acompaniante,
+					numero_noches= @num_noches,
+					checkin = @checkin,
+					checkout= @checkout,
+					pk_estado_reservacion = @pk_estado,
+					pk_servicio_reservacion = @pk_servicio,
+					@pk_cliente = @pk_cliente
+where ID_reservacion= @id
+go
+
+exec  proc_update_reservacion '6',6,'Si', 'Si', 1,1,1,3
+
+
+create procedure proc_delete_reservacion
+@id int
+as
+delete from reservacion 
+where  ID_reservacion= @id
+go
+
+create procedure proc_one_reservacion
+@id int
+as
+select * from reservacion where ID_reservacion= @id
+go
+
+exec proc_one_reservacion	3
+
+select * from reservacion;
+
+select * from detalle_reservacion
+
+select * from cliente;

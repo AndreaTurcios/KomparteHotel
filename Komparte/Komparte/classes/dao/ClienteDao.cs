@@ -32,6 +32,43 @@ namespace Komparte.classes.dao
             }
         }
 
+        public IEnumerable<Cliente> get_all_cliente()
+        {
+            var clienteList = new List<Cliente>();
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "select * from cliente";
+                    //command.CommandType = CommandType.StoredProcedure;
+                    command.CommandType = CommandType.Text;
+                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read()) //Agregar los resultados en la lista 
+                        {
+                            var obj = new Cliente
+                            {
+                                id = (int)reader[0],
+                                nombre = reader[1].ToString(),
+                                dui = reader[2].ToString(),
+                                telefono= reader[3].ToString(),
+                                direccion = reader[4].ToString(),
+                                correo = reader[5].ToString(),
+                                pk_estado_cliente = (int) reader[6],
+                                pk_hotel_cliente = (int) reader[7]
+                            };
+                            clienteList.Add(obj);
+                        }
+                    }
+
+                }
+            }
+            return clienteList;
+        }
+
         public int create_cliente(Cliente cli)
         {
             int result = -1;

@@ -16,5 +16,11 @@ namespace Komparte.classes.entidades
         public string correo { get; set; }
         public int pk_estado_cliente { get; set; }
         public int pk_hotel_cliente { get; set; }
+
+
+        public override string ToString()
+        {
+            return nombre;
+        }
     }
 }

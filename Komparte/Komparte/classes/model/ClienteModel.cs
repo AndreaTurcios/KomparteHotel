@@ -21,6 +21,11 @@ namespace Komparte.classes.model
             return tabla;
         }
 
+        public IEnumerable<Cliente> get_all_cliente()
+        {
+            return clienteDao.get_all_cliente();
+        }
+
         public int f_create_cliente(Cliente cli)
         {
             int result;
