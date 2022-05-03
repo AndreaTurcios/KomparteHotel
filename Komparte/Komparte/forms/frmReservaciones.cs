@@ -195,10 +195,39 @@ namespace Komparte.forms.obj
             }
         }
 
+        public void deleteObj() {
+            if (dataGridReservacion.RowCount <= 0)
+            {
+                MessageBox.Show("No hay datos para seleccionar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (dataGridReservacion.SelectedCells.Count >1)
+            {
+                //var result = userModel.RemoveUser((int)dataGridView1.CurrentRow.Cells[0].Value);//Obtener ID del usuario e invocar el metodo eliminar usuario del modelo.
+                var result = reservacionModel.f_delete_reservacion((dataGridReservacion.CurrentRow.Cells[0].Value.ToString()));
+                //userModel.RemoveUser((int)dataGridView1.CurrentRow.Cells[0].Value);
+
+                if (result > 0)
+                {
+                    MessageBox.Show("Eliminado con éxito");
+                    listOjb();
+                    clearField();
+                }
+                else MessageBox.Show("No se ha realizado operación, intente nuevamente");
+            }
+            else
+                MessageBox.Show("Por favor seleccione una fila", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             save();
             listOjb();
+        }
+
+        private void buttonRemove_Click(object sender, EventArgs e)
+        {
+            deleteObj();
         }
     }
 }

@@ -185,6 +185,7 @@ namespace Komparte.forms.obj
             this.buttonRemove.TabIndex = 4;
             this.buttonRemove.Text = "Eliminar";
             this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
             // buttonUpdate
             // 
